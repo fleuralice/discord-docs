@@ -2,9 +2,11 @@
 
 Spooks you. 👻
 
+[How scary!!!~](https://docs.helvetica.moe) I thought I was safe!! Maybe if enough people contribute we can exorcise the ghosts?
+
 ##### Latest commit from the documentation
 
-Latest update was <https://github.com/discord/discord-api-docs/commit/298ee7a7abf02ab6dd0944f9493c4dd5b71be31f>. [Here are the changes since then.](https://github.com/discord/discord-api-docs/compare/298ee7a7abf02ab6dd0944f9493c4dd5b71be31f..main)
+Latest update was [298ee7a7abf02ab6dd0944f9493c4dd5b71be31f](https://github.com/discord/discord-api-docs/commit/298ee7a7abf02ab6dd0944f9493c4dd5b71be31f). [Here are the changes since then](https://github.com/discord/discord-api-docs/compare/298ee7a7abf02ab6dd0944f9493c4dd5b71be31f..main).
 
 ##### Licensing
 
@@ -31,4 +33,4 @@ More generally, I require that properties next to a `$ref` *replace* rather than
 
 The previous "merge with" behavior is still achievable via an explicit `allOf`.
 
-Additionally, my schemas contain a `flags` property that lists the flags for some numbers. I should figure out if I should actually do this: either the flags need to exclude anything which isn't a combination of them or I should drop the concept. I guess alternatively they should be metadata, in which they should allow for descriptions too!
+Additionally, my schemas contain a `flags` property that lists the flags for some numbers. If the `type` is `string`, then these `flags` will be `string`s (or more precisely: bigints). Otherwise if the `type` is `integer`, then these `flags` will be `integer`s. I should figure out if I should actually do this: either the flags need to exclude anything which isn't a combination of them or I should drop the concept. I guess alternatively they should be metadata, in which case they should allow for descriptions too!
