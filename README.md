@@ -1,10 +1,10 @@
-### Discord Docs
+## Discord Docs
 
-Spooks you.
+Spooks you. 👻
 
-##### Latest commit
+##### Latest commit from the documentation
 
-Up to date as of 298ee7a7abf02ab6dd0944f9493c4dd5b71be31f.
+Latest update was <https://github.com/discord/discord-api-docs/commit/298ee7a7abf02ab6dd0944f9493c4dd5b71be31f>. [Here are the changes since then.](https://github.com/discord/discord-api-docs/compare/298ee7a7abf02ab6dd0944f9493c4dd5b71be31f..main)
 
 ##### Licensing
 
@@ -12,7 +12,7 @@ All data is under the [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/
 
 All code is under the [Parity license version 7.0.0](https://paritylicense.com/versions/7.0.0). [Compared to what you may be used to](https://github.com/licensezero/parity-public-license#comparing), this license requires any changes to the code to be contributed unless those changes are strictly prototypal (and only in use for less than 30 days). To be clear, "contributed" here essentially means that you simply place the code in a location where I am likely to find it.
 
-Both of these summaries may be wrong: I am not a lawyer and none of what I write adds or removes conditions from these licenses. You can find the full license texts to both attached. (TODO: attach)
+Both of these summaries may be wrong: I am not a lawyer and none of what I write adds or removes conditions from these licenses. You can find the full license texts to both attached.
 
 ##### Modifications to JSON Schema behavior
 
@@ -20,7 +20,7 @@ Unfortunately, `$ref` (`allOf` between two schemas) with differing `required` do
 
 ```json
 {
-    "$ref": "https://docs.helvetica.moe/schemas/integration.json",
+    "$ref": "https://docs.helvetica.moe/schemas/some-object.json",
     "required": []
 }
 ```
