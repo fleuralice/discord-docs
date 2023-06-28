@@ -1,0 +1,46 @@
+{
+    "$id": "https://docs.helvetica.moe/schemas/team.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "properties": {
+        "icon": {
+            "type": ["null", "string"]
+        },
+        "id": {
+            "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+        },
+        "members": {
+            "type": "list",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "membership_state": {
+                        "type": "integer",
+                        "eunm": [1, 2]
+                    },
+                    "permissions": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "team_id": {
+                        "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+                    },
+                    "user": {
+                        "$ref": "https://docs.helvetica.moe/schemas/user.json",
+                        "required": []
+                    }
+                },
+                "required": ["membership_state", "permissions", "team_id", "user"]
+            }
+        },
+        "names": {
+            "type": "string"
+        },
+        "owner_user_id": {
+            "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+        }
+    },
+    "required": ["icon", "id", "members", "name", "owner_user_id"]
+}

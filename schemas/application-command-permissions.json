@@ -1,0 +1,18 @@
+{
+    "$id": "https://docs.helvetica.moe/schemas/application-command-permissions.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "properties": {
+        "id": {
+            "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+        },
+        "type": {
+            "type": "integer",
+            "enum": [1, 2, 3]
+        },
+        "permission": {
+            "type": "boolean"
+        }
+    },
+    "required": ["id", "type", "permission"]
+}

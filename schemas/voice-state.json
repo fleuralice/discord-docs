@@ -1,0 +1,68 @@
+{
+    "$id": "https://docs.helvetica.moe/schemas/voice-state.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "properties": {
+        "guild_id": {
+            "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+        },
+        "channel_id": {
+            "oneOf": [
+                {
+                    "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+                },
+                {
+                    "type": "null"
+                }
+            ]
+        },
+        "user_id": {
+            "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+        },
+        "member": {
+            "$ref": "https://docs.helvetica.moe/schemas/member.json"
+        },
+        "session_id": {
+            "type": "string"
+        },
+        "deaf": {
+            "type": "boolean"
+        },
+        "mute": {
+            "type": "boolean"
+        },
+        "self_deaf": {
+            "type": "boolean"
+        },
+        "self_mute": {
+            "type": "boolean"
+        },
+        "self_stream": {
+            "type": "boolean"
+        },
+        "self_video": {
+            "type": "boolean"
+        },
+        "suppress": {
+            "type": "boolean"
+        },
+        "request_to_speak_timestamp": {
+            "type": [
+                "null",
+                "string"
+            ]
+        }
+    },
+    "required": [
+        "channel_id",
+        "user_id",
+        "session_id",
+        "deaf",
+        "mute",
+        "self_deaf",
+        "self_mute",
+        "self_video",
+        "suppress",
+        "request_to_speak_timestamp"
+    ]
+}

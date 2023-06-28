@@ -1,0 +1,89 @@
+{
+    "$id": "https://docs.helvetica.moe/schemas/invite.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "properties": {
+        "code": {
+            "type": "string"
+        },
+        "guild": {
+            "$ref": "https://docs.helvetica.moe/schemas/guild.json",
+            "required": []
+        },
+        "channel": {
+            "oneOf": [
+                {
+                    "$ref": "https://docs.helvetica.moe/schemas/channel.json",
+                    "required": []
+                },
+                {
+                    "type": "null"
+                }
+            ]
+        },
+        "inviter": {
+            "$ref": "https://docs.helvetica.moe/schemas/user.json"
+        },
+        "target_type": {
+            "type": "integer",
+            "enum": [
+                1,
+                2
+            ]
+        },
+        "target_user": {
+            "$ref": "https://docs.helvetica.moe/schemas/user.json"
+        },
+        "target_application": {
+            "$ref": "https://docs.helvetica.moe/schemas/application.json",
+            "required": []
+        },
+        "approximate_presence_count": {
+            "type": "integer"
+        },
+        "approximate_member_count": {
+            "type": "integer"
+        },
+        "expires_at": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "stage_instance": {
+            "type": "object",
+            "properties": {
+                "members": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "https://docs.helvetica.moe/schemas/member.json",
+                        "required": []
+                    }
+                },
+                "participant_count": {
+                    "type": "integer"
+                },
+                "speaker_count": {
+                    "type": "integer"
+                },
+                "topic": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "uses",
+                "max_uses",
+                "max_age",
+                "temporary",
+                "created_at"
+            ]
+        },
+        "guild_scheduled_event": {
+            "$ref": "https://docs.helvetica.moe/schemas/guild-scheduled-event.json"
+        }
+    },
+    "required": [
+        "code",
+        "channel"
+    ]
+}

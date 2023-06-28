@@ -1,0 +1,75 @@
+{
+    "$id": "https://docs.helvetica.moe/schemas/application-role-connection.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "properties": {
+        "platform_name": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "platform_username": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "metadata": {
+            "type": "object",
+            "properties": {
+                "type": {
+                    "type": "integer",
+                    "enum": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8
+                    ]
+                },
+                "key": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "name_localizations": {
+                    "type": "object",
+                    "propertyNames": {
+                        "$ref": "https://docs.helvetica.moe/schemas/locales.json"
+                    },
+                    "additionalProperties": {
+                        "type": "string"
+                    }
+                },
+                "description": {
+                    "type": "string"
+                },
+                "description_localizations": {
+                    "type": "object",
+                    "propertyNames": {
+                        "$ref": "https://docs.helvetica.moe/schemas/locales.json"
+                    },
+                    "additionalProperties": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": [
+                "type",
+                "key",
+                "name",
+                "description"
+            ]
+        }
+    },
+    "required": [
+        "platform_name",
+        "platform_username",
+        "metadata"
+    ]
+}

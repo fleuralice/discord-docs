@@ -1,0 +1,71 @@
+{
+    "$id": "https://docs.helvetica.moe/schemas/member.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "properties": {
+        "user": {
+            "$ref": "https://docs.helvetica.moe/schemas/user.json"
+        },
+        "nick": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "avatar": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "roles": {
+            "type": "array",
+            "items": {
+                "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+            }
+        },
+        "joined_at": {
+            "type": "string"
+        },
+        "premium_since": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "deaf": {
+            "type": "boolean"
+        },
+        "mute": {
+            "type": "boolean"
+        },
+        "flags": {
+            "type": "integer",
+            "flags": {
+                "did_rejoin": 1,
+                "completed_onboarding": 2,
+                "bypasses_verification": 4,
+                "started_onboarding": 8
+            }
+        },
+        "pending": {
+            "type": "boolean"
+        },
+        "permissions": {
+            "$ref": "https://docs.helvetica.moe/schemas/permissions.json"
+        },
+        "communication_disabled_until": {
+            "type": [
+                "null",
+                "string"
+            ]
+        }
+    },
+    "required": [
+        "user",
+        "roles",
+        "joined_at",
+        "deaf",
+        "mute",
+        "flags"
+    ]
+}

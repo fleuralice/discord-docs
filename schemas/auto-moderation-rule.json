@@ -1,0 +1,227 @@
+{
+    "$id": "https://docs.helvetica.moe/schemas/auto-moderation-rule.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "allOf": [
+        {
+            "properties": {
+                "id": {
+                    "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+                },
+                "guild_id": {
+                    "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "creator_id": {
+                    "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+                },
+                "event_type": {
+                    "type": "integer",
+                    "enum": [
+                        1
+                    ]
+                },
+                "actions": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "required": ["type"],
+                        "anyOf": [
+                            {
+                                "properties": {
+                                    "type": {
+                                        "type": "integer",
+                                        "enum": [1]
+                                    },
+                                    "metadata": {
+                                        "type": "object",
+                                        "properties": {
+                                            "custom_message": {
+                                                "type": "string"
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "properties": {
+                                    "type": {
+                                        "type": "integer",
+                                        "enum": [2]
+                                    },
+                                    "metadata": {
+                                        "type": "object",
+                                        "properties": {
+                                            "channel_id": {
+                                                "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+                                            }
+                                        },
+                                        "required": ["channel_id"]
+                                    }
+                                },
+                                "required": ["metadata"]
+                            },
+                            {
+                                "properties": {
+                                    "type": {
+                                        "type": "integer",
+                                        "enum": [3]
+                                    },
+                                    "metadata": {
+                                        "type": "object",
+                                        "properties": {
+                                            "duration_seconds": {
+                                                "type": "integer"
+                                            }
+                                        },
+                                        "required": ["duration_seconds"]
+                                    }
+                                },
+                                "required": ["metadata"]
+                            }
+                        ]
+                    }
+                },
+                "enabled": {
+                    "type": "boolean"
+                },
+                "exempt_roles": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+                    }
+                },
+                "exempt_channels": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+                    }
+                }
+            },
+            "required": [
+                "id",
+                "guild_id",
+                "name",
+                "creator_id",
+                "event_type",
+                "trigger_type",
+                "trigger_metadata",
+                "actions",
+                "enabled",
+                "exempt_roles",
+                "exempt_channels"
+            ]
+        },
+        {
+            "anyOf": [
+                {
+                    "properties": {
+                        "trigger_type": {
+                            "type": "integer",
+                            "enum": [
+                                1
+                            ]
+                        },
+                        "trigger_metadata": {
+                            "type": "object",
+                            "properties": {
+                                "keyword_filter": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string"
+                                    }
+                                },
+                                "regex_patterns": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string"
+                                    }
+                                },
+                                "allow_list": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string"
+                                    }
+                                }
+                            },
+                            "required": [
+                                "keyword_filter",
+                                "regex_patterns",
+                                "allow_list"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "properties": {
+                        "trigger_type": {
+                            "type": "integer",
+                            "enum": [
+                                4
+                            ]
+                        },
+                        "trigger_metadata": {
+                            "type": "object",
+                            "properties": {
+                                "presets": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "integer",
+                                        "enum": [1, 2, 3]
+                                    }
+                                },
+                                "allow_list": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "strings"
+                                    }
+                                }
+                            },
+                            "required": [
+                                "presets",
+                                "allow_list"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "properties": {
+                        "trigger_type": {
+                            "type": "integer",
+                            "enum": [
+                                5
+                            ]
+                        },
+                        "trigger_metadata": {
+                            "type": "object",
+                            "properties": {
+                                "mention_total_limit": {
+                                    "type": "integer"
+                                },
+                                "mention_raid_protection_enabled": {
+                                    "type": "boolean"
+                                }
+                            },
+                            "required": [
+                                "mention_total_limit",
+                                "mention_raid_protection_enabled"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "properties": {
+                        "trigger_type": {
+                            "type": "integer",
+                            "enum": [
+                                3
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}

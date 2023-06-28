@@ -1,0 +1,17 @@
+{
+  "name": "helvetica-docs",
+  "description": "docs for discord",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fleuralice/discord-docs.git"
+  },
+  "author": "A5rocks <discord@helvetica.moe>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fleuralice/discord-docs/issues"
+  },
+  "homepage": "https://github.com/fleuralice/discord-docs#readme",
+  "devDependencies": {
+    "prettier": "^2.8.8"
+  }
+}

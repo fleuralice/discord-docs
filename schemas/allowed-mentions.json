@@ -1,0 +1,30 @@
+{
+    "$id": "https://docs.helvetica.moe/schemas/allowed-mentions.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "properties": {
+        "parse": {
+            "type": "array",
+            "items": {
+                "type": "string",
+                "enum": ["roles", "users", "everyone"]
+            }
+        },
+        "roles": {
+            "type": "array",
+            "items": {
+                "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+            }
+        },
+        "users": {
+            "type": "array",
+            "items": {
+                "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+            }
+        },
+        "replied_user": {
+            "type": "boolean"
+        }
+    },
+    "required": ["parse", "roles", "users", "replied_user"]
+}

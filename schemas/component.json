@@ -1,0 +1,218 @@
+{
+    "$id": "https://docs.helvetica.moe/schemas/component.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "required": ["type"],
+    "oneOf": [
+        {
+            "properties": {
+                "type": {
+                    "type": "integer",
+                    "enum": [2]
+                },
+                "label": {
+                    "type": "string"
+                },
+                "emoji": {
+                    "$ref": "https://docs.helvetica.moe/schemas/emoji.json",
+                    "required": ["name", "id", "animated"]
+                },
+                "disabled": {
+                    "type": "boolean"
+                }
+            },
+            "oneOf": [
+                {
+                    "properties": {
+                        "style": {
+                            "type": "integer",
+                            "enum": [1, 2, 3, 4]
+                        },
+                        "custom_id": {
+                            "type": "string"
+                        }        
+                    },
+                    "required": ["custom_id"]
+                },
+                {
+                    "properties": {
+                        "style": {
+                            "type": "integer",
+                            "enum": [5]
+                        },
+                        "url": {
+                            "type": "string"
+                        }        
+                    },
+                    "required": ["url"]
+                }
+            ],
+            "required": ["type", "style"]
+        },
+        {
+            "properties": {
+                "type": {
+                    "type": "integer",
+                    "enum": [3]
+                },
+                "custom_id": {
+                    "type": "string"
+                },
+                "options": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "label": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "type": "string"
+                            },
+                            "description": {
+                                "type": "string"
+                            },
+                            "emoji": {
+                                "$ref": "https://docs.helvetica.moe/schemas/emoji.json",
+                                "required": ["name", "id", "animated"]
+                            },
+                            "default": {
+                                "type": "boolean"
+                            }
+                        },
+                        "required": ["label", "value"]
+                    }
+                },
+                "placeholder": {
+                    "type": "string"
+                },
+                "min_values": {
+                    "type": "integer"
+                },
+                "max_values": {
+                    "type": "integer"
+                },
+                "disabled": {
+                    "type": "boolean"
+                }
+            },
+            "required": ["type", "custom_id", "options"]
+        },
+        {
+            "properties": {
+                "type": {
+                    "type": "integer",
+                    "enum": [5, 6, 7]
+                },
+                "custom_id": {
+                    "type": "string"
+                },
+                "placeholder": {
+                    "type": "string"
+                },
+                "min_values": {
+                    "type": "integer"
+                },
+                "max_values": {
+                    "type": "integer"
+                },
+                "disabled": {
+                    "type": "boolean"
+                }
+            },
+            "required": ["type", "custom_id"]
+        },
+        {
+            "properties": {
+                "type": {
+                    "type": "integer",
+                    "enum": [8]
+                },
+                "custom_id": {
+                    "type": "string"
+                },
+                "channel_types": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/type"
+                    }
+                },
+                "placeholder": {
+                    "type": "string"
+                },
+                "min_values": {
+                    "type": "integer"
+                },
+                "max_values": {
+                    "type": "integer"
+                },
+                "disabled": {
+                    "type": "boolean"
+                }
+            },
+            "required": ["type", "custom_id"]
+        },
+        {
+            "properties": {
+                "type": {
+                    "type": "integer",
+                    "enum": [4]
+                },
+                "custom_id": {
+                    "type": "string"
+                },
+                "style": {
+                    "type": "integer",
+                    "enum": [1, 2]
+                },
+                "label": {
+                    "type": "string"
+                },
+                "min_length": {
+                    "type": "integer"
+                },
+                "max_length": {
+                    "type": "integer"
+                },
+                "required": {
+                    "type": "boolean"
+                },
+                "value": {
+                    "type": "string"
+                },
+                "placeholder": {
+                    "type": "string"
+                }
+            },
+            "required": ["type", "custom_id", "style", "label"]
+        },
+        {
+            "properties": {
+                "type": {
+                    "type": "integer",
+                    "enum": [1]
+                },
+                "components": {
+                    "type": "array",
+                    "items": {
+                        "allOf": [
+                            {
+                                "$ref": "https://docs.helvetica.moe/schemas/component.json"
+                            },
+                            {
+                                "not": {
+                                    "properties": {
+                                        "type": {
+                                            "type": "integer",
+                                            "enum": [1]
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    ]
+}

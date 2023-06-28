@@ -1,0 +1,137 @@
+{
+    "$id": "https://docs.helvetica.moe/schemas/integration.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "properties": {
+        "id": {
+            "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+        },
+        "name": {
+            "type": "string"
+        },
+        "type": {
+            "type": "string"
+        },
+        "enabled": {
+            "type": "boolean"
+        },
+        "syncing": {
+            "type": "boolean"
+        },
+        "role_id": {
+            "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+        },
+        "enable_emoticons": {
+            "type": "boolean"
+        },
+        "expire_behavior": {
+            "type": "integer",
+            "enum": [
+                0,
+                1
+            ]
+        },
+        "expire_grace_period": {
+            "type": "integer"
+        },
+        "user": {
+            "$ref": "https://docs.helvetica.moe/schemas/user.json"
+        },
+        "account": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id",
+                "name"
+            ]
+        },
+        "synced_at": {
+            "type": "string"
+        },
+        "subscriber_count": {
+            "type": "integer"
+        },
+        "revoked": {
+            "type": "boolean"
+        },
+        "application": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "icon": {
+                    "type": [
+                        "null",
+                        "string"
+                    ]
+                },
+                "description": {
+                    "type": "string"
+                },
+                "bot": {
+                    "$ref": "https://docs.helvetica.moe/schemas/user.json"
+                }
+            },
+            "required": [
+                "id",
+                "name",
+                "icon",
+                "description"
+            ]
+        },
+        "scopes": {
+            "type": "array",
+            "items": {
+                "type": "string",
+                "enum": [
+                    "activities.read",
+                    "activities.write",
+                    "applications.builds.read",
+                    "applications.builds.upload",
+                    "applications.commands",
+                    "applications.commands.update",
+                    "applications.commands.permissions.update",
+                    "applications.entitlements",
+                    "applications.store.update",
+                    "bot",
+                    "connections",
+                    "dm_channels.read",
+                    "email",
+                    "gdm.join",
+                    "guilds",
+                    "guilds.join",
+                    "guilds.members.read",
+                    "identify",
+                    "messages.read",
+                    "relationships.read",
+                    "role_connections.write",
+                    "rpc",
+                    "rpc.activites.write",
+                    "rpc.notifications.read",
+                    "rpc.voice.read",
+                    "rpc.voice.write",
+                    "voice",
+                    "webhook.incoming"
+                ]
+            }
+        }
+    },
+    "required": [
+        "id",
+        "name",
+        "type",
+        "enabled",
+        "account"
+    ]
+}

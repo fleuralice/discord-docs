@@ -1,0 +1,60 @@
+{
+    "$id": "https://docs.helvetica.moe/schemas/guild-template.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "properties": {
+        "code": {
+            "type": "string"
+        },
+        "name": {
+            "type": "string"
+        },
+        "description": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "usage_count": {
+            "type": "integer"
+        },
+        "creator_id": {
+            "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+        },
+        "creator": {
+            "$ref": "https://docs.helvetica.moe/schemas/user.json"
+        },
+        "created_at": {
+            "type": "string"
+        },
+        "updated_at": {
+            "type": "string"
+        },
+        "source_guild_id": {
+            "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+        },
+        "serialized_source_guild": {
+            "$ref": "https://docs.helvetica.moe/schemas/guild.json",
+            "required": []
+        },
+        "is_dirty": {
+            "type": [
+                "null",
+                "boolean"
+            ]
+        }
+    },
+    "required": [
+        "code",
+        "name",
+        "description",
+        "usage_count",
+        "creator_id",
+        "creator",
+        "created_at",
+        "updated_at",
+        "source_guild_id",
+        "serialized_source_guild",
+        "is_dirty"
+    ]
+}

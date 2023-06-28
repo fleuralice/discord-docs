@@ -1,0 +1,67 @@
+{
+    "$id": "https://docs.helvetica.moe/schemas/snowflake.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "string"
+        },
+        "name": {
+            "type": "string"
+        },
+        "type": {
+            "type": "string",
+            "enum": [
+                "battlenet",
+                "ebay",
+                "epicgames",
+                "facebook",
+                "github",
+                "instagram",
+                "leagueoflegends",
+                "paypal",
+                "playstation",
+                "reddit",
+                "riotgames",
+                "spotify",
+                "skype",
+                "steam",
+                "tiktok",
+                "twitch",
+                "twitter",
+                "xbox",
+                "youtube"
+            ]
+        },
+        "revoked": {
+            "type": "boolean"
+        },
+        "integrations": {
+            "type": "array",
+            "items": {
+                "$ref": "https://docs.helvetica.moe/schemas/integration.json",
+                "required": []
+            }
+        },
+        "verified": {
+            "type": "boolean"
+        },
+        "friend_sync": {
+            "type": "boolean"
+        },
+        "show_activity": {
+            "type": "boolean"
+        },
+        "two_way_link": {
+            "type": "boolean"
+        },
+        "visibility": {
+            "type": "integer",
+            "enum": [
+                0,
+                1
+            ]
+        }
+    },
+    "required": ["id", "name", "type", "verified", "friend_sync", "show_activity", "two_way_link", "visibility"]
+}

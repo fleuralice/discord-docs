@@ -1,0 +1,121 @@
+{
+    "$id": "https://docs.helvetica.moe/schemas/application.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "properties": {
+        "id": {
+            "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+        },
+        "name": {
+            "type": "string"
+        },
+        "icon": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "description": {
+            "type": "string"
+        },
+        "rpc_origins": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "bot_public": {
+            "type": "boolean"
+        },
+        "bot_require_code_grant": {
+            "type": "boolean"
+        },
+        "terms_of_service_url": {
+            "type": "string"
+        },
+        "privacy_policy_url": {
+            "type": "string"
+        },
+        "owner": {
+            "$ref": "https://docs.helvetica.moe/schemas/user.json",
+            "required": []
+        },
+        "verify_key": {
+            "type": "string"
+        },
+        "team": {
+            "oneOf": [
+                {
+                    "$ref": "https://docs.helvetica.moe/schemas/team.json"
+                },
+                {
+                    "type": "null"
+                }
+            ]
+        },
+        "guild_id": {
+            "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+        },
+        "primary_sku_id": {
+            "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+        },
+        "slug": {
+            "type": "string"
+        },
+        "cover_image": {
+            "type": "string"
+        },
+        "flags": {
+            "type": "integer",
+            "flags": {
+                "application_auto_moderation_rule_create_badge": 64,
+                "gateway_presence": 4096,
+                "gateway_presence_limited": 8192,
+                "gateway_guild_members": 16384,
+                "gateway_guild_members_limited": 32768,
+                "verification_pending_guild_limit": 65536,
+                "embedded": 131072,
+                "gateway_message_content": 262144,
+                "gateway_message_content_limited": 524288,
+                "application_command_badge": 8388608
+            }
+        },
+        "tags": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "install_params": {
+            "type": "object",
+            "properties": {
+                "scopes": {
+                    "$ref": "https://docs.helvetica.moe/schemas/integration.json#/properties/scopes"
+                },
+                "permissions": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "scopes",
+                "permissions"
+            ]
+        },
+        "custom_install_url": {
+            "type": "string"
+        },
+        "role_connections_verification_url": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "id",
+        "name",
+        "icon",
+        "description",
+        "bot_public",
+        "bot_require_code_grant",
+        "verify_key",
+        "team"
+    ]
+}

@@ -1,0 +1,367 @@
+{
+    "$id": "https://docs.helvetica.moe/schemas/guild.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "properties": {
+        "id": {
+            "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+        },
+        "name": {
+            "type": "string"
+        },
+        "icon": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "icon_hash": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "splash": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "discovery_splash": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "owner": {
+            "type": "boolean"
+        },
+        "owner_id": {
+            "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+        },
+        "permissions": {
+            "$ref": "https://docs.helvetica.moe/schemas/permissions.json"
+        },
+        "afk_channel_id": {
+            "oneOf": [
+                {
+                    "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+                },
+                {
+                    "type": "null"
+                }
+            ]
+        },
+        "afk_timeout": {
+            "type": "integer"
+        },
+        "widget_enabled": {
+            "type": "boolean"
+        },
+        "widget_channel_id": {
+            "oneOf": [
+                {
+                    "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+                },
+                {
+                    "type": "null"
+                }
+            ]
+        },
+        "verification_level": {
+            "type": "integer",
+            "enum": [
+                0,
+                1,
+                2,
+                3,
+                4
+            ]
+        },
+        "default_message_notifications": {
+            "type": "integer",
+            "enum": [
+                0,
+                1
+            ]
+        },
+        "expicit_content_filter": {
+            "type": "integer",
+            "enum": [
+                0,
+                1,
+                2
+            ]
+        },
+        "roles": {
+            "type": "array",
+            "items": {
+                "$ref": "https://docs.helvetica.moe/schemas/role.json"
+            }
+        },
+        "emojis": {
+            "type": "array",
+            "items": {
+                "$ref": "https://docs.helvetica.moe/schemas/emoji.json"
+            }
+        },
+        "features": {
+            "type": "array",
+            "items": {
+                "type": "string",
+                "enum": [
+                    "ANIMATED_BANNER",
+                    "ANIMATED_ICON",
+                    "APPLICATION_COMMAND_PERMISSIONS_V2",
+                    "AUTO_MODERATION",
+                    "BANNER",
+                    "COMMUNITY",
+                    "CREATOR_MONETIZABLE_PROVISIONAL",
+                    "CREATOR_STORE_PAGE",
+                    "DEVELOPER_SUPPORT_SERVER",
+                    "DICOVERABLE",
+                    "FEATURABLE",
+                    "INVITED_DISABLED",
+                    "INVITE_SPLASH",
+                    "MEMBER_VERIFICATION_GATE_ENABLED",
+                    "MORE_STICKERS",
+                    "NEWS",
+                    "PARTNERED",
+                    "PREVIEW_ENABLED",
+                    "RAID_ALERTS_DISABLED",
+                    "ROLE_ICONS",
+                    "ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE",
+                    "ROLE_SUBSCRIPTIONS_ENABLED",
+                    "TICKETED_EVENTS_ENABLED",
+                    "VANITY_URL",
+                    "VERIFIED",
+                    "VIP_REGIONS",
+                    "WELCOME_SCREEN_ENABLED"
+                ]
+            }
+        },
+        "mfa_level": {
+            "type": "integer",
+            "enum": [
+                0,
+                1
+            ]
+        },
+        "application_id": {
+            "oneOf": [
+                {
+                    "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+                },
+                {
+                    "type": "null"
+                }
+            ]
+        },
+        "system_channel_id": {
+            "oneOf": [
+                {
+                    "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+                },
+                {
+                    "type": "null"
+                }
+            ]
+        },
+        "system_channel_flags": {
+            "type": "integer",
+            "flags": {
+                "suppress_join_notifications": 1,
+                "suppress_premium_subscriptions": 2,
+                "suppress_guild_reminder_notifications": 4,
+                "suppress_join_notification_replies": 8,
+                "suppress_role_subscription_purchase_notifications": 16,
+                "suppress_role_subscription_purchage_notification_replied": 32
+            }
+        },
+        "rules_channel_id": {
+            "oneOf": [
+                {
+                    "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+                },
+                {
+                    "type": "null"
+                }
+            ]
+        },
+        "max_presences": {
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "max_members": {
+            "type": "integer"
+        },
+        "vanity_url_code": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "description": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "banner": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "premium_tier": {
+            "type": "integer",
+            "enum": [
+                0,
+                1,
+                2,
+                3
+            ]
+        },
+        "premium_subscription_count": {
+            "type": "integer"
+        },
+        "preferred_locale": {
+            "$ref": "https://docs.helvetica.moe/schemas/locales.json⌈"
+        },
+        "public_updates_channel_id": {
+            "oneOf": [
+                {
+                    "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+                },
+                {
+                    "type": "null"
+                }
+            ]
+        },
+        "max_video_channel_users": {
+            "type": "integer"
+        },
+        "max_stage_video_channel_users": {
+            "type": "integer"
+        },
+        "approximate_member_count": {
+            "type": "integer"
+        },
+        "approximate_presence_count": {
+            "type": "integer"
+        },
+        "welcome_screen": {
+            "type": "object",
+            "properties": {
+                "description": {
+                    "type": [
+                        "null",
+                        "string"
+                    ]
+                },
+                "welcome_channels": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "channel_id": {
+                                "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+                            },
+                            "description": {
+                                "type": "string"
+                            },
+                            "emoji_id": {
+                                "oneOf": [
+                                    {
+                                        "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+                                    },
+                                    {
+                                        "type": "null"
+                                    }
+                                ]
+                            },
+                            "emoji_name": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            }
+                        },
+                        "required": [
+                            "channel_id",
+                            "description",
+                            "emoji_id",
+                            "emoji_name"
+                        ]
+                    }
+                }
+            },
+            "required": [
+                "description",
+                "welcome_channels"
+            ]
+        },
+        "nsfw_level": {
+            "type": "integer",
+            "enum": [
+                0,
+                1,
+                2,
+                3
+            ]
+        },
+        "stickers": {
+            "type": "array",
+            "items": {
+                "$ref": "https://docs.helvetica.moe/schemas/sticker.json"
+            }
+        },
+        "premium_progress_bar_enabled": {
+            "type": "boolean"
+        },
+        "safety_alerts_channel_id": {
+            "oneOf": [
+                {
+                    "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+                },
+                {
+                    "type": "null"
+                }
+            ]
+        }
+    },
+    "required": [
+        "id",
+        "name",
+        "icon",
+        "splash",
+        "discovery_splash",
+        "owner_id",
+        "afk_channel_id",
+        "afk_timeout",
+        "widget_enabled",
+        "widget_channel_id",
+        "verification_level",
+        "default_message_notifications",
+        "explicit_content_filter",
+        "roles",
+        "emojis",
+        "featrues",
+        "mfa_level",
+        "application_id",
+        "system_channel_id",
+        "system_channel_flags",
+        "rules_channel_id",
+        "vanity_url_code",
+        "description",
+        "banner",
+        "premium_tier",
+        "preferred_locale",
+        "public_updates_channel_id",
+        "nsfw_level",
+        "premium_progress_bar_enabled",
+        "safety_alerts_channel_id"
+    ]
+}

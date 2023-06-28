@@ -1,0 +1,23 @@
+{
+    "$id": "https://docs.helvetica.moe/schemas/voice-region.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "string"
+        },
+        "name": {
+            "type": "string"
+        },
+        "optimal": {
+            "type": "boolean"
+        },
+        "deprecated": {
+            "type": "boolean"
+        },
+        "custom": {
+            "type": "boolean"
+        }
+    },
+    "required": ["id", "name", "optimal", "deprecated", "custom"]
+}
