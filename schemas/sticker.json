@@ -1,64 +1,64 @@
 {
-    "$id": "https://docs.helvetica.moe/schemas/sticker.json",
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "type": "object",
-    "properties": {
-        "id": {
-            "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
-        },
-        "pack_id": {
-            "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
-        },
-        "name": {
-            "type": "string"
-        },
-        "description": {
-            "type": [
-                "null",
-                "string"
-            ]
-        },
-        "tags": {
-            "type": "string"
-        },
-        "asset": {
-            "type": "string"
-        },
-        "type": {
-            "type": "integer",
-            "enum": [
-                1,
-                2
-            ]
-        },
-        "format_type": {
-            "type": "integer",
-            "enum": [
-                1,
-                2,
-                3,
-                4
-            ]
-        },
-        "available": {
-            "type": "boolean"
-        },
-        "guild_id": {
-            "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
-        },
-        "user": {
-            "$ref": "https://docs.helvetica.moe/schemas/user.json"
-        },
-        "sort_value": {
-            "type": "integer"
-        }
-    },
-    "required": [
-        "id",
-        "name",
-        "description",
-        "tags",
-        "type",
-        "format_type"
-    ]
+   "$id": "https://docs.helvetica.moe/schemas/sticker.json",
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "type": "object",
+   "properties": {
+      "id": {
+         "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+      },
+      "pack_id": {
+         "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+      },
+      "name": {
+         "type": "string"
+      },
+      "description": {
+         "type": [
+            "null",
+            "string"
+         ]
+      },
+      "tags": {
+         "type": "string"
+      },
+      "asset": {
+         "type": "string"
+      },
+      "type": {
+         "type": "integer",
+         "enum": [
+            1,
+            2
+         ]
+      },
+      "format_type": {
+         "type": "integer",
+         "enum": [
+            1,
+            2,
+            3,
+            4
+         ]
+      },
+      "available": {
+         "type": "boolean"
+      },
+      "guild_id": {
+         "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+      },
+      "user": {
+         "$ref": "https://docs.helvetica.moe/schemas/user.json"
+      },
+      "sort_value": {
+         "type": "integer"
+      }
+   },
+   "required": [
+      "id",
+      "name",
+      "description",
+      "tags",
+      "type",
+      "format_type"
+   ]
 }

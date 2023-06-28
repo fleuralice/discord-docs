@@ -1,105 +1,105 @@
 {
-    "$id": "https://docs.helvetica.moe/schemas/user.json",
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "type": "object",
-    "properties": {
-        "id": {
-            "$ref": "/schemas/snowflake.json"
-        },
-        "username": {
-            "type": "string"
-        },
-        "discriminator": {
-            "type": "string"
-        },
-        "global_name": {
-            "type": [
-                "null",
-                "string"
-            ]
-        },
-        "avatar": {
-            "type": [
-                "null",
-                "string"
-            ]
-        },
-        "bot": {
-            "type": "boolean"
-        },
-        "system": {
-            "type": "boolean"
-        },
-        "mfa_enabled": {
-            "type": "boolean"
-        },
-        "banner": {
-            "type": [
-                "null",
-                "string"
-            ]
-        },
-        "accent_color": {
-            "type": [
-                "null",
-                "integer"
-            ]
-        },
-        "locale": {
-            "type": "string"
-        },
-        "verified": {
-            "type": "boolean"
-        },
-        "email": {
-            "type": [
-                "null",
-                "string"
-            ]
-        },
-        "flags": {
-            "$ref": "#/$defs/flags"
-        },
-        "premium_type": {
-            "type": "integer",
-            "enum": [
-                0,
-                1,
-                2,
-                3
-            ]
-        },
-        "public_flags": {
-            "$ref": "#/$defs/flags"
-        }
-    },
-    "required": [
-        "id",
-        "username",
-        "discriminator",
-        "global_name",
-        "avatar"
-    ],
-    "$defs": {
-        "flags": {
-            "type": "integer",
-            "flags": {
-                "staff": 1,
-                "partner": 2,
-                "hypesquad": 4,
-                "bug_hunter_level_1": 8,
-                "hypesquad_online_house_1": 64,
-                "hypesquad_online_house_2": 128,
-                "hypesquad_online_house_3": 256,
-                "premium_early_supporter": 512,
-                "team_pseudo_user": 1024,
-                "bug_hunter_level_2": 16384,
-                "verified_bot": 65536,
-                "verified_developer": 131072,
-                "certified_moderator": 262144,
-                "bot_http_interactions": 524288,
-                "active_developer": 4194304
-            }
-        }
-    }
+   "$id": "https://docs.helvetica.moe/schemas/user.json",
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "type": "object",
+   "properties": {
+      "id": {
+         "$ref": "/schemas/snowflake.json"
+      },
+      "username": {
+         "type": "string"
+      },
+      "discriminator": {
+         "type": "string"
+      },
+      "global_name": {
+         "type": [
+            "null",
+            "string"
+         ]
+      },
+      "avatar": {
+         "type": [
+            "null",
+            "string"
+         ]
+      },
+      "bot": {
+         "type": "boolean"
+      },
+      "system": {
+         "type": "boolean"
+      },
+      "mfa_enabled": {
+         "type": "boolean"
+      },
+      "banner": {
+         "type": [
+            "null",
+            "string"
+         ]
+      },
+      "accent_color": {
+         "type": [
+            "null",
+            "integer"
+         ]
+      },
+      "locale": {
+         "type": "string"
+      },
+      "verified": {
+         "type": "boolean"
+      },
+      "email": {
+         "type": [
+            "null",
+            "string"
+         ]
+      },
+      "flags": {
+         "$ref": "#/$defs/flags"
+      },
+      "premium_type": {
+         "type": "integer",
+         "enum": [
+            0,
+            1,
+            2,
+            3
+         ]
+      },
+      "public_flags": {
+         "$ref": "#/$defs/flags"
+      }
+   },
+   "required": [
+      "id",
+      "username",
+      "discriminator",
+      "global_name",
+      "avatar"
+   ],
+   "$defs": {
+      "flags": {
+         "type": "integer",
+         "flags": {
+            "staff": 1,
+            "partner": 2,
+            "hypesquad": 4,
+            "bug_hunter_level_1": 8,
+            "hypesquad_online_house_1": 64,
+            "hypesquad_online_house_2": 128,
+            "hypesquad_online_house_3": 256,
+            "premium_early_supporter": 512,
+            "team_pseudo_user": 1024,
+            "bug_hunter_level_2": 16384,
+            "verified_bot": 65536,
+            "verified_developer": 131072,
+            "certified_moderator": 262144,
+            "bot_http_interactions": 524288,
+            "active_developer": 4194304
+         }
+      }
+   }
 }

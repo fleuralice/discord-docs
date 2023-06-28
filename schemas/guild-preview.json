@@ -1,71 +1,71 @@
 {
-    "$id": "https://docs.helvetica.moe/schemas/guild-preview.json",
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "type": "object",
-    "properties": {
-        "id": {
-            "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
-        },
-        "name": {
-            "type": "string"
-        },
-        "icon": {
-            "type": [
-                "null",
-                "string"
-            ]
-        },
-        "splash": {
-            "type": [
-                "null",
-                "string"
-            ]
-        },
-        "discovery_splash": {
-            "type": [
-                "null",
-                "string"
-            ]
-        },
-        "emojis": {
-            "type": "array",
-            "items": {
-                "$ref": "https://docs.helvetica.moe/schemas/emoji.json"
-            }
-        },
-        "features": {
-            "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/features"
-        },
-        "approximate_member_count": {
-            "type": "integer"
-        },
-        "approximate_presence_count": {
-            "type": "integer"
-        },
-        "description": {
-            "type": [
-                "null",
-                "string"
-            ]
-        },
-        "stickers": {
-            "type": "array",
-            "items": {
-                "$ref": "https://docs.helvetica.moe/schemas/sticker.json"
-            }
-        }
-    },
-    "required": [
-        "id",
-        "name",
-        "icon",
-        "splash",
-        "discovery_splash",
-        "emojis",
-        "features",
-        "approximate_member_count",
-        "approximate_presence_count",
-        "description",
-        "stickers"
-    ]
+   "$id": "https://docs.helvetica.moe/schemas/guild-preview.json",
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "type": "object",
+   "properties": {
+      "id": {
+         "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+      },
+      "name": {
+         "type": "string"
+      },
+      "icon": {
+         "type": [
+            "null",
+            "string"
+         ]
+      },
+      "splash": {
+         "type": [
+            "null",
+            "string"
+         ]
+      },
+      "discovery_splash": {
+         "type": [
+            "null",
+            "string"
+         ]
+      },
+      "emojis": {
+         "type": "array",
+         "items": {
+            "$ref": "https://docs.helvetica.moe/schemas/emoji.json"
+         }
+      },
+      "features": {
+         "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/features"
+      },
+      "approximate_member_count": {
+         "type": "integer"
+      },
+      "approximate_presence_count": {
+         "type": "integer"
+      },
+      "description": {
+         "type": [
+            "null",
+            "string"
+         ]
+      },
+      "stickers": {
+         "type": "array",
+         "items": {
+            "$ref": "https://docs.helvetica.moe/schemas/sticker.json"
+         }
+      }
+   },
+   "required": [
+      "id",
+      "name",
+      "icon",
+      "splash",
+      "discovery_splash",
+      "emojis",
+      "features",
+      "approximate_member_count",
+      "approximate_presence_count",
+      "description",
+      "stickers"
+   ]
 }

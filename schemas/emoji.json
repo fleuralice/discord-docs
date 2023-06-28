@@ -1,48 +1,48 @@
 {
-    "$id": "https://docs.helvetica.moe/schemas/emoji.json",
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "type": "object",
-    "properties": {
-        "id": {
-            "oneOf": [
-                {
-                    "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
-                },
-                {
-                    "type": "null"
-                }
-            ]
-        },
-        "name": {
-            "type": [
-                "string",
-                "null"
-            ]
-        },
-        "roles": {
-            "type": "array",
-            "items": {
-                "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+   "$id": "https://docs.helvetica.moe/schemas/emoji.json",
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "type": "object",
+   "properties": {
+      "id": {
+         "oneOf": [
+            {
+               "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+            },
+            {
+               "type": "null"
             }
-        },
-        "user": {
-            "$ref": "https://docs.helvetica.moe/schemas/user.json"
-        },
-        "require_colons": {
-            "type": "boolean"
-        },
-        "managed": {
-            "type": "boolean"
-        },
-        "animated": {
-            "type": "boolean"
-        },
-        "available": {
-            "type": "boolean"
-        }
-    },
-    "required": [
-        "id",
-        "name"
-    ]
+         ]
+      },
+      "name": {
+         "type": [
+            "string",
+            "null"
+         ]
+      },
+      "roles": {
+         "type": "array",
+         "items": {
+            "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+         }
+      },
+      "user": {
+         "$ref": "https://docs.helvetica.moe/schemas/user.json"
+      },
+      "require_colons": {
+         "type": "boolean"
+      },
+      "managed": {
+         "type": "boolean"
+      },
+      "animated": {
+         "type": "boolean"
+      },
+      "available": {
+         "type": "boolean"
+      }
+   },
+   "required": [
+      "id",
+      "name"
+   ]
 }

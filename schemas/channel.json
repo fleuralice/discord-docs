@@ -1,350 +1,350 @@
 {
-    "$id": "https://docs.helvetica.moe/schemas/channel.json",
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "type": "object",
-    "properties": {
-        "id": {
-            "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
-        },
-        "type": {
-            "type": "integer",
-            "enum": [
-                0,
-                1,
-                2,
-                3,
-                4,
-                5,
-                10,
-                11,
-                12,
-                13,
-                14,
-                15
-            ]
-        },
-        "guild_id": {
-            "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
-        },
-        "position": {
-            "type": "integer"
-        },
-        "permission_overwrites": {
-            "type": "array",
-            "items": {
-                "type": "object",
-                "properties": {
-                    "id": {
-                        "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
-                    },
-                    "type": {
-                        "type": "integer",
-                        "enum": [
-                            0,
-                            1
-                        ]
-                    },
-                    "allow": {
-                        "$ref": "https://docs.helvetica.moe/schemas/permissions.json"
-                    },
-                    "deny": {
-                        "$ref": "https://docs.helvetica.moe/schemas/permissions.json"
-                    }
-                },
-                "required": [
-                    "id",
-                    "type",
-                    "allow",
-                    "deny"
-                ]
-            }
-        },
-        "name": {
-            "type": [
-                "null",
-                "string"
-            ]
-        },
-        "topic": {
-            "type": [
-                "null",
-                "string"
-            ]
-        },
-        "nsfw": {
-            "type": "boolean"
-        },
-        "last_message_id": {
-            "oneOf": [
-                {
-                    "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
-                },
-                {
-                    "type": "null"
-                }
-            ]
-        },
-        "bitrate": {
-            "type": "integer"
-        },
-        "user_limit": {
-            "type": "integer"
-        },
-        "rate_limit_per_user": {
-            "type": "integer"
-        },
-        "recipients": {
-            "type": "array",
-            "items": {
-                "$ref": "https://docs.helvetica.moe/schemas/user.json"
-            }
-        },
-        "icon": {
-            "type": [
-                "null",
-                "string"
-            ]
-        },
-        "owner_id": {
-            "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
-        },
-        "application_id": {
-            "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
-        },
-        "managed": {
-            "type": "boolean"
-        },
-        "parent_id": {
-            "oneOf": [
-                {
-                    "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
-                },
-                {
-                    "type": "null"
-                }
-            ]
-        },
-        "last_pin_timestamp": {
-            "type": [
-                "string",
-                "null"
-            ]
-        },
-        "rtc_region": {
-            "type": [
-                "string",
-                "null"
-            ]
-        },
-        "video_quality_mode": {
-            "type": "integer",
-            "enum": [
-                1,
-                2
-            ]
-        },
-        "message_count": {
-            "type": "integer"
-        },
-        "member_count": {
-            "type": "integer"
-        },
-        "thread_metadata": {
+   "$id": "https://docs.helvetica.moe/schemas/channel.json",
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "type": "object",
+   "properties": {
+      "id": {
+         "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+      },
+      "type": {
+         "type": "integer",
+         "enum": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+         ]
+      },
+      "guild_id": {
+         "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+      },
+      "position": {
+         "type": "integer"
+      },
+      "permission_overwrites": {
+         "type": "array",
+         "items": {
             "type": "object",
             "properties": {
-                "archived": {
-                    "type": "boolean"
-                },
-                "auto_archive_duration": {
-                    "type": "integer",
-                    "enum": [
-                        60,
-                        1440,
-                        4320,
-                        10080
-                    ]
-                },
-                "archive_timestamp": {
-                    "type": "string"
-                },
-                "locked": {
-                    "type": "boolean"
-                },
-                "invitable": {
-                    "type": "boolean"
-                },
-                "create_timestamp": {
-                    "type": "string"
-                }
+               "id": {
+                  "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+               },
+               "type": {
+                  "type": "integer",
+                  "enum": [
+                     0,
+                     1
+                  ]
+               },
+               "allow": {
+                  "$ref": "https://docs.helvetica.moe/schemas/permissions.json"
+               },
+               "deny": {
+                  "$ref": "https://docs.helvetica.moe/schemas/permissions.json"
+               }
             },
             "required": [
-                "archived",
-                "auto_archive_duration",
-                "archive_timestamp",
-                "locked"
+               "id",
+               "type",
+               "allow",
+               "deny"
             ]
-        },
-        "member": {
-            "type": "object",
-            "properties": {
-                "id": {
-                    "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
-                },
-                "user_id": {
-                    "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
-                },
-                "join_timestamp": {
-                    "type": "string"
-                },
-                "flags": {
-                    "type": "integer"
-                },
-                "member": {
-                    "$ref": "https://docs.helvetica.moe/schemas/member.json"
-                }
+         }
+      },
+      "name": {
+         "type": [
+            "null",
+            "string"
+         ]
+      },
+      "topic": {
+         "type": [
+            "null",
+            "string"
+         ]
+      },
+      "nsfw": {
+         "type": "boolean"
+      },
+      "last_message_id": {
+         "oneOf": [
+            {
+               "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
             },
-            "required": [
-                "join_timestamp",
-                "flags"
-            ]
-        },
-        "default_auto_archive_duration": {
-            "type": "integer",
-            "enum": [
-                60,
-                1440,
-                4320,
-                10080
-            ]
-        },
-        "permissions": {
-            "type": "string"
-        },
-        "flags": {
-            "type": "integer",
+            {
+               "type": "null"
+            }
+         ]
+      },
+      "bitrate": {
+         "type": "integer"
+      },
+      "user_limit": {
+         "type": "integer"
+      },
+      "rate_limit_per_user": {
+         "type": "integer"
+      },
+      "recipients": {
+         "type": "array",
+         "items": {
+            "$ref": "https://docs.helvetica.moe/schemas/user.json"
+         }
+      },
+      "icon": {
+         "type": [
+            "null",
+            "string"
+         ]
+      },
+      "owner_id": {
+         "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+      },
+      "application_id": {
+         "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+      },
+      "managed": {
+         "type": "boolean"
+      },
+      "parent_id": {
+         "oneOf": [
+            {
+               "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+            },
+            {
+               "type": "null"
+            }
+         ]
+      },
+      "last_pin_timestamp": {
+         "type": [
+            "string",
+            "null"
+         ]
+      },
+      "rtc_region": {
+         "type": [
+            "string",
+            "null"
+         ]
+      },
+      "video_quality_mode": {
+         "type": "integer",
+         "enum": [
+            1,
+            2
+         ]
+      },
+      "message_count": {
+         "type": "integer"
+      },
+      "member_count": {
+         "type": "integer"
+      },
+      "thread_metadata": {
+         "type": "object",
+         "properties": {
+            "archived": {
+               "type": "boolean"
+            },
+            "auto_archive_duration": {
+               "type": "integer",
+               "enum": [
+                  60,
+                  1440,
+                  4320,
+                  10080
+               ]
+            },
+            "archive_timestamp": {
+               "type": "string"
+            },
+            "locked": {
+               "type": "boolean"
+            },
+            "invitable": {
+               "type": "boolean"
+            },
+            "create_timestamp": {
+               "type": "string"
+            }
+         },
+         "required": [
+            "archived",
+            "auto_archive_duration",
+            "archive_timestamp",
+            "locked"
+         ]
+      },
+      "member": {
+         "type": "object",
+         "properties": {
+            "id": {
+               "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+            },
+            "user_id": {
+               "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+            },
+            "join_timestamp": {
+               "type": "string"
+            },
             "flags": {
-                "pinned": 2,
-                "require_tag": 16
+               "type": "integer"
+            },
+            "member": {
+               "$ref": "https://docs.helvetica.moe/schemas/member.json"
             }
-        },
-        "total_message_sent": {
-            "type": "integer"
-        },
-        "available_tags": {
-            "type": "array",
-            "items": {
-                "type": "object",
-                "properties": {
-                    "id": {
-                        "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
-                    },
-                    "name": {
-                        "type": "string"
-                    },
-                    "moderated": {
-                        "type": "boolean"
-                    }
-                },
-                "oneOf": [
-                    {
-                        "properties": {
-                            "emoji_id": {
-                                "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
-                            },
-                            "emoji_name": {
-                                "type": "null"
-                            }
-                        }
-                    },
-                    {
-                        "properties": {
-                            "emoji_id": {
-                                "type": "null"
-                            },
-                            "emoji_name": {
-                                "type": "string"
-                            }
-                        }
-                    },
-                    {
-                        "properties": {
-                            "emoji_id": {
-                                "type": "null"
-                            },
-                            "emoji_name": {
-                                "type": "null"
-                            }
-                        }
-                    }
-                ],
-                "required": [
-                    "id",
-                    "name",
-                    "moderated",
-                    "emoji_id",
-                    "emoji_name"
-                ]
-            }
-        },
-        "applied_tags": {
-            "type": "array",
-            "items": {
-                "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
-            }
-        },
-        "default_reaction_emoji": {
-            "type": [
-                "null",
-                "object"
-            ],
+         },
+         "required": [
+            "join_timestamp",
+            "flags"
+         ]
+      },
+      "default_auto_archive_duration": {
+         "type": "integer",
+         "enum": [
+            60,
+            1440,
+            4320,
+            10080
+         ]
+      },
+      "permissions": {
+         "type": "string"
+      },
+      "flags": {
+         "type": "integer",
+         "flags": {
+            "pinned": 2,
+            "require_tag": 16
+         }
+      },
+      "total_message_sent": {
+         "type": "integer"
+      },
+      "available_tags": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "id": {
+                  "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+               },
+               "name": {
+                  "type": "string"
+               },
+               "moderated": {
+                  "type": "boolean"
+               }
+            },
             "oneOf": [
-                {
-                    "properties": {
-                        "emoji_id": {
-                            "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
-                        }
-                    },
-                    "required": [
-                        "emoji_id"
-                    ]
-                },
-                {
-                    "properties": {
-                        "emoji_name": {
-                            "type": "string"
-                        }
-                    },
-                    "required": [
-                        "emoji_name"
-                    ]
-                }
-            ]
-        },
-        "default_thread_rate_limit_per_user": {
-            "type": "integer"
-        },
-        "default_sort_order": {
-            "type": [
-                "integer",
-                "null"
+               {
+                  "properties": {
+                     "emoji_id": {
+                        "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+                     },
+                     "emoji_name": {
+                        "type": "null"
+                     }
+                  }
+               },
+               {
+                  "properties": {
+                     "emoji_id": {
+                        "type": "null"
+                     },
+                     "emoji_name": {
+                        "type": "string"
+                     }
+                  }
+               },
+               {
+                  "properties": {
+                     "emoji_id": {
+                        "type": "null"
+                     },
+                     "emoji_name": {
+                        "type": "null"
+                     }
+                  }
+               }
             ],
-            "enum": [
-                0,
-                1,
-                null
+            "required": [
+               "id",
+               "name",
+               "moderated",
+               "emoji_id",
+               "emoji_name"
             ]
-        },
-        "default_forum_layout": {
-            "type": "integer",
-            "enum": [
-                0,
-                1,
-                2
-            ]
-        }
-    },
-    "required": [
-        "id",
-        "type"
-    ]
+         }
+      },
+      "applied_tags": {
+         "type": "array",
+         "items": {
+            "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+         }
+      },
+      "default_reaction_emoji": {
+         "type": [
+            "null",
+            "object"
+         ],
+         "oneOf": [
+            {
+               "properties": {
+                  "emoji_id": {
+                     "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+                  }
+               },
+               "required": [
+                  "emoji_id"
+               ]
+            },
+            {
+               "properties": {
+                  "emoji_name": {
+                     "type": "string"
+                  }
+               },
+               "required": [
+                  "emoji_name"
+               ]
+            }
+         ]
+      },
+      "default_thread_rate_limit_per_user": {
+         "type": "integer"
+      },
+      "default_sort_order": {
+         "type": [
+            "integer",
+            "null"
+         ],
+         "enum": [
+            0,
+            1,
+            null
+         ]
+      },
+      "default_forum_layout": {
+         "type": "integer",
+         "enum": [
+            0,
+            1,
+            2
+         ]
+      }
+   },
+   "required": [
+      "id",
+      "type"
+   ]
 }

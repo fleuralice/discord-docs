@@ -1,85 +1,85 @@
 {
-    "$id": "https://docs.helvetica.moe/schemas/webhook.json",
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "type": "object",
-    "properties": {
-        "id": {
-            "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
-        },
-        "type": {
-            "type": "integer",
-            "enum": [
-                1,
-                2,
-                3
-            ]
-        },
-        "guild_id": {
-            "oneOf": [
-                {
-                    "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
-                },
-                {
-                    "type": "null"
-                }
-            ]
-        },
-        "channel_id": {
-            "oneOf": [
-                {
-                    "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
-                },
-                {
-                    "type": "null"
-                }
-            ]
-        },
-        "user": {
-            "$ref": "https://docs.helvetica.moe/schemas/user.json"
-        },
-        "name": {
-            "type": [
-                "null",
-                "string"
-            ]
-        },
-        "avatar": {
-            "type": [
-                "null",
-                "string"
-            ]
-        },
-        "token": {
-            "type": "string"
-        },
-        "application_id": {
-            "oneOf": [
-                {
-                    "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
-                },
-                {
-                    "type": "null"
-                }
-            ]
-        },
-        "source_guild": {
-            "$ref": "https://docs.helvetica.moe/schemas/guild.json",
-            "required": []
-        },
-        "source_channel": {
-            "$ref": "https://docs.helvetica.moe/schemas/channel.json",
-            "required": []
-        },
-        "url": {
-            "type": "string"
-        }
-    },
-    "required": [
-        "id",
-        "type",
-        "channel_id",
-        "name",
-        "avatar",
-        "application_id"
-    ]
+   "$id": "https://docs.helvetica.moe/schemas/webhook.json",
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "type": "object",
+   "properties": {
+      "id": {
+         "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+      },
+      "type": {
+         "type": "integer",
+         "enum": [
+            1,
+            2,
+            3
+         ]
+      },
+      "guild_id": {
+         "oneOf": [
+            {
+               "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+            },
+            {
+               "type": "null"
+            }
+         ]
+      },
+      "channel_id": {
+         "oneOf": [
+            {
+               "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+            },
+            {
+               "type": "null"
+            }
+         ]
+      },
+      "user": {
+         "$ref": "https://docs.helvetica.moe/schemas/user.json"
+      },
+      "name": {
+         "type": [
+            "null",
+            "string"
+         ]
+      },
+      "avatar": {
+         "type": [
+            "null",
+            "string"
+         ]
+      },
+      "token": {
+         "type": "string"
+      },
+      "application_id": {
+         "oneOf": [
+            {
+               "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+            },
+            {
+               "type": "null"
+            }
+         ]
+      },
+      "source_guild": {
+         "$ref": "https://docs.helvetica.moe/schemas/guild.json",
+         "required": []
+      },
+      "source_channel": {
+         "$ref": "https://docs.helvetica.moe/schemas/channel.json",
+         "required": []
+      },
+      "url": {
+         "type": "string"
+      }
+   },
+   "required": [
+      "id",
+      "type",
+      "channel_id",
+      "name",
+      "avatar",
+      "application_id"
+   ]
 }

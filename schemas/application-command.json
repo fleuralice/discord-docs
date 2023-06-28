@@ -1,298 +1,298 @@
 {
-    "$id": "https://docs.helvetica.moe/schemas/application-command.json",
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "type": "object",
-    "allOf": [
-        {
-            "properties": {
-                "id": {
-                    "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
-                },
-                "application_id": {
-                    "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
-                },
-                "guild_id": {
-                    "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
-                },
-                "name": {
-                    "type": "string"
-                },
-                "name_localizations": {
-                    "propertyNames": {
-                        "$ref": "https://docs.helvetica.moe/schemas/locales.json"
-                    }
-                },
-                "description": {
-                    "type": "string"
-                },
-                "description_localizations": {
-                    "propertyNames": {
-                        "$ref": "https://docs.helvetica.moe/schemas/locales.json"
-                    }
-                },
-                "default_member_permissions": {
-                    "oneOf": [
-                        {
-                            "$ref": "https://docs.helvetica.moe/schemas/permissions.json"
-                        },
-                        {
-                            "type": "null"
-                        }
-                    ]
-                },
-                "dm_permission": {
-                    "type": "boolean"
-                },
-                "default_permission": {
-                    "type": [
-                        "null",
-                        "boolean"
-                    ]
-                },
-                "nsfw": {
-                    "type": "boolean"
-                },
-                "version": {
-                    "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
-                }
+   "$id": "https://docs.helvetica.moe/schemas/application-command.json",
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "type": "object",
+   "allOf": [
+      {
+         "properties": {
+            "id": {
+               "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
             },
-            "required": [
-                "id",
-                "application_id",
-                "name",
-                "description",
-                "default_member_permissions",
-                "version"
-            ]
-        },
-        {
-            "oneOf": [
-                {
-                    "properties": {
-                        "type": {
-                            "type": "integer",
-                            "enum": [
-                                2,
-                                3
-                            ]
-                        }
-                    },
-                    "required": [
-                        "type"
-                    ]
-                },
-                {
-                    "properties": {
-                        "type": {
-                            "type": "integer",
-                            "enum": [
-                                1
-                            ]
-                        },
-                        "options": {
-                            "type": "array",
-                            "items": {
-                                "type": "object",
-                                "allOf": [
-                                    {
-                                        "properties": {
-                                            "name": {
-                                                "type": "string"
-                                            },
-                                            "name_localizations": {
-                                                "propertyNames": {
-                                                    "$ref": "https://docs.helvetica.moe/schemas/locales.json"
-                                                }
-                                            },
-                                            "description": {
-                                                "type": "string"
-                                            },
-                                            "description_localizations": {
-                                                "propertyNames": {
-                                                    "$ref": "https://docs.helvetica.moe/schemas/locales.json"
-                                                }
-                                            },
-                                            "required": {
-                                                "type": "boolean"
-                                            }
-                                        },
-                                        "required": [
-                                            "type",
-                                            "name",
-                                            "description"
-                                        ]
-                                    },
-                                    {
-                                        "oneOf": [
-                                            {
-                                                "properties": {
-                                                    "type": {
-                                                        "type": "integer",
-                                                        "enum": [
-                                                            1,
-                                                            2
-                                                        ]
-                                                    },
-                                                    "options": {
-                                                        "type": "array",
-                                                        "items": {
-                                                            "$ref": "https://docs.helvetica.moe/schemas/application-command.json#/allOf/1/oneOf/1/properties/options"
-                                                        }
-                                                    }
-                                                }
-                                            },
-                                            {
-                                                "properties": {
-                                                    "type": {
-                                                        "type": "integer",
-                                                        "enum": [
-                                                            3
-                                                        ]
-                                                    },
-                                                    "choices": {
-                                                        "type": "array",
-                                                        "items": {
-                                                            "type": "object",
-                                                            "properties": {
-                                                                "name": {
-                                                                    "type": "string"
-                                                                },
-                                                                "name_localizations": {
-                                                                    "propertyNames": {
-                                                                        "$ref": "https://docs.helvetica.moe/schemas/locales.json"
-                                                                    }
-                                                                },
-                                                                "value": {
-                                                                    "type": "string"
-                                                                }
-                                                            }
-                                                        }
-                                                    },
-                                                    "min_length": {
-                                                        "type": "integer"
-                                                    },
-                                                    "max_length": {
-                                                        "type": "integer"
-                                                    },
-                                                    "autocomplete": {
-                                                        "type": "boolean"
-                                                    }
-                                                }
-                                            },
-                                            {
-                                                "properties": {
-                                                    "type": {
-                                                        "type": "integer",
-                                                        "enum": [
-                                                            4
-                                                        ]
-                                                    },
-                                                    "choices": {
-                                                        "type": "array",
-                                                        "items": {
-                                                            "type": "object",
-                                                            "properties": {
-                                                                "name": {
-                                                                    "type": "string"
-                                                                },
-                                                                "name_localizations": {
-                                                                    "propertyNames": {
-                                                                        "$ref": "https://docs.helvetica.moe/schemas/locales.json"
-                                                                    }
-                                                                },
-                                                                "value": {
-                                                                    "type": "integer"
-                                                                }
-                                                            }
-                                                        }
-                                                    },
-                                                    "min_value": {
-                                                        "type": "integer"
-                                                    },
-                                                    "max_value": {
-                                                        "type": "integer"
-                                                    },
-                                                    "autocomplete": {
-                                                        "type": "boolean"
-                                                    }
-                                                }
-                                            },
-                                            {
-                                                "properties": {
-                                                    "type": {
-                                                        "type": "integer",
-                                                        "enum": [
-                                                            5,
-                                                            6,
-                                                            8,
-                                                            9,
-                                                            11
-                                                        ]
-                                                    }
-                                                }
-                                            },
-                                            {
-                                                "properties": {
-                                                    "type": {
-                                                        "type": "integer",
-                                                        "enum": [
-                                                            7
-                                                        ]
-                                                    },
-                                                    "channel_types": {
-                                                        "type": "array",
-                                                        "items": {
-                                                            "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/type"
-                                                        }
-                                                    }
-                                                }
-                                            },
-                                            {
-                                                "properties": {
-                                                    "type": {
-                                                        "type": "integer",
-                                                        "enum": [
-                                                            10
-                                                        ]
-                                                    },
-                                                    "choices": {
-                                                        "type": "array",
-                                                        "items": {
-                                                            "type": "object",
-                                                            "properties": {
-                                                                "name": {
-                                                                    "type": "string"
-                                                                },
-                                                                "name_localizations": {
-                                                                    "propertyNames": {
-                                                                        "$ref": "https://docs.helvetica.moe/schemas/locales.json"
-                                                                    }
-                                                                },
-                                                                "value": {
-                                                                    "type": "number"
-                                                                }
-                                                            }
-                                                        }
-                                                    },
-                                                    "min_value": {
-                                                        "type": "number"
-                                                    },
-                                                    "max_value": {
-                                                        "type": "number"
-                                                    },
-                                                    "autocomplete": {
-                                                        "type": "boolean"
-                                                    }
-                                                }
-                                            }
-                                        ]
+            "application_id": {
+               "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+            },
+            "guild_id": {
+               "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+            },
+            "name": {
+               "type": "string"
+            },
+            "name_localizations": {
+               "propertyNames": {
+                  "$ref": "https://docs.helvetica.moe/schemas/locales.json"
+               }
+            },
+            "description": {
+               "type": "string"
+            },
+            "description_localizations": {
+               "propertyNames": {
+                  "$ref": "https://docs.helvetica.moe/schemas/locales.json"
+               }
+            },
+            "default_member_permissions": {
+               "oneOf": [
+                  {
+                     "$ref": "https://docs.helvetica.moe/schemas/permissions.json"
+                  },
+                  {
+                     "type": "null"
+                  }
+               ]
+            },
+            "dm_permission": {
+               "type": "boolean"
+            },
+            "default_permission": {
+               "type": [
+                  "null",
+                  "boolean"
+               ]
+            },
+            "nsfw": {
+               "type": "boolean"
+            },
+            "version": {
+               "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+            }
+         },
+         "required": [
+            "id",
+            "application_id",
+            "name",
+            "description",
+            "default_member_permissions",
+            "version"
+         ]
+      },
+      {
+         "oneOf": [
+            {
+               "properties": {
+                  "type": {
+                     "type": "integer",
+                     "enum": [
+                        2,
+                        3
+                     ]
+                  }
+               },
+               "required": [
+                  "type"
+               ]
+            },
+            {
+               "properties": {
+                  "type": {
+                     "type": "integer",
+                     "enum": [
+                        1
+                     ]
+                  },
+                  "options": {
+                     "type": "array",
+                     "items": {
+                        "type": "object",
+                        "allOf": [
+                           {
+                              "properties": {
+                                 "name": {
+                                    "type": "string"
+                                 },
+                                 "name_localizations": {
+                                    "propertyNames": {
+                                       "$ref": "https://docs.helvetica.moe/schemas/locales.json"
                                     }
-                                ]
-                            }
-                        }
-                    }
-                }
-            ]
-        }
-    ]
+                                 },
+                                 "description": {
+                                    "type": "string"
+                                 },
+                                 "description_localizations": {
+                                    "propertyNames": {
+                                       "$ref": "https://docs.helvetica.moe/schemas/locales.json"
+                                    }
+                                 },
+                                 "required": {
+                                    "type": "boolean"
+                                 }
+                              },
+                              "required": [
+                                 "type",
+                                 "name",
+                                 "description"
+                              ]
+                           },
+                           {
+                              "oneOf": [
+                                 {
+                                    "properties": {
+                                       "type": {
+                                          "type": "integer",
+                                          "enum": [
+                                             1,
+                                             2
+                                          ]
+                                       },
+                                       "options": {
+                                          "type": "array",
+                                          "items": {
+                                             "$ref": "https://docs.helvetica.moe/schemas/application-command.json#/allOf/1/oneOf/1/properties/options"
+                                          }
+                                       }
+                                    }
+                                 },
+                                 {
+                                    "properties": {
+                                       "type": {
+                                          "type": "integer",
+                                          "enum": [
+                                             3
+                                          ]
+                                       },
+                                       "choices": {
+                                          "type": "array",
+                                          "items": {
+                                             "type": "object",
+                                             "properties": {
+                                                "name": {
+                                                   "type": "string"
+                                                },
+                                                "name_localizations": {
+                                                   "propertyNames": {
+                                                      "$ref": "https://docs.helvetica.moe/schemas/locales.json"
+                                                   }
+                                                },
+                                                "value": {
+                                                   "type": "string"
+                                                }
+                                             }
+                                          }
+                                       },
+                                       "min_length": {
+                                          "type": "integer"
+                                       },
+                                       "max_length": {
+                                          "type": "integer"
+                                       },
+                                       "autocomplete": {
+                                          "type": "boolean"
+                                       }
+                                    }
+                                 },
+                                 {
+                                    "properties": {
+                                       "type": {
+                                          "type": "integer",
+                                          "enum": [
+                                             4
+                                          ]
+                                       },
+                                       "choices": {
+                                          "type": "array",
+                                          "items": {
+                                             "type": "object",
+                                             "properties": {
+                                                "name": {
+                                                   "type": "string"
+                                                },
+                                                "name_localizations": {
+                                                   "propertyNames": {
+                                                      "$ref": "https://docs.helvetica.moe/schemas/locales.json"
+                                                   }
+                                                },
+                                                "value": {
+                                                   "type": "integer"
+                                                }
+                                             }
+                                          }
+                                       },
+                                       "min_value": {
+                                          "type": "integer"
+                                       },
+                                       "max_value": {
+                                          "type": "integer"
+                                       },
+                                       "autocomplete": {
+                                          "type": "boolean"
+                                       }
+                                    }
+                                 },
+                                 {
+                                    "properties": {
+                                       "type": {
+                                          "type": "integer",
+                                          "enum": [
+                                             5,
+                                             6,
+                                             8,
+                                             9,
+                                             11
+                                          ]
+                                       }
+                                    }
+                                 },
+                                 {
+                                    "properties": {
+                                       "type": {
+                                          "type": "integer",
+                                          "enum": [
+                                             7
+                                          ]
+                                       },
+                                       "channel_types": {
+                                          "type": "array",
+                                          "items": {
+                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/type"
+                                          }
+                                       }
+                                    }
+                                 },
+                                 {
+                                    "properties": {
+                                       "type": {
+                                          "type": "integer",
+                                          "enum": [
+                                             10
+                                          ]
+                                       },
+                                       "choices": {
+                                          "type": "array",
+                                          "items": {
+                                             "type": "object",
+                                             "properties": {
+                                                "name": {
+                                                   "type": "string"
+                                                },
+                                                "name_localizations": {
+                                                   "propertyNames": {
+                                                      "$ref": "https://docs.helvetica.moe/schemas/locales.json"
+                                                   }
+                                                },
+                                                "value": {
+                                                   "type": "number"
+                                                }
+                                             }
+                                          }
+                                       },
+                                       "min_value": {
+                                          "type": "number"
+                                       },
+                                       "max_value": {
+                                          "type": "number"
+                                       },
+                                       "autocomplete": {
+                                          "type": "boolean"
+                                       }
+                                    }
+                                 }
+                              ]
+                           }
+                        ]
+                     }
+                  }
+               }
+            }
+         ]
+      }
+   ]
 }

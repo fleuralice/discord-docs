@@ -1,107 +1,107 @@
 {
-    "$id": "https://docs.helvetica.moe/schemas/guild-onboarding.json",
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "type": "object",
-    "properties": {
-        "guild_id": {
-            "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
-        },
-        "prompts": {
-            "type": "array",
-            "items": {
-                "type": "object",
-                "properties": {
-                    "id": {
-                        "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
-                    },
-                    "type": {
-                        "type": "integer",
-                        "enum": [
-                            0,
-                            1
-                        ]
-                    },
-                    "options": {
-                        "type": "array",
-                        "items": {
-                            "type": "object",
-                            "properties": {
-                                "id": {
-                                    "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
-                                },
-                                "channel_ids": {
-                                    "type": "array",
-                                    "items": {
-                                        "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
-                                    }
-                                },
-                                "role_ids": {
-                                    "type": "array",
-                                    "items": {
-                                        "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
-                                    }
-                                },
-                                "emoji": {
-                                    "$ref": "https://docs.helvetica.moe/schemas/emoji.json"
-                                },
-                                "title": {
-                                    "type": "string"
-                                },
-                                "description": {
-                                    "type": [
-                                        "null",
-                                        "string"
-                                    ]
-                                }
-                            },
-                            "required": [
-                                "id",
-                                "channel_ids",
-                                "role_ids",
-                                "emoji",
-                                "title",
-                                "description"
-                            ]
+   "$id": "https://docs.helvetica.moe/schemas/guild-onboarding.json",
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "type": "object",
+   "properties": {
+      "guild_id": {
+         "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+      },
+      "prompts": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "id": {
+                  "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+               },
+               "type": {
+                  "type": "integer",
+                  "enum": [
+                     0,
+                     1
+                  ]
+               },
+               "options": {
+                  "type": "array",
+                  "items": {
+                     "type": "object",
+                     "properties": {
+                        "id": {
+                           "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+                        },
+                        "channel_ids": {
+                           "type": "array",
+                           "items": {
+                              "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+                           }
+                        },
+                        "role_ids": {
+                           "type": "array",
+                           "items": {
+                              "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+                           }
+                        },
+                        "emoji": {
+                           "$ref": "https://docs.helvetica.moe/schemas/emoji.json"
+                        },
+                        "title": {
+                           "type": "string"
+                        },
+                        "description": {
+                           "type": [
+                              "null",
+                              "string"
+                           ]
                         }
-                    },
-                    "title": {
-                        "type": "string"
-                    },
-                    "single_select": {
-                        "type": "boolean"
-                    },
-                    "required": {
-                        "type": "boolean"
-                    },
-                    "in_onboarding": {
-                        "type": "boolean"
-                    }
-                },
-                "required": [
-                    "id",
-                    "type",
-                    "options",
-                    "title",
-                    "single_select",
-                    "required",
-                    "in_onboarding"
-                ]
-            }
-        },
-        "default_channel_ids": {
-            "type": "array",
-            "items": {
-                "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
-            }
-        },
-        "enabled": {
-            "type": "boolean"
-        }
-    },
-    "required": [
-        "guild_id",
-        "prompts",
-        "default_channel_ids",
-        "enabled"
-    ]
+                     },
+                     "required": [
+                        "id",
+                        "channel_ids",
+                        "role_ids",
+                        "emoji",
+                        "title",
+                        "description"
+                     ]
+                  }
+               },
+               "title": {
+                  "type": "string"
+               },
+               "single_select": {
+                  "type": "boolean"
+               },
+               "required": {
+                  "type": "boolean"
+               },
+               "in_onboarding": {
+                  "type": "boolean"
+               }
+            },
+            "required": [
+               "id",
+               "type",
+               "options",
+               "title",
+               "single_select",
+               "required",
+               "in_onboarding"
+            ]
+         }
+      },
+      "default_channel_ids": {
+         "type": "array",
+         "items": {
+            "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+         }
+      },
+      "enabled": {
+         "type": "boolean"
+      }
+   },
+   "required": [
+      "guild_id",
+      "prompts",
+      "default_channel_ids",
+      "enabled"
+   ]
 }

@@ -1,48 +1,48 @@
 {
-    "$id": "https://docs.helvetica.moe/schemas/stage-instance.json",
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "type": "object",
-    "properties": {
-        "id": {
-            "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
-        },
-        "guild_id": {
-            "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
-        },
-        "channel_id": {
-            "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
-        },
-        "topic": {
-            "type": "string"
-        },
-        "privacy_level": {
-            "type": "integer",
-            "enum": [
-                1,
-                2
-            ]
-        },
-        "discoverable_disabled": {
-            "type": "boolean"
-        },
-        "guild_scheduled_event_id": {
-            "oneOf": [
-                {
-                    "$ref": "https://docs.helvetica.moe/schemas/guild-scheduled-event.json"
-                },
-                {
-                    "type": "null"
-                }
-            ]
-        }
-    },
-    "required": [
-        "id",
-        "guild_id",
-        "channel_id",
-        "topic",
-        "privacy_level",
-        "discoverable_disabled",
-        "guild_scheduled_event_id"
-    ]
+   "$id": "https://docs.helvetica.moe/schemas/stage-instance.json",
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "type": "object",
+   "properties": {
+      "id": {
+         "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+      },
+      "guild_id": {
+         "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+      },
+      "channel_id": {
+         "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+      },
+      "topic": {
+         "type": "string"
+      },
+      "privacy_level": {
+         "type": "integer",
+         "enum": [
+            1,
+            2
+         ]
+      },
+      "discoverable_disabled": {
+         "type": "boolean"
+      },
+      "guild_scheduled_event_id": {
+         "oneOf": [
+            {
+               "$ref": "https://docs.helvetica.moe/schemas/guild-scheduled-event.json"
+            },
+            {
+               "type": "null"
+            }
+         ]
+      }
+   },
+   "required": [
+      "id",
+      "guild_id",
+      "channel_id",
+      "topic",
+      "privacy_level",
+      "discoverable_disabled",
+      "guild_scheduled_event_id"
+   ]
 }

@@ -1,529 +1,529 @@
 {
-    "$id": "https://docs.helvetica.moe/schemas/message.json",
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "type": "object",
-    "properties": {
-        "id": {
-            "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
-        },
-        "channel_id": {
-            "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
-        },
-        "author": {
+   "$id": "https://docs.helvetica.moe/schemas/message.json",
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "type": "object",
+   "properties": {
+      "id": {
+         "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+      },
+      "channel_id": {
+         "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+      },
+      "author": {
+         "$ref": "https://docs.helvetica.moe/schemas/user.json"
+      },
+      "content": {
+         "type": "string"
+      },
+      "timestamp": {
+         "type": "string"
+      },
+      "edited_timestamp": {
+         "type": [
+            "string",
+            "null"
+         ]
+      },
+      "tts": {
+         "type": "boolean"
+      },
+      "mention_everyone": {
+         "type": "boolean"
+      },
+      "mentions": {
+         "type": "array",
+         "items": {
             "$ref": "https://docs.helvetica.moe/schemas/user.json"
-        },
-        "content": {
-            "type": "string"
-        },
-        "timestamp": {
-            "type": "string"
-        },
-        "edited_timestamp": {
-            "type": [
-                "string",
-                "null"
-            ]
-        },
-        "tts": {
-            "type": "boolean"
-        },
-        "mention_everyone": {
-            "type": "boolean"
-        },
-        "mentions": {
-            "type": "array",
-            "items": {
-                "$ref": "https://docs.helvetica.moe/schemas/user.json"
-            }
-        },
-        "mention_roles": {
-            "type": "array",
-            "items": {
-                "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
-            }
-        },
-        "mention_channels": {
-            "type": "array",
-            "items": {
-                "type": "object",
-                "properties": {
-                    "id": {
-                        "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
-                    },
-                    "guild_id": {
-                        "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
-                    },
-                    "type": {
-                        "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/type"
-                    },
-                    "name": {
-                        "type": "string"
-                    }
-                },
-                "required": [
-                    "id",
-                    "guild_id",
-                    "type",
-                    "name"
-                ]
-            }
-        },
-        "attachments": {
-            "type": "array",
-            "items": {
-                "type": "object",
-                "properties": {
-                    "id": {
-                        "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
-                    },
-                    "filename": {
-                        "type": "string"
-                    },
-                    "description": {
-                        "type": "string"
-                    },
-                    "content_type": {
-                        "type": "string"
-                    },
-                    "size": {
-                        "type": "integer"
-                    },
-                    "url": {
-                        "type": "string"
-                    },
-                    "proxy_url": {
-                        "type": "string"
-                    },
-                    "height": {
-                        "type": [
-                            "null",
-                            "integer"
-                        ]
-                    },
-                    "width": {
-                        "type": [
-                            "null",
-                            "integer"
-                        ]
-                    },
-                    "ephemeral": {
-                        "type": "boolean"
-                    },
-                    "duration_secs": {
-                        "type": "number"
-                    },
-                    "waveform": {
-                        "type": "string"
-                    }
-                },
-                "required": [
-                    "id",
-                    "filename",
-                    "size",
-                    "url",
-                    "proxy_url"
-                ]
-            }
-        },
-        "embeds": {
-            "type": "array",
-            "items": {
-                "type": "object",
-                "properties": {
-                    "title": {
-                        "type": "string"
-                    },
-                    "type": {
-                        "type": "string",
-                        "enum": [
-                            "rich",
-                            "image",
-                            "video",
-                            "gifv",
-                            "article",
-                            "link"
-                        ]
-                    },
-                    "description": {
-                        "type": "string"
-                    },
-                    "url": {
-                        "type": "string"
-                    },
-                    "timestamp": {
-                        "type": "string"
-                    },
-                    "color": {
-                        "type": "integer"
-                    },
-                    "footer": {
-                        "type": "object",
-                        "properties": {
-                            "text": {
-                                "type": "string"
-                            },
-                            "icon_url": {
-                                "type": "string"
-                            },
-                            "proxy_icon_url": {
-                                "type": "string"
-                            }
-                        },
-                        "required": [
-                            "text"
-                        ]
-                    },
-                    "image": {
-                        "type": "object",
-                        "properties": {
-                            "url": {
-                                "type": "string"
-                            },
-                            "proxy_url": {
-                                "type": "string"
-                            },
-                            "height": {
-                                "type": "integer"
-                            },
-                            "width": {
-                                "type": "integer"
-                            }
-                        },
-                        "required": [
-                            "url"
-                        ]
-                    },
-                    "thumbnail": {
-                        "type": "object",
-                        "properties": {
-                            "url": {
-                                "type": "string"
-                            },
-                            "proxy_url": {
-                                "type": "string"
-                            },
-                            "height": {
-                                "type": "integer"
-                            },
-                            "width": {
-                                "type": "integer"
-                            }
-                        },
-                        "required": [
-                            "url"
-                        ]
-                    },
-                    "video": {
-                        "type": "object",
-                        "properties": {
-                            "url": {
-                                "type": "string"
-                            },
-                            "proxy_url": {
-                                "type": "string"
-                            },
-                            "height": {
-                                "type": "integer"
-                            },
-                            "width": {
-                                "type": "integer"
-                            }
-                        }
-                    },
-                    "provider": {
-                        "type": "object",
-                        "properties": {
-                            "name": {
-                                "type": "string"
-                            },
-                            "url": {
-                                "type": "string"
-                            }
-                        }
-                    },
-                    "author": {
-                        "type": "object",
-                        "properties": {
-                            "name": {
-                                "type": "string"
-                            },
-                            "url": {
-                                "type": "string"
-                            },
-                            "icon_url": {
-                                "type": "string"
-                            },
-                            "proxy_icon_url": {
-                                "type": "string"
-                            }
-                        },
-                        "required": [
-                            "name"
-                        ]
-                    },
-                    "fields": {
-                        "type": "array",
-                        "items": {
-                            "type": "object",
-                            "properties": {
-                                "name": {
-                                    "type": "string"
-                                },
-                                "value": {
-                                    "type": "string"
-                                },
-                                "inline": {
-                                    "type": "boolean"
-                                }
-                            },
-                            "required": [
-                                "name",
-                                "value"
-                            ]
-                        }
-                    }
-                }
-            }
-        },
-        "reactions": {
-            "type": "array",
-            "items": {
-                "type": "object",
-                "properties": {
-                    "count": {
-                        "type": "integer"
-                    },
-                    "me": {
-                        "type": "boolean"
-                    },
-                    "emoji": {
-                        "$ref": "https://docs.helvetica.moe/schemas/emoji.json",
-                        "required": []
-                    }
-                },
-                "required": [
-                    "count",
-                    "me",
-                    "emoji"
-                ]
-            }
-        },
-        "nonce": {
-            "type": [
-                "integer",
-                "string"
-            ]
-        },
-        "pinned": {
-            "type": "boolean"
-        },
-        "webhook_id": {
+         }
+      },
+      "mention_roles": {
+         "type": "array",
+         "items": {
             "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
-        },
-        "type": {
-            "type": "integer",
-            "enum": [
-                0,
-                1,
-                2,
-                3,
-                4,
-                5,
-                6,
-                7,
-                8,
-                9,
-                10,
-                11,
-                12,
-                14,
-                15,
-                16,
-                17,
-                18,
-                19,
-                20,
-                21,
-                22,
-                23,
-                24,
-                25,
-                26,
-                27,
-                28,
-                29,
-                31,
-                32
-            ]
-        },
-        "activity": {
+         }
+      },
+      "mention_channels": {
+         "type": "array",
+         "items": {
             "type": "object",
             "properties": {
-                "type": {
-                    "type": "integer",
-                    "enum": [
-                        1,
-                        2,
-                        3,
-                        4
-                    ]
-                },
-                "party_id": {
-                    "type": "string"
-                }
+               "id": {
+                  "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+               },
+               "guild_id": {
+                  "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+               },
+               "type": {
+                  "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/type"
+               },
+               "name": {
+                  "type": "string"
+               }
             },
             "required": [
-                "type"
+               "id",
+               "guild_id",
+               "type",
+               "name"
             ]
-        },
-        "application": {
-            "$ref": "https://docs.helvetica.moe/schemas/application.json",
-            "required": []
-        },
-        "application_id": {
-            "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
-        },
-        "message_reference": {
-            "$comment": "TODO: technically this varies based on `flag` but not sure how to do that right now...",
+         }
+      },
+      "attachments": {
+         "type": "array",
+         "items": {
             "type": "object",
             "properties": {
-                "message_id": {
-                    "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
-                },
-                "channel_id": {
-                    "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
-                },
-                "guild_id": {
-                    "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
-                },
-                "fail_if_not_exists": {
-                    "type": "boolean"
-                }
+               "id": {
+                  "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+               },
+               "filename": {
+                  "type": "string"
+               },
+               "description": {
+                  "type": "string"
+               },
+               "content_type": {
+                  "type": "string"
+               },
+               "size": {
+                  "type": "integer"
+               },
+               "url": {
+                  "type": "string"
+               },
+               "proxy_url": {
+                  "type": "string"
+               },
+               "height": {
+                  "type": [
+                     "null",
+                     "integer"
+                  ]
+               },
+               "width": {
+                  "type": [
+                     "null",
+                     "integer"
+                  ]
+               },
+               "ephemeral": {
+                  "type": "boolean"
+               },
+               "duration_secs": {
+                  "type": "number"
+               },
+               "waveform": {
+                  "type": "string"
+               }
             },
             "required": [
-                "channel_id"
+               "id",
+               "filename",
+               "size",
+               "url",
+               "proxy_url"
             ]
-        },
-        "flags": {
-            "type": "integer",
-            "flags": {
-                "crossposted": 1,
-                "is_crosspost": 2,
-                "suppress_embeds": 4,
-                "source_message_deleted": 8,
-                "urgent": 16,
-                "has_thread": 32,
-                "ephemeral": 64,
-                "loading": 128,
-                "failed_to_mention_some_roles_in_thread": 256,
-                "suppress_notifications": 4096,
-                "is_voice_message": 8192
-            }
-        },
-        "referenced_message": {
-            "oneOf": [
-                {
-                    "$ref": "https://docs.helvetica.moe/schemas/message.json"
-                },
-                {
-                    "type": "null"
-                }
-            ]
-        },
-        "interaction": {
+         }
+      },
+      "embeds": {
+         "type": "array",
+         "items": {
             "type": "object",
             "properties": {
-                "id": {
-                    "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
-                },
-                "type": {
-                    "type": "integer",
-                    "enum": [1, 2, 3, 4, 5]
-                },
-                "name": {
-                    "type": "string"
-                },
-                "user": {
-                    "$ref": "https://docs.helvetica.moe/schemas/user.json"
-                },
-                "member": {
-                    "$ref": "https://docs.helvetica.moe/schemas/member.json",
-                    "required": []
-                }
-            }
-        },
-        "thread": {
-            "$ref": "https://docs.helvetica.moe/schemas/channel.json"
-        },
-        "components": {
-            "type": "array",
-            "items": {
-                "$ref": "https://docs.helvetica.moe/schemas/component.json"
-            }
-        },
-        "sticker_items": {
-            "type": "array",
-            "items": {
-                "type": "object",
-                "properties": {
-                    "id": {
-                        "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
-                    },
-                    "name": {
+               "title": {
+                  "type": "string"
+               },
+               "type": {
+                  "type": "string",
+                  "enum": [
+                     "rich",
+                     "image",
+                     "video",
+                     "gifv",
+                     "article",
+                     "link"
+                  ]
+               },
+               "description": {
+                  "type": "string"
+               },
+               "url": {
+                  "type": "string"
+               },
+               "timestamp": {
+                  "type": "string"
+               },
+               "color": {
+                  "type": "integer"
+               },
+               "footer": {
+                  "type": "object",
+                  "properties": {
+                     "text": {
                         "type": "string"
-                    },
-                    "format_type": {
-                        "$ref": "https://docs.helvetica.moe/schemas/sticker.json#/properties/format_type"
-                    }
-                },
-                "required": [
-                    "id",
-                    "name",
-                    "format_type"
-                ]
+                     },
+                     "icon_url": {
+                        "type": "string"
+                     },
+                     "proxy_icon_url": {
+                        "type": "string"
+                     }
+                  },
+                  "required": [
+                     "text"
+                  ]
+               },
+               "image": {
+                  "type": "object",
+                  "properties": {
+                     "url": {
+                        "type": "string"
+                     },
+                     "proxy_url": {
+                        "type": "string"
+                     },
+                     "height": {
+                        "type": "integer"
+                     },
+                     "width": {
+                        "type": "integer"
+                     }
+                  },
+                  "required": [
+                     "url"
+                  ]
+               },
+               "thumbnail": {
+                  "type": "object",
+                  "properties": {
+                     "url": {
+                        "type": "string"
+                     },
+                     "proxy_url": {
+                        "type": "string"
+                     },
+                     "height": {
+                        "type": "integer"
+                     },
+                     "width": {
+                        "type": "integer"
+                     }
+                  },
+                  "required": [
+                     "url"
+                  ]
+               },
+               "video": {
+                  "type": "object",
+                  "properties": {
+                     "url": {
+                        "type": "string"
+                     },
+                     "proxy_url": {
+                        "type": "string"
+                     },
+                     "height": {
+                        "type": "integer"
+                     },
+                     "width": {
+                        "type": "integer"
+                     }
+                  }
+               },
+               "provider": {
+                  "type": "object",
+                  "properties": {
+                     "name": {
+                        "type": "string"
+                     },
+                     "url": {
+                        "type": "string"
+                     }
+                  }
+               },
+               "author": {
+                  "type": "object",
+                  "properties": {
+                     "name": {
+                        "type": "string"
+                     },
+                     "url": {
+                        "type": "string"
+                     },
+                     "icon_url": {
+                        "type": "string"
+                     },
+                     "proxy_icon_url": {
+                        "type": "string"
+                     }
+                  },
+                  "required": [
+                     "name"
+                  ]
+               },
+               "fields": {
+                  "type": "array",
+                  "items": {
+                     "type": "object",
+                     "properties": {
+                        "name": {
+                           "type": "string"
+                        },
+                        "value": {
+                           "type": "string"
+                        },
+                        "inline": {
+                           "type": "boolean"
+                        }
+                     },
+                     "required": [
+                        "name",
+                        "value"
+                     ]
+                  }
+               }
             }
-        },
-        "position": {
-            "type": "integer"
-        },
-        "role_subscription_data": {
+         }
+      },
+      "reactions": {
+         "type": "array",
+         "items": {
             "type": "object",
             "properties": {
-                "role_subscription_listing_id": {
-                    "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
-                },
-                "tier_name": {
-                    "type": "string"
-                },
-                "total_months_subscribed": {
-                    "type": "integer"
-                },
-                "is_renewal": {
-                    "type": "boolean"
-                }
+               "count": {
+                  "type": "integer"
+               },
+               "me": {
+                  "type": "boolean"
+               },
+               "emoji": {
+                  "$ref": "https://docs.helvetica.moe/schemas/emoji.json",
+                  "required": []
+               }
             },
             "required": [
-                "role_subscription_listing_id",
-                "tier_name",
-                "total_months_subscribed",
-                "is_renewal"
+               "count",
+               "me",
+               "emoji"
             ]
-        }
-    },
-    "required": [
-        "id",
-        "channel_id",
-        "author",
-        "content",
-        "timestamp",
-        "edited_timestamp",
-        "tts",
-        "mention_everyone",
-        "mentions",
-        "mention_roles",
-        "attachments",
-        "embeds",
-        "pinned",
-        "type"
-    ]
+         }
+      },
+      "nonce": {
+         "type": [
+            "integer",
+            "string"
+         ]
+      },
+      "pinned": {
+         "type": "boolean"
+      },
+      "webhook_id": {
+         "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+      },
+      "type": {
+         "type": "integer",
+         "enum": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            31,
+            32
+         ]
+      },
+      "activity": {
+         "type": "object",
+         "properties": {
+            "type": {
+               "type": "integer",
+               "enum": [
+                  1,
+                  2,
+                  3,
+                  4
+               ]
+            },
+            "party_id": {
+               "type": "string"
+            }
+         },
+         "required": [
+            "type"
+         ]
+      },
+      "application": {
+         "$ref": "https://docs.helvetica.moe/schemas/application.json",
+         "required": []
+      },
+      "application_id": {
+         "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+      },
+      "message_reference": {
+         "$comment": "TODO: technically this varies based on `flag` but not sure how to do that right now...",
+         "type": "object",
+         "properties": {
+            "message_id": {
+               "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+            },
+            "channel_id": {
+               "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+            },
+            "guild_id": {
+               "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+            },
+            "fail_if_not_exists": {
+               "type": "boolean"
+            }
+         },
+         "required": [
+            "channel_id"
+         ]
+      },
+      "flags": {
+         "type": "integer",
+         "flags": {
+            "crossposted": 1,
+            "is_crosspost": 2,
+            "suppress_embeds": 4,
+            "source_message_deleted": 8,
+            "urgent": 16,
+            "has_thread": 32,
+            "ephemeral": 64,
+            "loading": 128,
+            "failed_to_mention_some_roles_in_thread": 256,
+            "suppress_notifications": 4096,
+            "is_voice_message": 8192
+         }
+      },
+      "referenced_message": {
+         "oneOf": [
+            {
+               "$ref": "https://docs.helvetica.moe/schemas/message.json"
+            },
+            {
+               "type": "null"
+            }
+         ]
+      },
+      "interaction": {
+         "type": "object",
+         "properties": {
+            "id": {
+               "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+            },
+            "type": {
+               "type": "integer",
+               "enum": [1, 2, 3, 4, 5]
+            },
+            "name": {
+               "type": "string"
+            },
+            "user": {
+               "$ref": "https://docs.helvetica.moe/schemas/user.json"
+            },
+            "member": {
+               "$ref": "https://docs.helvetica.moe/schemas/member.json",
+               "required": []
+            }
+         }
+      },
+      "thread": {
+         "$ref": "https://docs.helvetica.moe/schemas/channel.json"
+      },
+      "components": {
+         "type": "array",
+         "items": {
+            "$ref": "https://docs.helvetica.moe/schemas/component.json"
+         }
+      },
+      "sticker_items": {
+         "type": "array",
+         "items": {
+            "type": "object",
+            "properties": {
+               "id": {
+                  "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+               },
+               "name": {
+                  "type": "string"
+               },
+               "format_type": {
+                  "$ref": "https://docs.helvetica.moe/schemas/sticker.json#/properties/format_type"
+               }
+            },
+            "required": [
+               "id",
+               "name",
+               "format_type"
+            ]
+         }
+      },
+      "position": {
+         "type": "integer"
+      },
+      "role_subscription_data": {
+         "type": "object",
+         "properties": {
+            "role_subscription_listing_id": {
+               "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+            },
+            "tier_name": {
+               "type": "string"
+            },
+            "total_months_subscribed": {
+               "type": "integer"
+            },
+            "is_renewal": {
+               "type": "boolean"
+            }
+         },
+         "required": [
+            "role_subscription_listing_id",
+            "tier_name",
+            "total_months_subscribed",
+            "is_renewal"
+         ]
+      }
+   },
+   "required": [
+      "id",
+      "channel_id",
+      "author",
+      "content",
+      "timestamp",
+      "edited_timestamp",
+      "tts",
+      "mention_everyone",
+      "mentions",
+      "mention_roles",
+      "attachments",
+      "embeds",
+      "pinned",
+      "type"
+   ]
 }

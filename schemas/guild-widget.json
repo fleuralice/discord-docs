@@ -1,44 +1,44 @@
 {
-    "$id": "https://docs.helvetica.moe/schemas/guild-widget.json",
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "type": "object",
-    "properties": {
-        "id": {
-            "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
-        },
-        "name": {
-            "type": "string"
-        },
-        "instant_invite": {
-            "type": [
-                "null",
-                "string"
-            ]
-        },
-        "channels": {
-            "type": "array",
-            "items": {
-                "$ref": "https://docs.helvetica.moe/schemas/channel.json",
-                "required": []
-            }
-        },
-        "members": {
-            "type": "array",
-            "items": {
-                "$ref": "https://docs.helvetica.moe/schemas/user.json",
-                "required": []
-            }
-        },
-        "presence_count": {
-            "type": "integer"
-        }
-    },
-    "required": [
-        "id",
-        "anem",
-        "instant_invite",
-        "channels",
-        "members",
-        "presence_count"
-    ]
+   "$id": "https://docs.helvetica.moe/schemas/guild-widget.json",
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "type": "object",
+   "properties": {
+      "id": {
+         "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+      },
+      "name": {
+         "type": "string"
+      },
+      "instant_invite": {
+         "type": [
+            "null",
+            "string"
+         ]
+      },
+      "channels": {
+         "type": "array",
+         "items": {
+            "$ref": "https://docs.helvetica.moe/schemas/channel.json",
+            "required": []
+         }
+      },
+      "members": {
+         "type": "array",
+         "items": {
+            "$ref": "https://docs.helvetica.moe/schemas/user.json",
+            "required": []
+         }
+      },
+      "presence_count": {
+         "type": "integer"
+      }
+   },
+   "required": [
+      "id",
+      "anem",
+      "instant_invite",
+      "channels",
+      "members",
+      "presence_count"
+   ]
 }

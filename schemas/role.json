@@ -1,76 +1,76 @@
 {
-    "$id": "https://docs.helvetica.moe/schemas/role.json",
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "type": "object",
-    "properties": {
-        "id": {
-            "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
-        },
-        "name": {
-            "type": "string"
-        },
-        "color": {
-            "type": "integer"
-        },
-        "hoist": {
-            "type": "boolean"
-        },
-        "icon": {
-            "type": [
-                "null",
-                "string"
-            ]
-        },
-        "unicode_emoji": {
-            "type": [
-                "null",
-                "string"
-            ]
-        },
-        "position": {
-            "type": "integer"
-        },
-        "permissions": {
-            "$ref": "https://docs.helvetica.moe/schemas/permissions.json"
-        },
-        "managed": {
-            "type": "boolean"
-        },
-        "mentionable": {
-            "type": "boolean"
-        },
-        "tags": {
-            "type": "object",
-            "properties": {
-                "bot_id": {
-                    "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
-                },
-                "integration_id": {
-                    "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
-                },
-                "premium_subscriber": {
-                    "type": "null"
-                },
-                "subscription_listing_id": {
-                    "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
-                },
-                "available_for_purchase": {
-                    "type": "null"
-                },
-                "guild_connections": {
-                    "type": "null"
-                }
+   "$id": "https://docs.helvetica.moe/schemas/role.json",
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "type": "object",
+   "properties": {
+      "id": {
+         "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+      },
+      "name": {
+         "type": "string"
+      },
+      "color": {
+         "type": "integer"
+      },
+      "hoist": {
+         "type": "boolean"
+      },
+      "icon": {
+         "type": [
+            "null",
+            "string"
+         ]
+      },
+      "unicode_emoji": {
+         "type": [
+            "null",
+            "string"
+         ]
+      },
+      "position": {
+         "type": "integer"
+      },
+      "permissions": {
+         "$ref": "https://docs.helvetica.moe/schemas/permissions.json"
+      },
+      "managed": {
+         "type": "boolean"
+      },
+      "mentionable": {
+         "type": "boolean"
+      },
+      "tags": {
+         "type": "object",
+         "properties": {
+            "bot_id": {
+               "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+            },
+            "integration_id": {
+               "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+            },
+            "premium_subscriber": {
+               "type": "null"
+            },
+            "subscription_listing_id": {
+               "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+            },
+            "available_for_purchase": {
+               "type": "null"
+            },
+            "guild_connections": {
+               "type": "null"
             }
-        }
-    },
-    "required": [
-        "id",
-        "name",
-        "color",
-        "hoist",
-        "position",
-        "permissions",
-        "managed",
-        "mentionable"
-    ]
+         }
+      }
+   },
+   "required": [
+      "id",
+      "name",
+      "color",
+      "hoist",
+      "position",
+      "permissions",
+      "managed",
+      "mentionable"
+   ]
 }

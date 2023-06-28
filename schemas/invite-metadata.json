@@ -1,30 +1,30 @@
 {
-    "$id": "https://docs.helvetica.moe/schemas/invite-metadata.json",
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$ref": "https://docs.helvetica.moe/schemas/invite.json",
-    "type": "object",
-    "properties": {
-        "uses": {
-            "type": "integer"
-        },
-        "max_uses": {
-            "type": "integer"
-        },
-        "max_age": {
-            "type": "integer"
-        },
-        "temporary": {
-            "type": "boolean"
-        },
-        "created_at": {
-            "type": "string"
-        }
-    },
-    "required": [
-        "uses",
-        "max_uses",
-        "max_age",
-        "temporary",
-        "created_at"
-    ]
+   "$id": "https://docs.helvetica.moe/schemas/invite-metadata.json",
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "$ref": "https://docs.helvetica.moe/schemas/invite.json",
+   "type": "object",
+   "properties": {
+      "uses": {
+         "type": "integer"
+      },
+      "max_uses": {
+         "type": "integer"
+      },
+      "max_age": {
+         "type": "integer"
+      },
+      "temporary": {
+         "type": "boolean"
+      },
+      "created_at": {
+         "type": "string"
+      }
+   },
+   "required": [
+      "uses",
+      "max_uses",
+      "max_age",
+      "temporary",
+      "created_at"
+   ]
 }

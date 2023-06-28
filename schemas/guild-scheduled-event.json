@@ -1,120 +1,120 @@
 {
-    "$id": "https://docs.helvetica.moe/schemas/guild-scheduled-event.json",
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "type": "object",
-    "properties": {
-        "id": {
-            "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
-        },
-        "guild_id": {
-            "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
-        },
-        "channel_id": {
-            "oneOf": [
-                {
-                    "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
-                },
-                {
-                    "type": "null"
-                }
-            ]
-        },
-        "creator_id": {
-            "oneOf": [
-                {
-                    "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
-                },
-                {
-                    "type": "null"
-                }
-            ]
-        },
-        "name": {
-            "type": "string"
-        },
-        "description": {
-            "type": [
-                "null",
-                "string"
-            ]
-        },
-        "scheduled_start_time": {
-            "type": "string"
-        },
-        "scheduled_end_time": {
-            "type": [
-                "null",
-                "string"
-            ]
-        },
-        "privacy_level": {
-            "type": "integer",
-            "enum": [
-                2
-            ]
-        },
-        "status": {
-            "type": "integer",
-            "enum": [
-                1,
-                2,
-                3,
-                4
-            ]
-        },
-        "entity_type": {
-            "type": "integer",
-            "enum": [
-                1,
-                2,
-                3
-            ]
-        },
-        "entity_id": {
-            "oneOf": [
-                {
-                    "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
-                },
-                {
-                    "type": "null"
-                }
-            ]
-        },
-        "entity_metadata": {
-            "type": [
-                "null",
-                "object"
-            ],
-            "properties": {
-                "location": {
-                    "type": "string"
-                }
+   "$id": "https://docs.helvetica.moe/schemas/guild-scheduled-event.json",
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "type": "object",
+   "properties": {
+      "id": {
+         "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+      },
+      "guild_id": {
+         "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+      },
+      "channel_id": {
+         "oneOf": [
+            {
+               "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+            },
+            {
+               "type": "null"
             }
-        },
-        "creator": {
-            "$ref": "https://docs.helvetica.moe/schemas/user.json"
-        },
-        "user_count": {
-            "type": "integer"
-        },
-        "image": {
-            "type": [
-                "null",
-                "string"
-            ]
-        }
-    },
-    "required": [
-        "id",
-        "guild_id",
-        "channel_id",
-        "name",
-        "scheduled_start_time",
-        "scheduled_end_time",
-        "privacy_level",
-        "status",
-        "entity_type",
-        "entity_id",
-        "entity_metadata"
-    ]
+         ]
+      },
+      "creator_id": {
+         "oneOf": [
+            {
+               "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+            },
+            {
+               "type": "null"
+            }
+         ]
+      },
+      "name": {
+         "type": "string"
+      },
+      "description": {
+         "type": [
+            "null",
+            "string"
+         ]
+      },
+      "scheduled_start_time": {
+         "type": "string"
+      },
+      "scheduled_end_time": {
+         "type": [
+            "null",
+            "string"
+         ]
+      },
+      "privacy_level": {
+         "type": "integer",
+         "enum": [
+            2
+         ]
+      },
+      "status": {
+         "type": "integer",
+         "enum": [
+            1,
+            2,
+            3,
+            4
+         ]
+      },
+      "entity_type": {
+         "type": "integer",
+         "enum": [
+            1,
+            2,
+            3
+         ]
+      },
+      "entity_id": {
+         "oneOf": [
+            {
+               "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+            },
+            {
+               "type": "null"
+            }
+         ]
+      },
+      "entity_metadata": {
+         "type": [
+            "null",
+            "object"
+         ],
+         "properties": {
+            "location": {
+               "type": "string"
+            }
+         }
+      },
+      "creator": {
+         "$ref": "https://docs.helvetica.moe/schemas/user.json"
+      },
+      "user_count": {
+         "type": "integer"
+      },
+      "image": {
+         "type": [
+            "null",
+            "string"
+         ]
+      }
+   },
+   "required": [
+      "id",
+      "guild_id",
+      "channel_id",
+      "name",
+      "scheduled_start_time",
+      "scheduled_end_time",
+      "privacy_level",
+      "status",
+      "entity_type",
+      "entity_id",
+      "entity_metadata"
+   ]
 }

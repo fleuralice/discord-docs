@@ -1,17 +1,17 @@
 {
-    "$id": "https://docs.helvetica.moe/schemas/followed-channel.json",
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "type": "object",
-    "properties": {
-        "channel_id": {
-            "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
-        },
-        "webhook_id": {
-            "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
-        }
-    },
-    "required": [
-        "channel_id",
-        "webhook_id"
-    ]
+   "$id": "https://docs.helvetica.moe/schemas/followed-channel.json",
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "type": "object",
+   "properties": {
+      "channel_id": {
+         "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+      },
+      "webhook_id": {
+         "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+      }
+   },
+   "required": [
+      "channel_id",
+      "webhook_id"
+   ]
 }
