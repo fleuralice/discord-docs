@@ -1,5 +1,6 @@
 {
    "fmt": {
+      "exclude": ["dist/"],
       "indentWidth": 3
    },
    "lint": {

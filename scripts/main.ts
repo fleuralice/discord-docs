@@ -99,9 +99,6 @@ for (const schemaLocation of schemaLocations) {
             contents["$id"] !==
                `https://docs.helvetica.moe/${schemaLocation}${dirEntry.name}`
          ) {
-            console.log(
-               `error: ${schemaLocation}${dirEntry.name} has incorrect $id`,
-            );
             reportError(
                errorMap[errorMap.length - 1]!,
                ["$id"],
@@ -138,9 +135,7 @@ if (ids.filter((id) => typeof id === "string").length === ids.length) {
                   try {
                      const url = new URL(value, schema["$id"] as string);
                      url.hash = "";
-                     if (
-                        !ids.includes(url.toString()) && !value.startsWith("#")
-                     ) {
+                     if (!ids.includes(url.toString())) {
                         reportError(
                            errorMap[i]!,
                            [...path, "$ref"],
