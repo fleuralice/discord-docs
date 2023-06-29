@@ -33,7 +33,6 @@ const reportError = (
       const index = path[0];
       path = path.slice(1);
 
-      // TODO: if the error function errors, have a sane error
       if (typeof index === "string" && structure.type === "ObjectExpression") {
          // most of the type checks are literally just constrained by JSON
          const result = structure.properties.filter((prop) =>
@@ -66,9 +65,9 @@ const reportError = (
       1;
    const char = errorStart -
       error[2].split("\n").slice(0, line - 1).reduce(
-         (sum, str) => sum + str.length,
+         (sum, str) => sum + str.length + 1,
          0,
-      );
+      ) + 1;
 
    console.error(`${error[1]}:${line}:${char}: ${message}`);
    hadErrors = true;
@@ -95,6 +94,7 @@ for (const schemaLocation of schemaLocations) {
             ],
          );
 
+         // LINT: check that every schema has a matching `$id`
          if (
             contents["$id"] !==
                `https://docs.helvetica.moe/${schemaLocation}${dirEntry.name}`
@@ -108,6 +108,8 @@ for (const schemaLocation of schemaLocations) {
                "incorrect $id",
             );
          }
+
+         // LINT: check that every schema is using JSONSchema 2020-12
          if (
             contents["$schema"] !==
                "https://json-schema.org/draft/2020-12/schema"
@@ -118,14 +120,53 @@ for (const schemaLocation of schemaLocations) {
                "incorrect $schema",
             );
          }
+
          schemas.push(contents);
       }
    }
 }
 
+// LINT: check that all `$ref`s point to valid `$id` (TODO: JSON Path checking)
+const ids: unknown[] = schemas.map((schema) => schema["$id"]);
+if (ids.filter((id) => typeof id === "string").length === ids.length) {
+   schemas.forEach((schema, i) => {
+      const recurse = (s: unknown, path: (string | number)[]) => {
+         if (Array.isArray(s)) s.forEach((x, j) => recurse(x, [...path, j]));
+         else if (typeof s === "object" && s !== null) {
+            Object.entries(s).forEach(([key, value]) => {
+               if (key === "$ref") {
+                  try {
+                     const url = new URL(value, schema["$id"] as string);
+                     url.hash = "";
+                     if (
+                        !ids.includes(url.toString()) && !value.startsWith("#")
+                     ) {
+                        reportError(
+                           errorMap[i]!,
+                           [...path, "$ref"],
+                           "unknown $ref",
+                        );
+                     }
+                  } catch {
+                     reportError(
+                        errorMap[i]!,
+                        [...path, "$ref"],
+                        "invalid $ref",
+                     );
+                  }
+               }
+               recurse(value, [...path, key]);
+            });
+         }
+      };
+
+      recurse(schema, []);
+   });
+}
+
 if (hadErrors) {
    console.log("errored :(");
-   Deno.exit(1);
+   if (!Deno.args.includes("--dev")) Deno.exit(1);
 } else {
    console.log("success!");
    if (!dryRun) {

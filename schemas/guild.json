@@ -228,7 +228,7 @@
          "type": "integer"
       },
       "preferred_locale": {
-         "$ref": "https://docs.helvetica.moe/schemas/locales.json⌈"
+         "$ref": "https://docs.helvetica.moe/schemas/locales.json"
       },
       "public_updates_channel_id": {
          "oneOf": [
