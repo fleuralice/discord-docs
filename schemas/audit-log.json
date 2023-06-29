@@ -38,9 +38,6 @@
                      "action_type": {
                         "type": "integer"
                      },
-                     "options": {
-                        "type": "object"
-                     },
                      "reason": {
                         "type": "string"
                      }
@@ -3799,6 +3796,180 @@
                                  },
                                  "required": ["key"]
                               }
+                           }
+                        }
+                     }
+                  ]
+               },
+               {
+                  "anyOf": [
+                     {
+                        "properties": {
+                           "action_type": {
+                              "type": "integer",
+                              "enum": [121]
+                           },
+                           "options": {
+                              "type": "object",
+                              "properties": {
+                                 "application_id": {
+                                    "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+                                 }
+                              },
+                              "required": ["application_id"]
+                           }
+                        }
+                     },
+                     {
+                        "properties": {
+                           "action_type": {
+                              "type": "integer",
+                              "enum": [143, 144, 145]
+                           },
+                           "options": {
+                              "type": "object",
+                              "properties": {
+                                 "auto_moderation_rule_name": {
+                                    "$ref": "https://docs.helvetica.moe/schemas/auto-moderation-rule.json#/allOf/0/properties/name"
+                                 },
+                                 "auto_moderation_rule_trigger_type": {
+                                    "type": "string"
+                                 }
+                              },
+                              "required": [
+                                 "auto_moderation_rule_name",
+                                 "auto_moderation_rule_trigger_type"
+                              ]
+                           }
+                        }
+                     },
+                     {
+                        "properties": {
+                           "action_type": {
+                              "type": "integer",
+                              "enum": [
+                                 26,
+                                 72,
+                                 74,
+                                 75,
+                                 83,
+                                 84,
+                                 85,
+                                 143,
+                                 144,
+                                 145
+                              ]
+                           },
+                           "options": {
+                              "type": "object",
+                              "properties": {
+                                 "channel_id": {
+                                    "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+                                 }
+                              },
+                              "required": ["channel_id"]
+                           }
+                        }
+                     },
+                     {
+                        "properties": {
+                           "action_type": {
+                              "type": "integer",
+                              "enum": [26, 27, 72, 73]
+                           },
+                           "options": {
+                              "type": "object",
+                              "properties": {
+                                 "count": {
+                                    "type": "string"
+                                 }
+                              },
+                              "required": ["count"]
+                           }
+                        }
+                     },
+                     {
+                        "properties": {
+                           "action_type": {
+                              "type": "integer",
+                              "enum": [21]
+                           },
+                           "options": {
+                              "type": "object",
+                              "properties": {
+                                 "delete_member_days": {
+                                    "type": "string"
+                                 },
+                                 "members_removed": {
+                                    "type": "string"
+                                 }
+                              },
+                              "required": [
+                                 "delete_member_days",
+                                 "members_removed"
+                              ]
+                           }
+                        }
+                     },
+                     {
+                        "properties": {
+                           "action_type": {
+                              "type": "integer",
+                              "enum": [13, 14, 15]
+                           },
+                           "options": {
+                              "type": "object",
+                              "properties": {
+                                 "id": {
+                                    "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+                                 },
+                                 "type": {
+                                    "type": "string",
+                                    "enum": ["0"]
+                                 }
+                              },
+                              "required": ["id", "type"]
+                           }
+                        }
+                     },
+                     {
+                        "properties": {
+                           "action_type": {
+                              "type": "integer",
+                              "enum": [13, 14, 15]
+                           },
+                           "options": {
+                              "type": "object",
+                              "properties": {
+                                 "id": {
+                                    "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+                                 },
+                                 "type": {
+                                    "type": "string",
+                                    "enum": ["1"]
+                                 },
+                                 "name": {
+                                    "type": "string"
+                                 }
+                              },
+                              "required": ["id", "type", "name"]
+                           }
+                        }
+                     },
+                     {
+                        "properties": {
+                           "action_type": {
+                              "type": "integer",
+                              "enum": [74, 75]
+                           },
+                           "options": {
+                              "type": "object",
+                              "properties": {
+                                 "message_id": {
+                                    "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+                                 }
+                              },
+                              "required": ["message_id"]
                            }
                         }
                      }

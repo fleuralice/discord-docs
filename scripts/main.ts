@@ -159,6 +159,56 @@ if (ids.filter((id) => typeof id === "string").length === ids.length) {
    });
 }
 
+// LINT: check that there are no `{"type": "object"}` (with no other keys)
+schemas.forEach((schema, i) => {
+   const recurse = (s: unknown, path: (string | number)[]) => {
+      if (Array.isArray(s)) s.forEach((x, j) => recurse(x, [...path, j]));
+      else if (typeof s === "object" && s !== null) {
+         if (
+            "type" in s && s["type"] === "object" && Object.keys(s).length === 1
+         ) {
+            reportError(
+               errorMap[i]!,
+               path,
+               'bare {"type": "object"}',
+            );
+         }
+
+         Object.entries(s).forEach(([key, value]) => {
+            recurse(value, [...path, key]);
+         });
+      }
+   };
+
+   recurse(schema, []);
+});
+
+// LINT: check that the only key adjacent to a `$ref` is `required`
+schemas.forEach((schema, i) => {
+   const recurse = (s: unknown, path: (string | number)[]) => {
+      if (Array.isArray(s)) s.forEach((x, j) => recurse(x, [...path, j]));
+      else if (typeof s === "object" && s !== null) {
+         if (
+            "$ref" in s &&
+            Object.keys(s).filter((k) => !["$ref", "required"].includes(k))
+               .length
+         ) {
+            reportError(
+               errorMap[i]!,
+               path,
+               "weird key adjacent to a $ref",
+            );
+         }
+
+         Object.entries(s).forEach(([key, value]) => {
+            recurse(value, [...path, key]);
+         });
+      }
+   };
+
+   recurse(schema, []);
+});
+
 if (hadErrors) {
    console.log("errored :(");
    if (!Deno.args.includes("--dev")) Deno.exit(1);
