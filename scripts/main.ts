@@ -6,6 +6,7 @@ import type {
    VariableDeclaration,
 } from "https://esm.sh/@swc/core@1.2.212/types.js";
 import { KeyValueProperty } from "https://esm.sh/@swc/core@1.2.212/types.js";
+import { bundle, createSchemaMapping } from "./build.ts";
 
 const dryRun = !Deno.args.includes("--build");
 
@@ -259,12 +260,20 @@ if (hadErrors) {
          await Deno.mkdir(`dist/${schemaLocation}`);
          for await (const dirEntry of Deno.readDir(schemaLocation)) {
             if (dirEntry.isFile && dirEntry.name.endsWith(".json")) {
-               await Deno.copyFile(
-                  `${schemaLocation}${dirEntry.name}`,
+               await Deno.writeTextFile(
                   `dist/${schemaLocation}${dirEntry.name}`,
+                  JSON.stringify(
+                     JSON.parse(
+                        await Deno.readTextFile(
+                           `${schemaLocation}${dirEntry.name}`,
+                        ),
+                     ),
+                  ),
                );
             }
          }
       }
+
+      await Deno.writeTextFile("dist/bundled.json", JSON.stringify(bundled));
    }
 }
