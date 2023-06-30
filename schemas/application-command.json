@@ -6,20 +6,20 @@
       {
          "properties": {
             "id": {
-               "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+               "$ref": "/schemas/snowflake.json"
             },
             "application_id": {
-               "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+               "$ref": "/schemas/snowflake.json"
             },
             "guild_id": {
-               "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+               "$ref": "/schemas/snowflake.json"
             },
             "name": {
                "type": "string"
             },
             "name_localizations": {
                "propertyNames": {
-                  "$ref": "https://docs.helvetica.moe/schemas/locales.json"
+                  "$ref": "/schemas/locales.json"
                }
             },
             "description": {
@@ -27,13 +27,13 @@
             },
             "description_localizations": {
                "propertyNames": {
-                  "$ref": "https://docs.helvetica.moe/schemas/locales.json"
+                  "$ref": "/schemas/locales.json"
                }
             },
             "default_member_permissions": {
                "oneOf": [
                   {
-                     "$ref": "https://docs.helvetica.moe/schemas/permissions.json"
+                     "$ref": "/schemas/permissions.json"
                   },
                   {
                      "type": "null"
@@ -53,7 +53,7 @@
                "type": "boolean"
             },
             "version": {
-               "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+               "$ref": "/schemas/snowflake.json"
             }
          },
          "required": [
@@ -101,7 +101,7 @@
                                  },
                                  "name_localizations": {
                                     "propertyNames": {
-                                       "$ref": "https://docs.helvetica.moe/schemas/locales.json"
+                                       "$ref": "/schemas/locales.json"
                                     }
                                  },
                                  "description": {
@@ -109,7 +109,7 @@
                                  },
                                  "description_localizations": {
                                     "propertyNames": {
-                                       "$ref": "https://docs.helvetica.moe/schemas/locales.json"
+                                       "$ref": "/schemas/locales.json"
                                     }
                                  },
                                  "required": {
@@ -136,7 +136,7 @@
                                        "options": {
                                           "type": "array",
                                           "items": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/application-command.json#/allOf/1/oneOf/1/properties/options"
+                                             "$ref": "/schemas/application-command.json#/allOf/1/oneOf/1/properties/options"
                                           }
                                        }
                                     }
@@ -159,7 +159,7 @@
                                                 },
                                                 "name_localizations": {
                                                    "propertyNames": {
-                                                      "$ref": "https://docs.helvetica.moe/schemas/locales.json"
+                                                      "$ref": "/schemas/locales.json"
                                                    }
                                                 },
                                                 "value": {
@@ -197,7 +197,7 @@
                                                 },
                                                 "name_localizations": {
                                                    "propertyNames": {
-                                                      "$ref": "https://docs.helvetica.moe/schemas/locales.json"
+                                                      "$ref": "/schemas/locales.json"
                                                    }
                                                 },
                                                 "value": {
@@ -242,7 +242,7 @@
                                        "channel_types": {
                                           "type": "array",
                                           "items": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/type"
+                                             "$ref": "/schemas/channel.json#/properties/type"
                                           }
                                        }
                                     }
@@ -265,7 +265,7 @@
                                                 },
                                                 "name_localizations": {
                                                    "propertyNames": {
-                                                      "$ref": "https://docs.helvetica.moe/schemas/locales.json"
+                                                      "$ref": "/schemas/locales.json"
                                                    }
                                                 },
                                                 "value": {

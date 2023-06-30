@@ -40,7 +40,7 @@
             "name_localizations": {
                "type": "object",
                "propertyNames": {
-                  "$ref": "https://docs.helvetica.moe/schemas/locales.json"
+                  "$ref": "/schemas/locales.json"
                },
                "additionalProperties": {
                   "type": "string"
@@ -52,7 +52,7 @@
             "description_localizations": {
                "type": "object",
                "propertyNames": {
-                  "$ref": "https://docs.helvetica.moe/schemas/locales.json"
+                  "$ref": "/schemas/locales.json"
                },
                "additionalProperties": {
                   "type": "string"

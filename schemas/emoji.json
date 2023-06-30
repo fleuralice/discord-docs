@@ -6,7 +6,7 @@
       "id": {
          "oneOf": [
             {
-               "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+               "$ref": "/schemas/snowflake.json"
             },
             {
                "type": "null"
@@ -22,11 +22,11 @@
       "roles": {
          "type": "array",
          "items": {
-            "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+            "$ref": "/schemas/snowflake.json"
          }
       },
       "user": {
-         "$ref": "https://docs.helvetica.moe/schemas/user.json"
+         "$ref": "/schemas/user.json"
       },
       "require_colons": {
          "type": "boolean"

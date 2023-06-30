@@ -19,10 +19,10 @@
          "type": "integer"
       },
       "creator_id": {
-         "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+         "$ref": "/schemas/snowflake.json"
       },
       "creator": {
-         "$ref": "https://docs.helvetica.moe/schemas/user.json"
+         "$ref": "/schemas/user.json"
       },
       "created_at": {
          "type": "string"
@@ -31,10 +31,10 @@
          "type": "string"
       },
       "source_guild_id": {
-         "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+         "$ref": "/schemas/snowflake.json"
       },
       "serialized_source_guild": {
-         "$ref": "https://docs.helvetica.moe/schemas/guild.json",
+         "$ref": "/schemas/guild.json",
          "required": []
       },
       "is_dirty": {

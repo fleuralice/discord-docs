@@ -7,7 +7,7 @@
          "type": ["null", "string"]
       },
       "id": {
-         "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+         "$ref": "/schemas/snowflake.json"
       },
       "members": {
          "type": "list",
@@ -25,10 +25,10 @@
                   }
                },
                "team_id": {
-                  "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+                  "$ref": "/schemas/snowflake.json"
                },
                "user": {
-                  "$ref": "https://docs.helvetica.moe/schemas/user.json",
+                  "$ref": "/schemas/user.json",
                   "required": []
                }
             },
@@ -39,7 +39,7 @@
          "type": "string"
       },
       "owner_user_id": {
-         "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+         "$ref": "/schemas/snowflake.json"
       }
    },
    "required": ["icon", "id", "members", "name", "owner_user_id"]

@@ -4,7 +4,7 @@
    "type": "object",
    "properties": {
       "id": {
-         "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+         "$ref": "/schemas/snowflake.json"
       },
       "name": {
          "type": "string"
@@ -37,15 +37,15 @@
          "type": "boolean"
       },
       "owner_id": {
-         "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+         "$ref": "/schemas/snowflake.json"
       },
       "permissions": {
-         "$ref": "https://docs.helvetica.moe/schemas/permissions.json"
+         "$ref": "/schemas/permissions.json"
       },
       "afk_channel_id": {
          "oneOf": [
             {
-               "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+               "$ref": "/schemas/snowflake.json"
             },
             {
                "type": "null"
@@ -61,7 +61,7 @@
       "widget_channel_id": {
          "oneOf": [
             {
-               "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+               "$ref": "/schemas/snowflake.json"
             },
             {
                "type": "null"
@@ -96,13 +96,13 @@
       "roles": {
          "type": "array",
          "items": {
-            "$ref": "https://docs.helvetica.moe/schemas/role.json"
+            "$ref": "/schemas/role.json"
          }
       },
       "emojis": {
          "type": "array",
          "items": {
-            "$ref": "https://docs.helvetica.moe/schemas/emoji.json"
+            "$ref": "/schemas/emoji.json"
          }
       },
       "features": {
@@ -150,7 +150,7 @@
       "application_id": {
          "oneOf": [
             {
-               "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+               "$ref": "/schemas/snowflake.json"
             },
             {
                "type": "null"
@@ -160,7 +160,7 @@
       "system_channel_id": {
          "oneOf": [
             {
-               "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+               "$ref": "/schemas/snowflake.json"
             },
             {
                "type": "null"
@@ -181,7 +181,7 @@
       "rules_channel_id": {
          "oneOf": [
             {
-               "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+               "$ref": "/schemas/snowflake.json"
             },
             {
                "type": "null"
@@ -228,12 +228,12 @@
          "type": "integer"
       },
       "preferred_locale": {
-         "$ref": "https://docs.helvetica.moe/schemas/locales.json"
+         "$ref": "/schemas/locales.json"
       },
       "public_updates_channel_id": {
          "oneOf": [
             {
-               "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+               "$ref": "/schemas/snowflake.json"
             },
             {
                "type": "null"
@@ -267,7 +267,7 @@
                   "type": "object",
                   "properties": {
                      "channel_id": {
-                        "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+                        "$ref": "/schemas/snowflake.json"
                      },
                      "description": {
                         "type": "string"
@@ -275,7 +275,7 @@
                      "emoji_id": {
                         "oneOf": [
                            {
-                              "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+                              "$ref": "/schemas/snowflake.json"
                            },
                            {
                               "type": "null"
@@ -315,7 +315,7 @@
       "stickers": {
          "type": "array",
          "items": {
-            "$ref": "https://docs.helvetica.moe/schemas/sticker.json"
+            "$ref": "/schemas/sticker.json"
          }
       },
       "premium_progress_bar_enabled": {
@@ -324,7 +324,7 @@
       "safety_alerts_channel_id": {
          "oneOf": [
             {
-               "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+               "$ref": "/schemas/snowflake.json"
             },
             {
                "type": "null"

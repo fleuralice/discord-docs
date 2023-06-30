@@ -4,7 +4,7 @@
    "type": "object",
    "properties": {
       "id": {
-         "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+         "$ref": "/schemas/snowflake.json"
       },
       "type": {
          "type": "integer",
@@ -17,7 +17,7 @@
       "guild_id": {
          "oneOf": [
             {
-               "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+               "$ref": "/schemas/snowflake.json"
             },
             {
                "type": "null"
@@ -27,7 +27,7 @@
       "channel_id": {
          "oneOf": [
             {
-               "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+               "$ref": "/schemas/snowflake.json"
             },
             {
                "type": "null"
@@ -35,7 +35,7 @@
          ]
       },
       "user": {
-         "$ref": "https://docs.helvetica.moe/schemas/user.json"
+         "$ref": "/schemas/user.json"
       },
       "name": {
          "type": [
@@ -55,7 +55,7 @@
       "application_id": {
          "oneOf": [
             {
-               "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+               "$ref": "/schemas/snowflake.json"
             },
             {
                "type": "null"
@@ -63,11 +63,11 @@
          ]
       },
       "source_guild": {
-         "$ref": "https://docs.helvetica.moe/schemas/guild.json",
+         "$ref": "/schemas/guild.json",
          "required": []
       },
       "source_channel": {
-         "$ref": "https://docs.helvetica.moe/schemas/channel.json",
+         "$ref": "/schemas/channel.json",
          "required": []
       },
       "url": {

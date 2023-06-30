@@ -39,7 +39,7 @@
       "integrations": {
          "type": "array",
          "items": {
-            "$ref": "https://docs.helvetica.moe/schemas/integration.json",
+            "$ref": "/schemas/integration.json",
             "required": []
          }
       },

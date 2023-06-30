@@ -7,13 +7,13 @@
          "type": "string"
       },
       "guild": {
-         "$ref": "https://docs.helvetica.moe/schemas/guild.json",
+         "$ref": "/schemas/guild.json",
          "required": []
       },
       "channel": {
          "oneOf": [
             {
-               "$ref": "https://docs.helvetica.moe/schemas/channel.json",
+               "$ref": "/schemas/channel.json",
                "required": []
             },
             {
@@ -22,7 +22,7 @@
          ]
       },
       "inviter": {
-         "$ref": "https://docs.helvetica.moe/schemas/user.json"
+         "$ref": "/schemas/user.json"
       },
       "target_type": {
          "type": "integer",
@@ -32,10 +32,10 @@
          ]
       },
       "target_user": {
-         "$ref": "https://docs.helvetica.moe/schemas/user.json"
+         "$ref": "/schemas/user.json"
       },
       "target_application": {
-         "$ref": "https://docs.helvetica.moe/schemas/application.json",
+         "$ref": "/schemas/application.json",
          "required": []
       },
       "approximate_presence_count": {
@@ -56,7 +56,7 @@
             "members": {
                "type": "array",
                "items": {
-                  "$ref": "https://docs.helvetica.moe/schemas/member.json",
+                  "$ref": "/schemas/member.json",
                   "required": []
                }
             },
@@ -79,7 +79,7 @@
          ]
       },
       "guild_scheduled_event": {
-         "$ref": "https://docs.helvetica.moe/schemas/guild-scheduled-event.json"
+         "$ref": "/schemas/guild-scheduled-event.json"
       }
    },
    "required": [

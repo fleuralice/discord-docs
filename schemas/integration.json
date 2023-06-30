@@ -4,7 +4,7 @@
    "type": "object",
    "properties": {
       "id": {
-         "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+         "$ref": "/schemas/snowflake.json"
       },
       "name": {
          "type": "string"
@@ -19,7 +19,7 @@
          "type": "boolean"
       },
       "role_id": {
-         "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+         "$ref": "/schemas/snowflake.json"
       },
       "enable_emoticons": {
          "type": "boolean"
@@ -35,7 +35,7 @@
          "type": "integer"
       },
       "user": {
-         "$ref": "https://docs.helvetica.moe/schemas/user.json"
+         "$ref": "/schemas/user.json"
       },
       "account": {
          "type": "object",
@@ -65,7 +65,7 @@
          "type": "object",
          "properties": {
             "id": {
-               "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+               "$ref": "/schemas/snowflake.json"
             },
             "name": {
                "type": "string"
@@ -80,7 +80,7 @@
                "type": "string"
             },
             "bot": {
-               "$ref": "https://docs.helvetica.moe/schemas/user.json"
+               "$ref": "/schemas/user.json"
             }
          },
          "required": [

@@ -6,16 +6,16 @@
       {
          "properties": {
             "id": {
-               "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+               "$ref": "/schemas/snowflake.json"
             },
             "guild_id": {
-               "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+               "$ref": "/schemas/snowflake.json"
             },
             "name": {
                "type": "string"
             },
             "creator_id": {
-               "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+               "$ref": "/schemas/snowflake.json"
             },
             "event_type": {
                "type": "integer",
@@ -55,7 +55,7 @@
                               "type": "object",
                               "properties": {
                                  "channel_id": {
-                                    "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+                                    "$ref": "/schemas/snowflake.json"
                                  }
                               },
                               "required": ["channel_id"]
@@ -90,13 +90,13 @@
             "exempt_roles": {
                "type": "array",
                "items": {
-                  "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+                  "$ref": "/schemas/snowflake.json"
                }
             },
             "exempt_channels": {
                "type": "array",
                "items": {
-                  "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+                  "$ref": "/schemas/snowflake.json"
                }
             }
          },

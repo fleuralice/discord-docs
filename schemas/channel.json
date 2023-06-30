@@ -4,7 +4,7 @@
    "type": "object",
    "properties": {
       "id": {
-         "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+         "$ref": "/schemas/snowflake.json"
       },
       "type": {
          "type": "integer",
@@ -24,7 +24,7 @@
          ]
       },
       "guild_id": {
-         "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+         "$ref": "/schemas/snowflake.json"
       },
       "position": {
          "type": "integer"
@@ -35,7 +35,7 @@
             "type": "object",
             "properties": {
                "id": {
-                  "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+                  "$ref": "/schemas/snowflake.json"
                },
                "type": {
                   "type": "integer",
@@ -45,10 +45,10 @@
                   ]
                },
                "allow": {
-                  "$ref": "https://docs.helvetica.moe/schemas/permissions.json"
+                  "$ref": "/schemas/permissions.json"
                },
                "deny": {
-                  "$ref": "https://docs.helvetica.moe/schemas/permissions.json"
+                  "$ref": "/schemas/permissions.json"
                }
             },
             "required": [
@@ -77,7 +77,7 @@
       "last_message_id": {
          "oneOf": [
             {
-               "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+               "$ref": "/schemas/snowflake.json"
             },
             {
                "type": "null"
@@ -96,7 +96,7 @@
       "recipients": {
          "type": "array",
          "items": {
-            "$ref": "https://docs.helvetica.moe/schemas/user.json"
+            "$ref": "/schemas/user.json"
          }
       },
       "icon": {
@@ -106,10 +106,10 @@
          ]
       },
       "owner_id": {
-         "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+         "$ref": "/schemas/snowflake.json"
       },
       "application_id": {
-         "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+         "$ref": "/schemas/snowflake.json"
       },
       "managed": {
          "type": "boolean"
@@ -117,7 +117,7 @@
       "parent_id": {
          "oneOf": [
             {
-               "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+               "$ref": "/schemas/snowflake.json"
             },
             {
                "type": "null"
@@ -188,10 +188,10 @@
          "type": "object",
          "properties": {
             "id": {
-               "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+               "$ref": "/schemas/snowflake.json"
             },
             "user_id": {
-               "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+               "$ref": "/schemas/snowflake.json"
             },
             "join_timestamp": {
                "type": "string"
@@ -200,7 +200,7 @@
                "type": "integer"
             },
             "member": {
-               "$ref": "https://docs.helvetica.moe/schemas/member.json"
+               "$ref": "/schemas/member.json"
             }
          },
          "required": [
@@ -236,7 +236,7 @@
             "type": "object",
             "properties": {
                "id": {
-                  "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+                  "$ref": "/schemas/snowflake.json"
                },
                "name": {
                   "type": "string"
@@ -249,7 +249,7 @@
                {
                   "properties": {
                      "emoji_id": {
-                        "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+                        "$ref": "/schemas/snowflake.json"
                      },
                      "emoji_name": {
                         "type": "null"
@@ -289,7 +289,7 @@
       "applied_tags": {
          "type": "array",
          "items": {
-            "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+            "$ref": "/schemas/snowflake.json"
          }
       },
       "default_reaction_emoji": {
@@ -301,7 +301,7 @@
             {
                "properties": {
                   "emoji_id": {
-                     "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+                     "$ref": "/schemas/snowflake.json"
                   }
                },
                "required": [

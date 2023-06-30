@@ -4,7 +4,7 @@
    "type": "object",
    "properties": {
       "id": {
-         "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+         "$ref": "/schemas/snowflake.json"
       },
       "type": {
          "type": "integer",

@@ -3,7 +3,7 @@
    "$schema": "https://json-schema.org/draft/2020-12/schema",
    "properties": {
       "user": {
-         "$ref": "https://docs.helvetica.moe/schemas/user.json"
+         "$ref": "/schemas/user.json"
       },
       "nick": {
          "type": [
@@ -20,7 +20,7 @@
       "roles": {
          "type": "array",
          "items": {
-            "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+            "$ref": "/schemas/snowflake.json"
          }
       },
       "joined_at": {
@@ -51,7 +51,7 @@
          "type": "boolean"
       },
       "permissions": {
-         "$ref": "https://docs.helvetica.moe/schemas/permissions.json"
+         "$ref": "/schemas/permissions.json"
       },
       "communication_disabled_until": {
          "type": [

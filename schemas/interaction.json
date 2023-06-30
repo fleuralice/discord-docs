@@ -21,10 +21,10 @@
                "type": "object",
                "properties": {
                   "id": {
-                     "$ref": "https://docs.helvetica.moe/schemas/application-command.json#/allOf/0/properties/id"
+                     "$ref": "/schemas/application-command.json#/allOf/0/properties/id"
                   },
                   "name": {
-                     "$ref": "https://docs.helvetica.moe/schemas/application-command.json#/allOf/0/properties/name"
+                     "$ref": "/schemas/application-command.json#/allOf/0/properties/name"
                   },
                   "type": {
                      "type": "integer",
@@ -36,58 +36,58 @@
                         "users": {
                            "type": "object",
                            "propertyNames": {
-                              "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+                              "$ref": "/schemas/snowflake.json"
                            },
                            "additionalProperties": {
-                              "$ref": "https://docs.helvetica.moe/schemas/user.json"
+                              "$ref": "/schemas/user.json"
                            }
                         },
                         "members": {
                            "type": "object",
                            "propertyNames": {
-                              "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+                              "$ref": "/schemas/snowflake.json"
                            },
                            "additionalProperties": {
-                              "$ref": "https://docs.helvetica.moe/schemas/member.json",
+                              "$ref": "/schemas/member.json",
                               "required": []
                            }
                         },
                         "roles": {
                            "type": "object",
                            "propertyNames": {
-                              "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+                              "$ref": "/schemas/snowflake.json"
                            },
                            "additionalProperties": {
-                              "$ref": "https://docs.helvetica.moe/schemas/role.json"
+                              "$ref": "/schemas/role.json"
                            }
                         },
                         "channels": {
                            "type": "object",
                            "propertyNames": {
-                              "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+                              "$ref": "/schemas/snowflake.json"
                            },
                            "additionalProperties": {
-                              "$ref": "https://docs.helvetica.moe/schemas/channel.json",
+                              "$ref": "/schemas/channel.json",
                               "required": []
                            }
                         },
                         "messages": {
                            "type": "object",
                            "propertyNames": {
-                              "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+                              "$ref": "/schemas/snowflake.json"
                            },
                            "additionalProperties": {
-                              "$ref": "https://docs.helvetica.moe/schemas/message.json",
+                              "$ref": "/schemas/message.json",
                               "required": []
                            }
                         },
                         "attachments": {
                            "type": "object",
                            "propertyNames": {
-                              "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+                              "$ref": "/schemas/snowflake.json"
                            },
                            "additionalProperties": {
-                              "$ref": "https://docs.helvetica.moe/schemas/message.json#/properties/attachments/items"
+                              "$ref": "/schemas/message.json#/properties/attachments/items"
                            }
                         }
                      }
@@ -108,7 +108,7 @@
                               "type": ["string", "integer", "number", "boolean"]
                            },
                            "options": {
-                              "$ref": "https://docs.helvetica.moe/schemas/interaction.json#/oneOf/1/properties/data/properties/options"
+                              "$ref": "/schemas/interaction.json#/oneOf/1/properties/data/properties/options"
                            },
                            "focused": {
                               "type": "boolean"
@@ -118,10 +118,10 @@
                      }
                   },
                   "guild_id": {
-                     "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+                     "$ref": "/schemas/snowflake.json"
                   },
                   "target_id": {
-                     "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+                     "$ref": "/schemas/snowflake.json"
                   }
                }
             }
@@ -142,7 +142,7 @@
                "enum": [1, 2, 3, 4, 5, 6, 7, 8]
             },
             "values": {
-               "$ref": "https://docs.helvetica.moe/schemas/component.json#/oneOf/1/properties/options"
+               "$ref": "/schemas/component.json#/oneOf/1/properties/options"
             }
          },
          "required": ["data", "locale"]
@@ -159,7 +159,7 @@
             "components": {
                "type": "array",
                "items": {
-                  "$ref": "https://docs.helvetica.moe/schemas/component.json"
+                  "$ref": "/schemas/component.json"
                }
             }
          },
@@ -168,26 +168,26 @@
    ],
    "properties": {
       "id": {
-         "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+         "$ref": "/schemas/snowflake.json"
       },
       "application_id": {
-         "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+         "$ref": "/schemas/snowflake.json"
       },
       "guild_id": {
-         "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+         "$ref": "/schemas/snowflake.json"
       },
       "channel": {
-         "$ref": "https://docs.helvetica.moe/schemas/channel.json",
+         "$ref": "/schemas/channel.json",
          "required": []
       },
       "channel_id": {
-         "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+         "$ref": "/schemas/snowflake.json"
       },
       "member": {
-         "$ref": "https://docs.helvetica.moe/schemas/member.json"
+         "$ref": "/schemas/member.json"
       },
       "user": {
-         "$ref": "https://docs.helvetica.moe/schemas/user.json"
+         "$ref": "/schemas/user.json"
       },
       "token": {
          "type": "string"
@@ -197,16 +197,16 @@
          "enum": [1]
       },
       "message": {
-         "$ref": "https://docs.helvetica.moe/schemas/message.json"
+         "$ref": "/schemas/message.json"
       },
       "app_permissions": {
-         "$ref": "https://docs.helvetica.moe/schemas/permissions.json"
+         "$ref": "/schemas/permissions.json"
       },
       "locale": {
-         "$ref": "https://docs.helvetica.moe/schemas/locales.json"
+         "$ref": "/schemas/locales.json"
       },
       "guild_locale": {
-         "$ref": "https://docs.helvetica.moe/schemas/locales.json"
+         "$ref": "/schemas/locales.json"
       }
    },
    "required": ["id", "application_id", "type", "token", "version"]

@@ -209,11 +209,43 @@ schemas.forEach((schema, i) => {
    recurse(schema, []);
 });
 
+// LINT: check that every $ref is a relative link
+schemas.forEach((schema, i) => {
+   const recurse = (s: unknown, path: (string | number)[]) => {
+      if (Array.isArray(s)) s.forEach((x, j) => recurse(x, [...path, j]));
+      else if (typeof s === "object" && s !== null) {
+         Object.entries(s).forEach(([key, value]) => {
+            if (key === "$ref") {
+               try {
+                  // relative URL means that without a base, it will error
+                  const url = new URL(value);
+                  url.hash = "";
+                  reportError(
+                     errorMap[i]!,
+                     [...path, "$ref"],
+                     "absolute $ref",
+                  );
+               } catch {
+                  // this is the case I want
+               }
+            }
+            recurse(value, [...path, key]);
+         });
+      }
+   };
+
+   recurse(schema, []);
+});
+
 if (hadErrors) {
    console.log("errored :(");
    if (!Deno.args.includes("--dev")) Deno.exit(1);
 } else {
    console.log("success!");
+
+   const schemaMapping = createSchemaMapping(schemas);
+   const bundled = bundle(schemaMapping);
+
    if (!dryRun) {
       try {
          await Deno.remove("dist/", { recursive: true });

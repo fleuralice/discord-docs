@@ -6,7 +6,7 @@
       "application_commands": {
          "type": "array",
          "items": {
-            "$ref": "https://docs.helvetica.moe/schemas/application-command.json"
+            "$ref": "/schemas/application-command.json"
          }
       },
       "audit_log_entries": {
@@ -25,7 +25,7 @@
                      "user_id": {
                         "oneOf": [
                            {
-                              "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+                              "$ref": "/schemas/snowflake.json"
                            },
                            {
                               "type": "null"
@@ -33,7 +33,7 @@
                         ]
                      },
                      "id": {
-                        "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+                        "$ref": "/schemas/snowflake.json"
                      },
                      "action_type": {
                         "type": "integer"
@@ -70,10 +70,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/id"
+                                             "$ref": "/schemas/guild.json#/properties/id"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/id"
+                                             "$ref": "/schemas/guild.json#/properties/id"
                                           },
                                           "key": {
                                              "type": "string",
@@ -86,10 +86,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/name"
+                                             "$ref": "/schemas/guild.json#/properties/name"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/name"
+                                             "$ref": "/schemas/guild.json#/properties/name"
                                           },
                                           "key": {
                                              "type": "string",
@@ -102,10 +102,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/icon"
+                                             "$ref": "/schemas/guild.json#/properties/icon"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/icon"
+                                             "$ref": "/schemas/guild.json#/properties/icon"
                                           },
                                           "key": {
                                              "type": "string",
@@ -118,10 +118,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/icon_hash"
+                                             "$ref": "/schemas/guild.json#/properties/icon_hash"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/icon_hash"
+                                             "$ref": "/schemas/guild.json#/properties/icon_hash"
                                           },
                                           "key": {
                                              "type": "string",
@@ -134,10 +134,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/splash"
+                                             "$ref": "/schemas/guild.json#/properties/splash"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/splash"
+                                             "$ref": "/schemas/guild.json#/properties/splash"
                                           },
                                           "key": {
                                              "type": "string",
@@ -150,10 +150,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/discovery_splash"
+                                             "$ref": "/schemas/guild.json#/properties/discovery_splash"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/discovery_splash"
+                                             "$ref": "/schemas/guild.json#/properties/discovery_splash"
                                           },
                                           "key": {
                                              "type": "string",
@@ -166,10 +166,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/owner"
+                                             "$ref": "/schemas/guild.json#/properties/owner"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/owner"
+                                             "$ref": "/schemas/guild.json#/properties/owner"
                                           },
                                           "key": {
                                              "type": "string",
@@ -182,10 +182,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/owner_id"
+                                             "$ref": "/schemas/guild.json#/properties/owner_id"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/owner_id"
+                                             "$ref": "/schemas/guild.json#/properties/owner_id"
                                           },
                                           "key": {
                                              "type": "string",
@@ -198,10 +198,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/permissions"
+                                             "$ref": "/schemas/guild.json#/properties/permissions"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/permissions"
+                                             "$ref": "/schemas/guild.json#/properties/permissions"
                                           },
                                           "key": {
                                              "type": "string",
@@ -214,10 +214,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/afk_channel_id"
+                                             "$ref": "/schemas/guild.json#/properties/afk_channel_id"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/afk_channel_id"
+                                             "$ref": "/schemas/guild.json#/properties/afk_channel_id"
                                           },
                                           "key": {
                                              "type": "string",
@@ -230,10 +230,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/afk_timeout"
+                                             "$ref": "/schemas/guild.json#/properties/afk_timeout"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/afk_timeout"
+                                             "$ref": "/schemas/guild.json#/properties/afk_timeout"
                                           },
                                           "key": {
                                              "type": "string",
@@ -246,10 +246,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/widget_enabled"
+                                             "$ref": "/schemas/guild.json#/properties/widget_enabled"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/widget_enabled"
+                                             "$ref": "/schemas/guild.json#/properties/widget_enabled"
                                           },
                                           "key": {
                                              "type": "string",
@@ -262,10 +262,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/widget_channel_id"
+                                             "$ref": "/schemas/guild.json#/properties/widget_channel_id"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/widget_channel_id"
+                                             "$ref": "/schemas/guild.json#/properties/widget_channel_id"
                                           },
                                           "key": {
                                              "type": "string",
@@ -278,10 +278,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/verification_level"
+                                             "$ref": "/schemas/guild.json#/properties/verification_level"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/verification_level"
+                                             "$ref": "/schemas/guild.json#/properties/verification_level"
                                           },
                                           "key": {
                                              "type": "string",
@@ -294,10 +294,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/default_message_notifications"
+                                             "$ref": "/schemas/guild.json#/properties/default_message_notifications"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/default_message_notifications"
+                                             "$ref": "/schemas/guild.json#/properties/default_message_notifications"
                                           },
                                           "key": {
                                              "type": "string",
@@ -310,10 +310,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/expicit_content_filter"
+                                             "$ref": "/schemas/guild.json#/properties/expicit_content_filter"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/expicit_content_filter"
+                                             "$ref": "/schemas/guild.json#/properties/expicit_content_filter"
                                           },
                                           "key": {
                                              "type": "string",
@@ -326,10 +326,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/roles"
+                                             "$ref": "/schemas/guild.json#/properties/roles"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/roles"
+                                             "$ref": "/schemas/guild.json#/properties/roles"
                                           },
                                           "key": {
                                              "type": "string",
@@ -342,10 +342,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/emojis"
+                                             "$ref": "/schemas/guild.json#/properties/emojis"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/emojis"
+                                             "$ref": "/schemas/guild.json#/properties/emojis"
                                           },
                                           "key": {
                                              "type": "string",
@@ -358,10 +358,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/features"
+                                             "$ref": "/schemas/guild.json#/properties/features"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/features"
+                                             "$ref": "/schemas/guild.json#/properties/features"
                                           },
                                           "key": {
                                              "type": "string",
@@ -374,10 +374,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/mfa_level"
+                                             "$ref": "/schemas/guild.json#/properties/mfa_level"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/mfa_level"
+                                             "$ref": "/schemas/guild.json#/properties/mfa_level"
                                           },
                                           "key": {
                                              "type": "string",
@@ -390,10 +390,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/application_id"
+                                             "$ref": "/schemas/guild.json#/properties/application_id"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/application_id"
+                                             "$ref": "/schemas/guild.json#/properties/application_id"
                                           },
                                           "key": {
                                              "type": "string",
@@ -406,10 +406,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/system_channel_id"
+                                             "$ref": "/schemas/guild.json#/properties/system_channel_id"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/system_channel_id"
+                                             "$ref": "/schemas/guild.json#/properties/system_channel_id"
                                           },
                                           "key": {
                                              "type": "string",
@@ -422,10 +422,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/system_channel_flags"
+                                             "$ref": "/schemas/guild.json#/properties/system_channel_flags"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/system_channel_flags"
+                                             "$ref": "/schemas/guild.json#/properties/system_channel_flags"
                                           },
                                           "key": {
                                              "type": "string",
@@ -438,10 +438,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/rules_channel_id"
+                                             "$ref": "/schemas/guild.json#/properties/rules_channel_id"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/rules_channel_id"
+                                             "$ref": "/schemas/guild.json#/properties/rules_channel_id"
                                           },
                                           "key": {
                                              "type": "string",
@@ -454,10 +454,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/max_presences"
+                                             "$ref": "/schemas/guild.json#/properties/max_presences"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/max_presences"
+                                             "$ref": "/schemas/guild.json#/properties/max_presences"
                                           },
                                           "key": {
                                              "type": "string",
@@ -470,10 +470,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/max_members"
+                                             "$ref": "/schemas/guild.json#/properties/max_members"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/max_members"
+                                             "$ref": "/schemas/guild.json#/properties/max_members"
                                           },
                                           "key": {
                                              "type": "string",
@@ -486,10 +486,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/vanity_url_code"
+                                             "$ref": "/schemas/guild.json#/properties/vanity_url_code"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/vanity_url_code"
+                                             "$ref": "/schemas/guild.json#/properties/vanity_url_code"
                                           },
                                           "key": {
                                              "type": "string",
@@ -502,10 +502,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/description"
+                                             "$ref": "/schemas/guild.json#/properties/description"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/description"
+                                             "$ref": "/schemas/guild.json#/properties/description"
                                           },
                                           "key": {
                                              "type": "string",
@@ -518,10 +518,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/banner"
+                                             "$ref": "/schemas/guild.json#/properties/banner"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/banner"
+                                             "$ref": "/schemas/guild.json#/properties/banner"
                                           },
                                           "key": {
                                              "type": "string",
@@ -534,10 +534,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/premium_tier"
+                                             "$ref": "/schemas/guild.json#/properties/premium_tier"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/premium_tier"
+                                             "$ref": "/schemas/guild.json#/properties/premium_tier"
                                           },
                                           "key": {
                                              "type": "string",
@@ -550,10 +550,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/premium_subscription_count"
+                                             "$ref": "/schemas/guild.json#/properties/premium_subscription_count"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/premium_subscription_count"
+                                             "$ref": "/schemas/guild.json#/properties/premium_subscription_count"
                                           },
                                           "key": {
                                              "type": "string",
@@ -566,10 +566,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/preferred_locale"
+                                             "$ref": "/schemas/guild.json#/properties/preferred_locale"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/preferred_locale"
+                                             "$ref": "/schemas/guild.json#/properties/preferred_locale"
                                           },
                                           "key": {
                                              "type": "string",
@@ -582,10 +582,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/public_updates_channel_id"
+                                             "$ref": "/schemas/guild.json#/properties/public_updates_channel_id"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/public_updates_channel_id"
+                                             "$ref": "/schemas/guild.json#/properties/public_updates_channel_id"
                                           },
                                           "key": {
                                              "type": "string",
@@ -598,10 +598,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/max_video_channel_users"
+                                             "$ref": "/schemas/guild.json#/properties/max_video_channel_users"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/max_video_channel_users"
+                                             "$ref": "/schemas/guild.json#/properties/max_video_channel_users"
                                           },
                                           "key": {
                                              "type": "string",
@@ -614,10 +614,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/max_stage_video_channel_users"
+                                             "$ref": "/schemas/guild.json#/properties/max_stage_video_channel_users"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/max_stage_video_channel_users"
+                                             "$ref": "/schemas/guild.json#/properties/max_stage_video_channel_users"
                                           },
                                           "key": {
                                              "type": "string",
@@ -630,10 +630,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/approximate_member_count"
+                                             "$ref": "/schemas/guild.json#/properties/approximate_member_count"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/approximate_member_count"
+                                             "$ref": "/schemas/guild.json#/properties/approximate_member_count"
                                           },
                                           "key": {
                                              "type": "string",
@@ -646,10 +646,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/approximate_presence_count"
+                                             "$ref": "/schemas/guild.json#/properties/approximate_presence_count"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/approximate_presence_count"
+                                             "$ref": "/schemas/guild.json#/properties/approximate_presence_count"
                                           },
                                           "key": {
                                              "type": "string",
@@ -662,10 +662,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/welcome_screen"
+                                             "$ref": "/schemas/guild.json#/properties/welcome_screen"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/welcome_screen"
+                                             "$ref": "/schemas/guild.json#/properties/welcome_screen"
                                           },
                                           "key": {
                                              "type": "string",
@@ -678,10 +678,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/nsfw_level"
+                                             "$ref": "/schemas/guild.json#/properties/nsfw_level"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/nsfw_level"
+                                             "$ref": "/schemas/guild.json#/properties/nsfw_level"
                                           },
                                           "key": {
                                              "type": "string",
@@ -694,10 +694,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/stickers"
+                                             "$ref": "/schemas/guild.json#/properties/stickers"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/stickers"
+                                             "$ref": "/schemas/guild.json#/properties/stickers"
                                           },
                                           "key": {
                                              "type": "string",
@@ -710,10 +710,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/premium_progress_bar_enabled"
+                                             "$ref": "/schemas/guild.json#/properties/premium_progress_bar_enabled"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/premium_progress_bar_enabled"
+                                             "$ref": "/schemas/guild.json#/properties/premium_progress_bar_enabled"
                                           },
                                           "key": {
                                              "type": "string",
@@ -726,10 +726,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/safety_alerts_channel_id"
+                                             "$ref": "/schemas/guild.json#/properties/safety_alerts_channel_id"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/safety_alerts_channel_id"
+                                             "$ref": "/schemas/guild.json#/properties/safety_alerts_channel_id"
                                           },
                                           "key": {
                                              "type": "string",
@@ -768,10 +768,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/id"
+                                             "$ref": "/schemas/channel.json#/properties/id"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/id"
+                                             "$ref": "/schemas/channel.json#/properties/id"
                                           },
                                           "key": {
                                              "type": "string",
@@ -784,10 +784,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/type"
+                                             "$ref": "/schemas/channel.json#/properties/type"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/type"
+                                             "$ref": "/schemas/channel.json#/properties/type"
                                           },
                                           "key": {
                                              "type": "string",
@@ -800,10 +800,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/guild_id"
+                                             "$ref": "/schemas/channel.json#/properties/guild_id"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/guild_id"
+                                             "$ref": "/schemas/channel.json#/properties/guild_id"
                                           },
                                           "key": {
                                              "type": "string",
@@ -816,10 +816,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/position"
+                                             "$ref": "/schemas/channel.json#/properties/position"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/position"
+                                             "$ref": "/schemas/channel.json#/properties/position"
                                           },
                                           "key": {
                                              "type": "string",
@@ -832,10 +832,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/permission_overwrites"
+                                             "$ref": "/schemas/channel.json#/properties/permission_overwrites"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/permission_overwrites"
+                                             "$ref": "/schemas/channel.json#/properties/permission_overwrites"
                                           },
                                           "key": {
                                              "type": "string",
@@ -848,10 +848,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/name"
+                                             "$ref": "/schemas/channel.json#/properties/name"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/name"
+                                             "$ref": "/schemas/channel.json#/properties/name"
                                           },
                                           "key": {
                                              "type": "string",
@@ -864,10 +864,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/topic"
+                                             "$ref": "/schemas/channel.json#/properties/topic"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/topic"
+                                             "$ref": "/schemas/channel.json#/properties/topic"
                                           },
                                           "key": {
                                              "type": "string",
@@ -880,10 +880,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/nsfw"
+                                             "$ref": "/schemas/channel.json#/properties/nsfw"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/nsfw"
+                                             "$ref": "/schemas/channel.json#/properties/nsfw"
                                           },
                                           "key": {
                                              "type": "string",
@@ -896,10 +896,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/last_message_id"
+                                             "$ref": "/schemas/channel.json#/properties/last_message_id"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/last_message_id"
+                                             "$ref": "/schemas/channel.json#/properties/last_message_id"
                                           },
                                           "key": {
                                              "type": "string",
@@ -912,10 +912,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/bitrate"
+                                             "$ref": "/schemas/channel.json#/properties/bitrate"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/bitrate"
+                                             "$ref": "/schemas/channel.json#/properties/bitrate"
                                           },
                                           "key": {
                                              "type": "string",
@@ -928,10 +928,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/user_limit"
+                                             "$ref": "/schemas/channel.json#/properties/user_limit"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/user_limit"
+                                             "$ref": "/schemas/channel.json#/properties/user_limit"
                                           },
                                           "key": {
                                              "type": "string",
@@ -944,10 +944,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/rate_limit_per_user"
+                                             "$ref": "/schemas/channel.json#/properties/rate_limit_per_user"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/rate_limit_per_user"
+                                             "$ref": "/schemas/channel.json#/properties/rate_limit_per_user"
                                           },
                                           "key": {
                                              "type": "string",
@@ -960,10 +960,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/recipients"
+                                             "$ref": "/schemas/channel.json#/properties/recipients"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/recipients"
+                                             "$ref": "/schemas/channel.json#/properties/recipients"
                                           },
                                           "key": {
                                              "type": "string",
@@ -976,10 +976,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/icon"
+                                             "$ref": "/schemas/channel.json#/properties/icon"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/icon"
+                                             "$ref": "/schemas/channel.json#/properties/icon"
                                           },
                                           "key": {
                                              "type": "string",
@@ -992,10 +992,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/owner_id"
+                                             "$ref": "/schemas/channel.json#/properties/owner_id"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/owner_id"
+                                             "$ref": "/schemas/channel.json#/properties/owner_id"
                                           },
                                           "key": {
                                              "type": "string",
@@ -1008,10 +1008,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/application_id"
+                                             "$ref": "/schemas/channel.json#/properties/application_id"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/application_id"
+                                             "$ref": "/schemas/channel.json#/properties/application_id"
                                           },
                                           "key": {
                                              "type": "string",
@@ -1024,10 +1024,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/managed"
+                                             "$ref": "/schemas/channel.json#/properties/managed"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/managed"
+                                             "$ref": "/schemas/channel.json#/properties/managed"
                                           },
                                           "key": {
                                              "type": "string",
@@ -1040,10 +1040,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/parent_id"
+                                             "$ref": "/schemas/channel.json#/properties/parent_id"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/parent_id"
+                                             "$ref": "/schemas/channel.json#/properties/parent_id"
                                           },
                                           "key": {
                                              "type": "string",
@@ -1056,10 +1056,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/last_pin_timestamp"
+                                             "$ref": "/schemas/channel.json#/properties/last_pin_timestamp"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/last_pin_timestamp"
+                                             "$ref": "/schemas/channel.json#/properties/last_pin_timestamp"
                                           },
                                           "key": {
                                              "type": "string",
@@ -1072,10 +1072,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/rtc_region"
+                                             "$ref": "/schemas/channel.json#/properties/rtc_region"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/rtc_region"
+                                             "$ref": "/schemas/channel.json#/properties/rtc_region"
                                           },
                                           "key": {
                                              "type": "string",
@@ -1088,10 +1088,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/video_quality_mode"
+                                             "$ref": "/schemas/channel.json#/properties/video_quality_mode"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/video_quality_mode"
+                                             "$ref": "/schemas/channel.json#/properties/video_quality_mode"
                                           },
                                           "key": {
                                              "type": "string",
@@ -1104,10 +1104,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/message_count"
+                                             "$ref": "/schemas/channel.json#/properties/message_count"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/message_count"
+                                             "$ref": "/schemas/channel.json#/properties/message_count"
                                           },
                                           "key": {
                                              "type": "string",
@@ -1120,10 +1120,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/member_count"
+                                             "$ref": "/schemas/channel.json#/properties/member_count"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/member_count"
+                                             "$ref": "/schemas/channel.json#/properties/member_count"
                                           },
                                           "key": {
                                              "type": "string",
@@ -1136,10 +1136,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/thread_metadata"
+                                             "$ref": "/schemas/channel.json#/properties/thread_metadata"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/thread_metadata"
+                                             "$ref": "/schemas/channel.json#/properties/thread_metadata"
                                           },
                                           "key": {
                                              "type": "string",
@@ -1152,10 +1152,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/member"
+                                             "$ref": "/schemas/channel.json#/properties/member"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/member"
+                                             "$ref": "/schemas/channel.json#/properties/member"
                                           },
                                           "key": {
                                              "type": "string",
@@ -1168,10 +1168,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/default_auto_archive_duration"
+                                             "$ref": "/schemas/channel.json#/properties/default_auto_archive_duration"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/default_auto_archive_duration"
+                                             "$ref": "/schemas/channel.json#/properties/default_auto_archive_duration"
                                           },
                                           "key": {
                                              "type": "string",
@@ -1184,10 +1184,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/permissions"
+                                             "$ref": "/schemas/channel.json#/properties/permissions"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/permissions"
+                                             "$ref": "/schemas/channel.json#/properties/permissions"
                                           },
                                           "key": {
                                              "type": "string",
@@ -1200,10 +1200,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/flags"
+                                             "$ref": "/schemas/channel.json#/properties/flags"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/flags"
+                                             "$ref": "/schemas/channel.json#/properties/flags"
                                           },
                                           "key": {
                                              "type": "string",
@@ -1216,10 +1216,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/total_message_sent"
+                                             "$ref": "/schemas/channel.json#/properties/total_message_sent"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/total_message_sent"
+                                             "$ref": "/schemas/channel.json#/properties/total_message_sent"
                                           },
                                           "key": {
                                              "type": "string",
@@ -1232,10 +1232,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/available_tags"
+                                             "$ref": "/schemas/channel.json#/properties/available_tags"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/available_tags"
+                                             "$ref": "/schemas/channel.json#/properties/available_tags"
                                           },
                                           "key": {
                                              "type": "string",
@@ -1248,10 +1248,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/applied_tags"
+                                             "$ref": "/schemas/channel.json#/properties/applied_tags"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/applied_tags"
+                                             "$ref": "/schemas/channel.json#/properties/applied_tags"
                                           },
                                           "key": {
                                              "type": "string",
@@ -1264,10 +1264,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/default_reaction_emoji"
+                                             "$ref": "/schemas/channel.json#/properties/default_reaction_emoji"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/default_reaction_emoji"
+                                             "$ref": "/schemas/channel.json#/properties/default_reaction_emoji"
                                           },
                                           "key": {
                                              "type": "string",
@@ -1280,10 +1280,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/default_thread_rate_limit_per_user"
+                                             "$ref": "/schemas/channel.json#/properties/default_thread_rate_limit_per_user"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/default_thread_rate_limit_per_user"
+                                             "$ref": "/schemas/channel.json#/properties/default_thread_rate_limit_per_user"
                                           },
                                           "key": {
                                              "type": "string",
@@ -1296,10 +1296,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/default_sort_order"
+                                             "$ref": "/schemas/channel.json#/properties/default_sort_order"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/default_sort_order"
+                                             "$ref": "/schemas/channel.json#/properties/default_sort_order"
                                           },
                                           "key": {
                                              "type": "string",
@@ -1312,10 +1312,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/default_forum_layout"
+                                             "$ref": "/schemas/channel.json#/properties/default_forum_layout"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/default_forum_layout"
+                                             "$ref": "/schemas/channel.json#/properties/default_forum_layout"
                                           },
                                           "key": {
                                              "type": "string",
@@ -1351,10 +1351,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/permission_overwrites/items/properties/id"
+                                             "$ref": "/schemas/channel.json#/properties/permission_overwrites/items/properties/id"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/permission_overwrites/items/properties/id"
+                                             "$ref": "/schemas/channel.json#/properties/permission_overwrites/items/properties/id"
                                           },
                                           "key": {
                                              "type": "string",
@@ -1367,10 +1367,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/permission_overwrites/items/properties/type"
+                                             "$ref": "/schemas/channel.json#/properties/permission_overwrites/items/properties/type"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/permission_overwrites/items/properties/type"
+                                             "$ref": "/schemas/channel.json#/properties/permission_overwrites/items/properties/type"
                                           },
                                           "key": {
                                              "type": "string",
@@ -1383,10 +1383,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/permission_overwrites/items/properties/allow"
+                                             "$ref": "/schemas/channel.json#/properties/permission_overwrites/items/properties/allow"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/permission_overwrites/items/properties/allow"
+                                             "$ref": "/schemas/channel.json#/properties/permission_overwrites/items/properties/allow"
                                           },
                                           "key": {
                                              "type": "string",
@@ -1399,10 +1399,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/permission_overwrites/items/properties/deny"
+                                             "$ref": "/schemas/channel.json#/properties/permission_overwrites/items/properties/deny"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/permission_overwrites/items/properties/deny"
+                                             "$ref": "/schemas/channel.json#/properties/permission_overwrites/items/properties/deny"
                                           },
                                           "key": {
                                              "type": "string",
@@ -1436,10 +1436,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/member.json#/properties/user"
+                                             "$ref": "/schemas/member.json#/properties/user"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/member.json#/properties/user"
+                                             "$ref": "/schemas/member.json#/properties/user"
                                           },
                                           "key": {
                                              "type": "string",
@@ -1452,10 +1452,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/member.json#/properties/nick"
+                                             "$ref": "/schemas/member.json#/properties/nick"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/member.json#/properties/nick"
+                                             "$ref": "/schemas/member.json#/properties/nick"
                                           },
                                           "key": {
                                              "type": "string",
@@ -1468,10 +1468,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/member.json#/properties/avatar"
+                                             "$ref": "/schemas/member.json#/properties/avatar"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/member.json#/properties/avatar"
+                                             "$ref": "/schemas/member.json#/properties/avatar"
                                           },
                                           "key": {
                                              "type": "string",
@@ -1484,10 +1484,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/member.json#/properties/roles"
+                                             "$ref": "/schemas/member.json#/properties/roles"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/member.json#/properties/roles"
+                                             "$ref": "/schemas/member.json#/properties/roles"
                                           },
                                           "key": {
                                              "type": "string",
@@ -1500,10 +1500,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/member.json#/properties/joined_at"
+                                             "$ref": "/schemas/member.json#/properties/joined_at"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/member.json#/properties/joined_at"
+                                             "$ref": "/schemas/member.json#/properties/joined_at"
                                           },
                                           "key": {
                                              "type": "string",
@@ -1516,10 +1516,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/member.json#/properties/premium_since"
+                                             "$ref": "/schemas/member.json#/properties/premium_since"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/member.json#/properties/premium_since"
+                                             "$ref": "/schemas/member.json#/properties/premium_since"
                                           },
                                           "key": {
                                              "type": "string",
@@ -1532,10 +1532,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/member.json#/properties/deaf"
+                                             "$ref": "/schemas/member.json#/properties/deaf"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/member.json#/properties/deaf"
+                                             "$ref": "/schemas/member.json#/properties/deaf"
                                           },
                                           "key": {
                                              "type": "string",
@@ -1548,10 +1548,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/member.json#/properties/mute"
+                                             "$ref": "/schemas/member.json#/properties/mute"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/member.json#/properties/mute"
+                                             "$ref": "/schemas/member.json#/properties/mute"
                                           },
                                           "key": {
                                              "type": "string",
@@ -1564,10 +1564,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/member.json#/properties/flags"
+                                             "$ref": "/schemas/member.json#/properties/flags"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/member.json#/properties/flags"
+                                             "$ref": "/schemas/member.json#/properties/flags"
                                           },
                                           "key": {
                                              "type": "string",
@@ -1580,10 +1580,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/member.json#/properties/pending"
+                                             "$ref": "/schemas/member.json#/properties/pending"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/member.json#/properties/pending"
+                                             "$ref": "/schemas/member.json#/properties/pending"
                                           },
                                           "key": {
                                              "type": "string",
@@ -1596,10 +1596,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/member.json#/properties/permissions"
+                                             "$ref": "/schemas/member.json#/properties/permissions"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/member.json#/properties/permissions"
+                                             "$ref": "/schemas/member.json#/properties/permissions"
                                           },
                                           "key": {
                                              "type": "string",
@@ -1612,10 +1612,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/member.json#/properties/communication_disabled_until"
+                                             "$ref": "/schemas/member.json#/properties/communication_disabled_until"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/member.json#/properties/communication_disabled_until"
+                                             "$ref": "/schemas/member.json#/properties/communication_disabled_until"
                                           },
                                           "key": {
                                              "type": "string",
@@ -1652,10 +1652,10 @@
                                           "type": "object",
                                           "properties": {
                                              "id": {
-                                                "$ref": "https://docs.helvetica.moe/schemas/role.json#/properties/id"
+                                                "$ref": "/schemas/role.json#/properties/id"
                                              },
                                              "name": {
-                                                "$ref": "https://docs.helvetica.moe/schemas/role.json#/properties/name"
+                                                "$ref": "/schemas/role.json#/properties/name"
                                              }
                                           },
                                           "required": [
@@ -1670,10 +1670,10 @@
                                           "type": "object",
                                           "properties": {
                                              "id": {
-                                                "$ref": "https://docs.helvetica.moe/schemas/role.json#/properties/id"
+                                                "$ref": "/schemas/role.json#/properties/id"
                                              },
                                              "name": {
-                                                "$ref": "https://docs.helvetica.moe/schemas/role.json#/properties/name"
+                                                "$ref": "/schemas/role.json#/properties/name"
                                              }
                                           },
                                           "required": [
@@ -1715,10 +1715,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/role.json#/properties/id"
+                                             "$ref": "/schemas/role.json#/properties/id"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/role.json#/properties/id"
+                                             "$ref": "/schemas/role.json#/properties/id"
                                           },
                                           "key": {
                                              "type": "string",
@@ -1731,10 +1731,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/role.json#/properties/name"
+                                             "$ref": "/schemas/role.json#/properties/name"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/role.json#/properties/name"
+                                             "$ref": "/schemas/role.json#/properties/name"
                                           },
                                           "key": {
                                              "type": "string",
@@ -1747,10 +1747,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/role.json#/properties/color"
+                                             "$ref": "/schemas/role.json#/properties/color"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/role.json#/properties/color"
+                                             "$ref": "/schemas/role.json#/properties/color"
                                           },
                                           "key": {
                                              "type": "string",
@@ -1763,10 +1763,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/role.json#/properties/hoist"
+                                             "$ref": "/schemas/role.json#/properties/hoist"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/role.json#/properties/hoist"
+                                             "$ref": "/schemas/role.json#/properties/hoist"
                                           },
                                           "key": {
                                              "type": "string",
@@ -1779,10 +1779,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/role.json#/properties/icon"
+                                             "$ref": "/schemas/role.json#/properties/icon"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/role.json#/properties/icon"
+                                             "$ref": "/schemas/role.json#/properties/icon"
                                           },
                                           "key": {
                                              "type": "string",
@@ -1795,10 +1795,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/role.json#/properties/unicode_emoji"
+                                             "$ref": "/schemas/role.json#/properties/unicode_emoji"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/role.json#/properties/unicode_emoji"
+                                             "$ref": "/schemas/role.json#/properties/unicode_emoji"
                                           },
                                           "key": {
                                              "type": "string",
@@ -1811,10 +1811,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/role.json#/properties/position"
+                                             "$ref": "/schemas/role.json#/properties/position"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/role.json#/properties/position"
+                                             "$ref": "/schemas/role.json#/properties/position"
                                           },
                                           "key": {
                                              "type": "string",
@@ -1827,10 +1827,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/role.json#/properties/permissions"
+                                             "$ref": "/schemas/role.json#/properties/permissions"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/role.json#/properties/permissions"
+                                             "$ref": "/schemas/role.json#/properties/permissions"
                                           },
                                           "key": {
                                              "type": "string",
@@ -1843,10 +1843,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/role.json#/properties/managed"
+                                             "$ref": "/schemas/role.json#/properties/managed"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/role.json#/properties/managed"
+                                             "$ref": "/schemas/role.json#/properties/managed"
                                           },
                                           "key": {
                                              "type": "string",
@@ -1859,10 +1859,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/role.json#/properties/mentionable"
+                                             "$ref": "/schemas/role.json#/properties/mentionable"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/role.json#/properties/mentionable"
+                                             "$ref": "/schemas/role.json#/properties/mentionable"
                                           },
                                           "key": {
                                              "type": "string",
@@ -1875,10 +1875,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/role.json#/properties/tags"
+                                             "$ref": "/schemas/role.json#/properties/tags"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/role.json#/properties/tags"
+                                             "$ref": "/schemas/role.json#/properties/tags"
                                           },
                                           "key": {
                                              "type": "string",
@@ -1914,10 +1914,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/invite-metadata.json#/properties/uses"
+                                             "$ref": "/schemas/invite-metadata.json#/properties/uses"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/invite-metadata.json#/properties/uses"
+                                             "$ref": "/schemas/invite-metadata.json#/properties/uses"
                                           },
                                           "key": {
                                              "type": "string",
@@ -1930,10 +1930,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/invite-metadata.json#/properties/max_uses"
+                                             "$ref": "/schemas/invite-metadata.json#/properties/max_uses"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/invite-metadata.json#/properties/max_uses"
+                                             "$ref": "/schemas/invite-metadata.json#/properties/max_uses"
                                           },
                                           "key": {
                                              "type": "string",
@@ -1946,10 +1946,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/invite-metadata.json#/properties/max_age"
+                                             "$ref": "/schemas/invite-metadata.json#/properties/max_age"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/invite-metadata.json#/properties/max_age"
+                                             "$ref": "/schemas/invite-metadata.json#/properties/max_age"
                                           },
                                           "key": {
                                              "type": "string",
@@ -1962,10 +1962,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/invite-metadata.json#/properties/temporary"
+                                             "$ref": "/schemas/invite-metadata.json#/properties/temporary"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/invite-metadata.json#/properties/temporary"
+                                             "$ref": "/schemas/invite-metadata.json#/properties/temporary"
                                           },
                                           "key": {
                                              "type": "string",
@@ -1978,10 +1978,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/invite-metadata.json#/properties/created_at"
+                                             "$ref": "/schemas/invite-metadata.json#/properties/created_at"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/invite-metadata.json#/properties/created_at"
+                                             "$ref": "/schemas/invite-metadata.json#/properties/created_at"
                                           },
                                           "key": {
                                              "type": "string",
@@ -1994,10 +1994,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/invite-metadata.json#/properties/code"
+                                             "$ref": "/schemas/invite-metadata.json#/properties/code"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/invite-metadata.json#/properties/code"
+                                             "$ref": "/schemas/invite-metadata.json#/properties/code"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2010,10 +2010,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/invite-metadata.json#/properties/guild"
+                                             "$ref": "/schemas/invite-metadata.json#/properties/guild"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/invite-metadata.json#/properties/guild"
+                                             "$ref": "/schemas/invite-metadata.json#/properties/guild"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2026,10 +2026,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/invite-metadata.json#/properties/channel"
+                                             "$ref": "/schemas/invite-metadata.json#/properties/channel"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/invite-metadata.json#/properties/channel"
+                                             "$ref": "/schemas/invite-metadata.json#/properties/channel"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2042,10 +2042,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/invite-metadata.json#/properties/inviter"
+                                             "$ref": "/schemas/invite-metadata.json#/properties/inviter"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/invite-metadata.json#/properties/inviter"
+                                             "$ref": "/schemas/invite-metadata.json#/properties/inviter"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2058,10 +2058,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/invite-metadata.json#/properties/target_type"
+                                             "$ref": "/schemas/invite-metadata.json#/properties/target_type"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/invite-metadata.json#/properties/target_type"
+                                             "$ref": "/schemas/invite-metadata.json#/properties/target_type"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2074,10 +2074,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/invite-metadata.json#/properties/target_user"
+                                             "$ref": "/schemas/invite-metadata.json#/properties/target_user"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/invite-metadata.json#/properties/target_user"
+                                             "$ref": "/schemas/invite-metadata.json#/properties/target_user"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2090,10 +2090,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/invite-metadata.json#/properties/target_application"
+                                             "$ref": "/schemas/invite-metadata.json#/properties/target_application"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/invite-metadata.json#/properties/target_application"
+                                             "$ref": "/schemas/invite-metadata.json#/properties/target_application"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2106,10 +2106,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/invite-metadata.json#/properties/approximate_presence_count"
+                                             "$ref": "/schemas/invite-metadata.json#/properties/approximate_presence_count"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/invite-metadata.json#/properties/approximate_presence_count"
+                                             "$ref": "/schemas/invite-metadata.json#/properties/approximate_presence_count"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2122,10 +2122,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/invite-metadata.json#/properties/approximate_member_count"
+                                             "$ref": "/schemas/invite-metadata.json#/properties/approximate_member_count"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/invite-metadata.json#/properties/approximate_member_count"
+                                             "$ref": "/schemas/invite-metadata.json#/properties/approximate_member_count"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2138,10 +2138,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/invite-metadata.json#/properties/expires_at"
+                                             "$ref": "/schemas/invite-metadata.json#/properties/expires_at"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/invite-metadata.json#/properties/expires_at"
+                                             "$ref": "/schemas/invite-metadata.json#/properties/expires_at"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2154,10 +2154,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/invite-metadata.json#/properties/stage_instance"
+                                             "$ref": "/schemas/invite-metadata.json#/properties/stage_instance"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/invite-metadata.json#/properties/stage_instance"
+                                             "$ref": "/schemas/invite-metadata.json#/properties/stage_instance"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2170,10 +2170,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/invite-metadata.json#/properties/guild_scheduled_event"
+                                             "$ref": "/schemas/invite-metadata.json#/properties/guild_scheduled_event"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/invite-metadata.json#/properties/guild_scheduled_event"
+                                             "$ref": "/schemas/invite-metadata.json#/properties/guild_scheduled_event"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2186,10 +2186,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/id"
+                                             "$ref": "/schemas/channel.json#/properties/id"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/id"
+                                             "$ref": "/schemas/channel.json#/properties/id"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2225,10 +2225,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/webhook.json#/properties/id"
+                                             "$ref": "/schemas/webhook.json#/properties/id"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/webhook.json#/properties/id"
+                                             "$ref": "/schemas/webhook.json#/properties/id"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2241,10 +2241,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/webhook.json#/properties/type"
+                                             "$ref": "/schemas/webhook.json#/properties/type"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/webhook.json#/properties/type"
+                                             "$ref": "/schemas/webhook.json#/properties/type"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2257,10 +2257,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/webhook.json#/properties/guild_id"
+                                             "$ref": "/schemas/webhook.json#/properties/guild_id"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/webhook.json#/properties/guild_id"
+                                             "$ref": "/schemas/webhook.json#/properties/guild_id"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2273,10 +2273,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/webhook.json#/properties/channel_id"
+                                             "$ref": "/schemas/webhook.json#/properties/channel_id"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/webhook.json#/properties/channel_id"
+                                             "$ref": "/schemas/webhook.json#/properties/channel_id"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2289,10 +2289,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/webhook.json#/properties/user"
+                                             "$ref": "/schemas/webhook.json#/properties/user"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/webhook.json#/properties/user"
+                                             "$ref": "/schemas/webhook.json#/properties/user"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2305,10 +2305,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/webhook.json#/properties/name"
+                                             "$ref": "/schemas/webhook.json#/properties/name"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/webhook.json#/properties/name"
+                                             "$ref": "/schemas/webhook.json#/properties/name"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2321,10 +2321,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/webhook.json#/properties/avatar"
+                                             "$ref": "/schemas/webhook.json#/properties/avatar"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/webhook.json#/properties/avatar"
+                                             "$ref": "/schemas/webhook.json#/properties/avatar"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2337,10 +2337,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/webhook.json#/properties/token"
+                                             "$ref": "/schemas/webhook.json#/properties/token"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/webhook.json#/properties/token"
+                                             "$ref": "/schemas/webhook.json#/properties/token"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2353,10 +2353,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/webhook.json#/properties/application_id"
+                                             "$ref": "/schemas/webhook.json#/properties/application_id"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/webhook.json#/properties/application_id"
+                                             "$ref": "/schemas/webhook.json#/properties/application_id"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2369,10 +2369,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/webhook.json#/properties/source_guild"
+                                             "$ref": "/schemas/webhook.json#/properties/source_guild"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/webhook.json#/properties/source_guild"
+                                             "$ref": "/schemas/webhook.json#/properties/source_guild"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2385,10 +2385,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/webhook.json#/properties/source_channel"
+                                             "$ref": "/schemas/webhook.json#/properties/source_channel"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/webhook.json#/properties/source_channel"
+                                             "$ref": "/schemas/webhook.json#/properties/source_channel"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2401,10 +2401,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/webhook.json#/properties/url"
+                                             "$ref": "/schemas/webhook.json#/properties/url"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/webhook.json#/properties/url"
+                                             "$ref": "/schemas/webhook.json#/properties/url"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2440,10 +2440,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/emoji.json#/properties/id"
+                                             "$ref": "/schemas/emoji.json#/properties/id"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/emoji.json#/properties/id"
+                                             "$ref": "/schemas/emoji.json#/properties/id"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2456,10 +2456,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/emoji.json#/properties/name"
+                                             "$ref": "/schemas/emoji.json#/properties/name"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/emoji.json#/properties/name"
+                                             "$ref": "/schemas/emoji.json#/properties/name"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2472,10 +2472,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/emoji.json#/properties/roles"
+                                             "$ref": "/schemas/emoji.json#/properties/roles"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/emoji.json#/properties/roles"
+                                             "$ref": "/schemas/emoji.json#/properties/roles"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2488,10 +2488,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/emoji.json#/properties/user"
+                                             "$ref": "/schemas/emoji.json#/properties/user"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/emoji.json#/properties/user"
+                                             "$ref": "/schemas/emoji.json#/properties/user"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2504,10 +2504,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/emoji.json#/properties/require_colons"
+                                             "$ref": "/schemas/emoji.json#/properties/require_colons"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/emoji.json#/properties/require_colons"
+                                             "$ref": "/schemas/emoji.json#/properties/require_colons"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2520,10 +2520,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/emoji.json#/properties/managed"
+                                             "$ref": "/schemas/emoji.json#/properties/managed"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/emoji.json#/properties/managed"
+                                             "$ref": "/schemas/emoji.json#/properties/managed"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2536,10 +2536,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/emoji.json#/properties/animated"
+                                             "$ref": "/schemas/emoji.json#/properties/animated"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/emoji.json#/properties/animated"
+                                             "$ref": "/schemas/emoji.json#/properties/animated"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2552,10 +2552,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/emoji.json#/properties/available"
+                                             "$ref": "/schemas/emoji.json#/properties/available"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/emoji.json#/properties/available"
+                                             "$ref": "/schemas/emoji.json#/properties/available"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2591,10 +2591,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/integration.json#/properties/id"
+                                             "$ref": "/schemas/integration.json#/properties/id"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/integration.json#/properties/id"
+                                             "$ref": "/schemas/integration.json#/properties/id"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2607,10 +2607,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/integration.json#/properties/name"
+                                             "$ref": "/schemas/integration.json#/properties/name"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/integration.json#/properties/name"
+                                             "$ref": "/schemas/integration.json#/properties/name"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2623,10 +2623,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/integration.json#/properties/type"
+                                             "$ref": "/schemas/integration.json#/properties/type"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/integration.json#/properties/type"
+                                             "$ref": "/schemas/integration.json#/properties/type"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2639,10 +2639,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/integration.json#/properties/enabled"
+                                             "$ref": "/schemas/integration.json#/properties/enabled"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/integration.json#/properties/enabled"
+                                             "$ref": "/schemas/integration.json#/properties/enabled"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2655,10 +2655,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/integration.json#/properties/syncing"
+                                             "$ref": "/schemas/integration.json#/properties/syncing"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/integration.json#/properties/syncing"
+                                             "$ref": "/schemas/integration.json#/properties/syncing"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2671,10 +2671,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/integration.json#/properties/role_id"
+                                             "$ref": "/schemas/integration.json#/properties/role_id"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/integration.json#/properties/role_id"
+                                             "$ref": "/schemas/integration.json#/properties/role_id"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2687,10 +2687,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/integration.json#/properties/enable_emoticons"
+                                             "$ref": "/schemas/integration.json#/properties/enable_emoticons"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/integration.json#/properties/enable_emoticons"
+                                             "$ref": "/schemas/integration.json#/properties/enable_emoticons"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2703,10 +2703,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/integration.json#/properties/expire_behavior"
+                                             "$ref": "/schemas/integration.json#/properties/expire_behavior"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/integration.json#/properties/expire_behavior"
+                                             "$ref": "/schemas/integration.json#/properties/expire_behavior"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2719,10 +2719,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/integration.json#/properties/expire_grace_period"
+                                             "$ref": "/schemas/integration.json#/properties/expire_grace_period"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/integration.json#/properties/expire_grace_period"
+                                             "$ref": "/schemas/integration.json#/properties/expire_grace_period"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2735,10 +2735,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/integration.json#/properties/user"
+                                             "$ref": "/schemas/integration.json#/properties/user"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/integration.json#/properties/user"
+                                             "$ref": "/schemas/integration.json#/properties/user"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2751,10 +2751,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/integration.json#/properties/account"
+                                             "$ref": "/schemas/integration.json#/properties/account"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/integration.json#/properties/account"
+                                             "$ref": "/schemas/integration.json#/properties/account"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2767,10 +2767,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/integration.json#/properties/synced_at"
+                                             "$ref": "/schemas/integration.json#/properties/synced_at"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/integration.json#/properties/synced_at"
+                                             "$ref": "/schemas/integration.json#/properties/synced_at"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2783,10 +2783,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/integration.json#/properties/subscriber_count"
+                                             "$ref": "/schemas/integration.json#/properties/subscriber_count"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/integration.json#/properties/subscriber_count"
+                                             "$ref": "/schemas/integration.json#/properties/subscriber_count"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2799,10 +2799,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/integration.json#/properties/revoked"
+                                             "$ref": "/schemas/integration.json#/properties/revoked"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/integration.json#/properties/revoked"
+                                             "$ref": "/schemas/integration.json#/properties/revoked"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2815,10 +2815,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/integration.json#/properties/application"
+                                             "$ref": "/schemas/integration.json#/properties/application"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/integration.json#/properties/application"
+                                             "$ref": "/schemas/integration.json#/properties/application"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2831,10 +2831,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/integration.json#/properties/scopes"
+                                             "$ref": "/schemas/integration.json#/properties/scopes"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/integration.json#/properties/scopes"
+                                             "$ref": "/schemas/integration.json#/properties/scopes"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2867,10 +2867,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/stage-instance.json#/properties/id"
+                                             "$ref": "/schemas/stage-instance.json#/properties/id"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/stage-instance.json#/properties/id"
+                                             "$ref": "/schemas/stage-instance.json#/properties/id"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2883,10 +2883,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/stage-instance.json#/properties/guild_id"
+                                             "$ref": "/schemas/stage-instance.json#/properties/guild_id"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/stage-instance.json#/properties/guild_id"
+                                             "$ref": "/schemas/stage-instance.json#/properties/guild_id"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2899,10 +2899,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/stage-instance.json#/properties/channel_id"
+                                             "$ref": "/schemas/stage-instance.json#/properties/channel_id"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/stage-instance.json#/properties/channel_id"
+                                             "$ref": "/schemas/stage-instance.json#/properties/channel_id"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2915,10 +2915,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/stage-instance.json#/properties/topic"
+                                             "$ref": "/schemas/stage-instance.json#/properties/topic"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/stage-instance.json#/properties/topic"
+                                             "$ref": "/schemas/stage-instance.json#/properties/topic"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2931,10 +2931,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/stage-instance.json#/properties/privacy_level"
+                                             "$ref": "/schemas/stage-instance.json#/properties/privacy_level"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/stage-instance.json#/properties/privacy_level"
+                                             "$ref": "/schemas/stage-instance.json#/properties/privacy_level"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2947,10 +2947,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/stage-instance.json#/properties/discoverable_disabled"
+                                             "$ref": "/schemas/stage-instance.json#/properties/discoverable_disabled"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/stage-instance.json#/properties/discoverable_disabled"
+                                             "$ref": "/schemas/stage-instance.json#/properties/discoverable_disabled"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2963,10 +2963,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/stage-instance.json#/properties/guild_scheduled_event_id"
+                                             "$ref": "/schemas/stage-instance.json#/properties/guild_scheduled_event_id"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/stage-instance.json#/properties/guild_scheduled_event_id"
+                                             "$ref": "/schemas/stage-instance.json#/properties/guild_scheduled_event_id"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2999,10 +2999,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/sticker.json#/properties/id"
+                                             "$ref": "/schemas/sticker.json#/properties/id"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/sticker.json#/properties/id"
+                                             "$ref": "/schemas/sticker.json#/properties/id"
                                           },
                                           "key": {
                                              "type": "string",
@@ -3015,10 +3015,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/sticker.json#/properties/pack_id"
+                                             "$ref": "/schemas/sticker.json#/properties/pack_id"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/sticker.json#/properties/pack_id"
+                                             "$ref": "/schemas/sticker.json#/properties/pack_id"
                                           },
                                           "key": {
                                              "type": "string",
@@ -3031,10 +3031,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/sticker.json#/properties/name"
+                                             "$ref": "/schemas/sticker.json#/properties/name"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/sticker.json#/properties/name"
+                                             "$ref": "/schemas/sticker.json#/properties/name"
                                           },
                                           "key": {
                                              "type": "string",
@@ -3047,10 +3047,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/sticker.json#/properties/description"
+                                             "$ref": "/schemas/sticker.json#/properties/description"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/sticker.json#/properties/description"
+                                             "$ref": "/schemas/sticker.json#/properties/description"
                                           },
                                           "key": {
                                              "type": "string",
@@ -3063,10 +3063,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/sticker.json#/properties/tags"
+                                             "$ref": "/schemas/sticker.json#/properties/tags"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/sticker.json#/properties/tags"
+                                             "$ref": "/schemas/sticker.json#/properties/tags"
                                           },
                                           "key": {
                                              "type": "string",
@@ -3079,10 +3079,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/sticker.json#/properties/asset"
+                                             "$ref": "/schemas/sticker.json#/properties/asset"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/sticker.json#/properties/asset"
+                                             "$ref": "/schemas/sticker.json#/properties/asset"
                                           },
                                           "key": {
                                              "type": "string",
@@ -3095,10 +3095,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/sticker.json#/properties/type"
+                                             "$ref": "/schemas/sticker.json#/properties/type"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/sticker.json#/properties/type"
+                                             "$ref": "/schemas/sticker.json#/properties/type"
                                           },
                                           "key": {
                                              "type": "string",
@@ -3111,10 +3111,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/sticker.json#/properties/format_type"
+                                             "$ref": "/schemas/sticker.json#/properties/format_type"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/sticker.json#/properties/format_type"
+                                             "$ref": "/schemas/sticker.json#/properties/format_type"
                                           },
                                           "key": {
                                              "type": "string",
@@ -3127,10 +3127,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/sticker.json#/properties/available"
+                                             "$ref": "/schemas/sticker.json#/properties/available"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/sticker.json#/properties/available"
+                                             "$ref": "/schemas/sticker.json#/properties/available"
                                           },
                                           "key": {
                                              "type": "string",
@@ -3143,10 +3143,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/sticker.json#/properties/guild_id"
+                                             "$ref": "/schemas/sticker.json#/properties/guild_id"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/sticker.json#/properties/guild_id"
+                                             "$ref": "/schemas/sticker.json#/properties/guild_id"
                                           },
                                           "key": {
                                              "type": "string",
@@ -3159,10 +3159,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/sticker.json#/properties/user"
+                                             "$ref": "/schemas/sticker.json#/properties/user"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/sticker.json#/properties/user"
+                                             "$ref": "/schemas/sticker.json#/properties/user"
                                           },
                                           "key": {
                                              "type": "string",
@@ -3175,10 +3175,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/sticker.json#/properties/sort_value"
+                                             "$ref": "/schemas/sticker.json#/properties/sort_value"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/sticker.json#/properties/sort_value"
+                                             "$ref": "/schemas/sticker.json#/properties/sort_value"
                                           },
                                           "key": {
                                              "type": "string",
@@ -3211,10 +3211,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild-scheduled-event.json#/properties/id"
+                                             "$ref": "/schemas/guild-scheduled-event.json#/properties/id"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild-scheduled-event.json#/properties/id"
+                                             "$ref": "/schemas/guild-scheduled-event.json#/properties/id"
                                           },
                                           "key": {
                                              "type": "string",
@@ -3227,10 +3227,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild-scheduled-event.json#/properties/guild_id"
+                                             "$ref": "/schemas/guild-scheduled-event.json#/properties/guild_id"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild-scheduled-event.json#/properties/guild_id"
+                                             "$ref": "/schemas/guild-scheduled-event.json#/properties/guild_id"
                                           },
                                           "key": {
                                              "type": "string",
@@ -3243,10 +3243,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild-scheduled-event.json#/properties/channel_id"
+                                             "$ref": "/schemas/guild-scheduled-event.json#/properties/channel_id"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild-scheduled-event.json#/properties/channel_id"
+                                             "$ref": "/schemas/guild-scheduled-event.json#/properties/channel_id"
                                           },
                                           "key": {
                                              "type": "string",
@@ -3259,10 +3259,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild-scheduled-event.json#/properties/creator_id"
+                                             "$ref": "/schemas/guild-scheduled-event.json#/properties/creator_id"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild-scheduled-event.json#/properties/creator_id"
+                                             "$ref": "/schemas/guild-scheduled-event.json#/properties/creator_id"
                                           },
                                           "key": {
                                              "type": "string",
@@ -3275,10 +3275,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild-scheduled-event.json#/properties/name"
+                                             "$ref": "/schemas/guild-scheduled-event.json#/properties/name"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild-scheduled-event.json#/properties/name"
+                                             "$ref": "/schemas/guild-scheduled-event.json#/properties/name"
                                           },
                                           "key": {
                                              "type": "string",
@@ -3291,10 +3291,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild-scheduled-event.json#/properties/description"
+                                             "$ref": "/schemas/guild-scheduled-event.json#/properties/description"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild-scheduled-event.json#/properties/description"
+                                             "$ref": "/schemas/guild-scheduled-event.json#/properties/description"
                                           },
                                           "key": {
                                              "type": "string",
@@ -3307,10 +3307,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild-scheduled-event.json#/properties/scheduled_start_time"
+                                             "$ref": "/schemas/guild-scheduled-event.json#/properties/scheduled_start_time"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild-scheduled-event.json#/properties/scheduled_start_time"
+                                             "$ref": "/schemas/guild-scheduled-event.json#/properties/scheduled_start_time"
                                           },
                                           "key": {
                                              "type": "string",
@@ -3323,10 +3323,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild-scheduled-event.json#/properties/scheduled_end_time"
+                                             "$ref": "/schemas/guild-scheduled-event.json#/properties/scheduled_end_time"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild-scheduled-event.json#/properties/scheduled_end_time"
+                                             "$ref": "/schemas/guild-scheduled-event.json#/properties/scheduled_end_time"
                                           },
                                           "key": {
                                              "type": "string",
@@ -3339,10 +3339,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild-scheduled-event.json#/properties/privacy_level"
+                                             "$ref": "/schemas/guild-scheduled-event.json#/properties/privacy_level"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild-scheduled-event.json#/properties/privacy_level"
+                                             "$ref": "/schemas/guild-scheduled-event.json#/properties/privacy_level"
                                           },
                                           "key": {
                                              "type": "string",
@@ -3355,10 +3355,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild-scheduled-event.json#/properties/status"
+                                             "$ref": "/schemas/guild-scheduled-event.json#/properties/status"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild-scheduled-event.json#/properties/status"
+                                             "$ref": "/schemas/guild-scheduled-event.json#/properties/status"
                                           },
                                           "key": {
                                              "type": "string",
@@ -3371,10 +3371,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild-scheduled-event.json#/properties/entity_type"
+                                             "$ref": "/schemas/guild-scheduled-event.json#/properties/entity_type"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild-scheduled-event.json#/properties/entity_type"
+                                             "$ref": "/schemas/guild-scheduled-event.json#/properties/entity_type"
                                           },
                                           "key": {
                                              "type": "string",
@@ -3387,10 +3387,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild-scheduled-event.json#/properties/entity_id"
+                                             "$ref": "/schemas/guild-scheduled-event.json#/properties/entity_id"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild-scheduled-event.json#/properties/entity_id"
+                                             "$ref": "/schemas/guild-scheduled-event.json#/properties/entity_id"
                                           },
                                           "key": {
                                              "type": "string",
@@ -3403,10 +3403,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild-scheduled-event.json#/properties/entity_metadata"
+                                             "$ref": "/schemas/guild-scheduled-event.json#/properties/entity_metadata"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild-scheduled-event.json#/properties/entity_metadata"
+                                             "$ref": "/schemas/guild-scheduled-event.json#/properties/entity_metadata"
                                           },
                                           "key": {
                                              "type": "string",
@@ -3419,10 +3419,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild-scheduled-event.json#/properties/creator"
+                                             "$ref": "/schemas/guild-scheduled-event.json#/properties/creator"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild-scheduled-event.json#/properties/creator"
+                                             "$ref": "/schemas/guild-scheduled-event.json#/properties/creator"
                                           },
                                           "key": {
                                              "type": "string",
@@ -3435,10 +3435,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild-scheduled-event.json#/properties/user_count"
+                                             "$ref": "/schemas/guild-scheduled-event.json#/properties/user_count"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild-scheduled-event.json#/properties/user_count"
+                                             "$ref": "/schemas/guild-scheduled-event.json#/properties/user_count"
                                           },
                                           "key": {
                                              "type": "string",
@@ -3451,10 +3451,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild-scheduled-event.json#/properties/image"
+                                             "$ref": "/schemas/guild-scheduled-event.json#/properties/image"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/guild-scheduled-event.json#/properties/image"
+                                             "$ref": "/schemas/guild-scheduled-event.json#/properties/image"
                                           },
                                           "key": {
                                              "type": "string",
@@ -3487,10 +3487,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/auto-moderation-rule.json#/allOf/0/properties/id"
+                                             "$ref": "/schemas/auto-moderation-rule.json#/allOf/0/properties/id"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/auto-moderation-rule.json#/allOf/0/properties/id"
+                                             "$ref": "/schemas/auto-moderation-rule.json#/allOf/0/properties/id"
                                           },
                                           "key": {
                                              "type": "string",
@@ -3503,10 +3503,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/auto-moderation-rule.json#/allOf/0/properties/guild_id"
+                                             "$ref": "/schemas/auto-moderation-rule.json#/allOf/0/properties/guild_id"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/auto-moderation-rule.json#/allOf/0/properties/guild_id"
+                                             "$ref": "/schemas/auto-moderation-rule.json#/allOf/0/properties/guild_id"
                                           },
                                           "key": {
                                              "type": "string",
@@ -3519,10 +3519,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/auto-moderation-rule.json#/allOf/0/properties/name"
+                                             "$ref": "/schemas/auto-moderation-rule.json#/allOf/0/properties/name"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/auto-moderation-rule.json#/allOf/0/properties/name"
+                                             "$ref": "/schemas/auto-moderation-rule.json#/allOf/0/properties/name"
                                           },
                                           "key": {
                                              "type": "string",
@@ -3535,10 +3535,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/auto-moderation-rule.json#/allOf/0/properties/creator_id"
+                                             "$ref": "/schemas/auto-moderation-rule.json#/allOf/0/properties/creator_id"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/auto-moderation-rule.json#/allOf/0/properties/creator_id"
+                                             "$ref": "/schemas/auto-moderation-rule.json#/allOf/0/properties/creator_id"
                                           },
                                           "key": {
                                              "type": "string",
@@ -3551,10 +3551,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/auto-moderation-rule.json#/allOf/0/properties/event_type"
+                                             "$ref": "/schemas/auto-moderation-rule.json#/allOf/0/properties/event_type"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/auto-moderation-rule.json#/allOf/0/properties/event_type"
+                                             "$ref": "/schemas/auto-moderation-rule.json#/allOf/0/properties/event_type"
                                           },
                                           "key": {
                                              "type": "string",
@@ -3567,10 +3567,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/auto-moderation-rule.json#/allOf/0/properties/actions"
+                                             "$ref": "/schemas/auto-moderation-rule.json#/allOf/0/properties/actions"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/auto-moderation-rule.json#/allOf/0/properties/actions"
+                                             "$ref": "/schemas/auto-moderation-rule.json#/allOf/0/properties/actions"
                                           },
                                           "key": {
                                              "type": "string",
@@ -3583,10 +3583,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/auto-moderation-rule.json#/allOf/0/properties/enabled"
+                                             "$ref": "/schemas/auto-moderation-rule.json#/allOf/0/properties/enabled"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/auto-moderation-rule.json#/allOf/0/properties/enabled"
+                                             "$ref": "/schemas/auto-moderation-rule.json#/allOf/0/properties/enabled"
                                           },
                                           "key": {
                                              "type": "string",
@@ -3599,10 +3599,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/auto-moderation-rule.json#/allOf/0/properties/exempt_roles"
+                                             "$ref": "/schemas/auto-moderation-rule.json#/allOf/0/properties/exempt_roles"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/auto-moderation-rule.json#/allOf/0/properties/exempt_roles"
+                                             "$ref": "/schemas/auto-moderation-rule.json#/allOf/0/properties/exempt_roles"
                                           },
                                           "key": {
                                              "type": "string",
@@ -3615,10 +3615,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/auto-moderation-rule.json#/allOf/0/properties/exempt_channels"
+                                             "$ref": "/schemas/auto-moderation-rule.json#/allOf/0/properties/exempt_channels"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/auto-moderation-rule.json#/allOf/0/properties/exempt_channels"
+                                             "$ref": "/schemas/auto-moderation-rule.json#/allOf/0/properties/exempt_channels"
                                           },
                                           "key": {
                                              "type": "string",
@@ -3631,10 +3631,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/auto-moderation-rule.json#/allOf/1/anyOf/0/properties/trigger_type"
+                                             "$ref": "/schemas/auto-moderation-rule.json#/allOf/1/anyOf/0/properties/trigger_type"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/auto-moderation-rule.json#/allOf/1/anyOf/0/properties/trigger_type"
+                                             "$ref": "/schemas/auto-moderation-rule.json#/allOf/1/anyOf/0/properties/trigger_type"
                                           },
                                           "key": {
                                              "type": "string",
@@ -3647,10 +3647,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/auto-moderation-rule.json#/allOf/1/anyOf/0/properties/trigger_metadata"
+                                             "$ref": "/schemas/auto-moderation-rule.json#/allOf/1/anyOf/0/properties/trigger_metadata"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/auto-moderation-rule.json#/allOf/1/anyOf/0/properties/trigger_metadata"
+                                             "$ref": "/schemas/auto-moderation-rule.json#/allOf/1/anyOf/0/properties/trigger_metadata"
                                           },
                                           "key": {
                                              "type": "string",
@@ -3663,10 +3663,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/auto-moderation-rule.json#/allOf/1/anyOf/1/properties/trigger_type"
+                                             "$ref": "/schemas/auto-moderation-rule.json#/allOf/1/anyOf/1/properties/trigger_type"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/auto-moderation-rule.json#/allOf/1/anyOf/1/properties/trigger_type"
+                                             "$ref": "/schemas/auto-moderation-rule.json#/allOf/1/anyOf/1/properties/trigger_type"
                                           },
                                           "key": {
                                              "type": "string",
@@ -3679,10 +3679,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/auto-moderation-rule.json#/allOf/1/anyOf/1/properties/trigger_metadata"
+                                             "$ref": "/schemas/auto-moderation-rule.json#/allOf/1/anyOf/1/properties/trigger_metadata"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/auto-moderation-rule.json#/allOf/1/anyOf/1/properties/trigger_metadata"
+                                             "$ref": "/schemas/auto-moderation-rule.json#/allOf/1/anyOf/1/properties/trigger_metadata"
                                           },
                                           "key": {
                                              "type": "string",
@@ -3695,10 +3695,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/auto-moderation-rule.json#/allOf/1/anyOf/2/properties/trigger_type"
+                                             "$ref": "/schemas/auto-moderation-rule.json#/allOf/1/anyOf/2/properties/trigger_type"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/auto-moderation-rule.json#/allOf/1/anyOf/2/properties/trigger_type"
+                                             "$ref": "/schemas/auto-moderation-rule.json#/allOf/1/anyOf/2/properties/trigger_type"
                                           },
                                           "key": {
                                              "type": "string",
@@ -3711,10 +3711,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/auto-moderation-rule.json#/allOf/1/anyOf/2/properties/trigger_metadata"
+                                             "$ref": "/schemas/auto-moderation-rule.json#/allOf/1/anyOf/2/properties/trigger_metadata"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/auto-moderation-rule.json#/allOf/1/anyOf/2/properties/trigger_metadata"
+                                             "$ref": "/schemas/auto-moderation-rule.json#/allOf/1/anyOf/2/properties/trigger_metadata"
                                           },
                                           "key": {
                                              "type": "string",
@@ -3727,10 +3727,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/auto-moderation-rule.json#/allOf/1/anyOf/3/properties/trigger_type"
+                                             "$ref": "/schemas/auto-moderation-rule.json#/allOf/1/anyOf/3/properties/trigger_type"
                                           },
                                           "old_value": {
-                                             "$ref": "https://docs.helvetica.moe/schemas/auto-moderation-rule.json#/allOf/1/anyOf/3/properties/trigger_type"
+                                             "$ref": "/schemas/auto-moderation-rule.json#/allOf/1/anyOf/3/properties/trigger_type"
                                           },
                                           "key": {
                                              "type": "string",
@@ -3785,13 +3785,13 @@
                                  "type": "object",
                                  "properties": {
                                     "key": {
-                                       "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+                                       "$ref": "/schemas/snowflake.json"
                                     },
                                     "new_value": {
-                                       "$ref": "https://docs.helvetica.moe/schemas/application-command-permissions.json"
+                                       "$ref": "/schemas/application-command-permissions.json"
                                     },
                                     "old_value": {
-                                       "$ref": "https://docs.helvetica.moe/schemas/application-command-permissions.json"
+                                       "$ref": "/schemas/application-command-permissions.json"
                                     }
                                  },
                                  "required": ["key"]
@@ -3813,7 +3813,7 @@
                               "type": "object",
                               "properties": {
                                  "application_id": {
-                                    "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+                                    "$ref": "/schemas/snowflake.json"
                                  }
                               },
                               "required": ["application_id"]
@@ -3830,7 +3830,7 @@
                               "type": "object",
                               "properties": {
                                  "auto_moderation_rule_name": {
-                                    "$ref": "https://docs.helvetica.moe/schemas/auto-moderation-rule.json#/allOf/0/properties/name"
+                                    "$ref": "/schemas/auto-moderation-rule.json#/allOf/0/properties/name"
                                  },
                                  "auto_moderation_rule_trigger_type": {
                                     "type": "string"
@@ -3864,7 +3864,7 @@
                               "type": "object",
                               "properties": {
                                  "channel_id": {
-                                    "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+                                    "$ref": "/schemas/snowflake.json"
                                  }
                               },
                               "required": ["channel_id"]
@@ -3921,7 +3921,7 @@
                               "type": "object",
                               "properties": {
                                  "id": {
-                                    "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+                                    "$ref": "/schemas/snowflake.json"
                                  },
                                  "type": {
                                     "type": "string",
@@ -3942,7 +3942,7 @@
                               "type": "object",
                               "properties": {
                                  "id": {
-                                    "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+                                    "$ref": "/schemas/snowflake.json"
                                  },
                                  "type": {
                                     "type": "string",
@@ -3966,7 +3966,7 @@
                               "type": "object",
                               "properties": {
                                  "message_id": {
-                                    "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+                                    "$ref": "/schemas/snowflake.json"
                                  }
                               },
                               "required": ["message_id"]
@@ -3981,38 +3981,38 @@
       "auto_moderation_rules": {
          "type": "array",
          "items": {
-            "$ref": "https://docs.helvetica.moe/schemas/auto-moderation-rule.json"
+            "$ref": "/schemas/auto-moderation-rule.json"
          }
       },
       "guild_scheduled_events": {
          "type": "array",
          "items": {
-            "$ref": "https://docs.helvetica.moe/schemas/guild-scheduled-event.json"
+            "$ref": "/schemas/guild-scheduled-event.json"
          }
       },
       "integrations": {
          "type": "array",
          "items": {
-            "$ref": "https://docs.helvetica.moe/schemas/integration.json",
+            "$ref": "/schemas/integration.json",
             "required": []
          }
       },
       "threads": {
          "type": "array",
          "items": {
-            "$ref": "https://docs.helvetica.moe/schemas/channel.json"
+            "$ref": "/schemas/channel.json"
          }
       },
       "users": {
          "type": "array",
          "items": {
-            "$ref": "https://docs.helvetica.moe/schemas/user.json"
+            "$ref": "/schemas/user.json"
          }
       },
       "webhooks": {
          "type": "array",
          "items": {
-            "$ref": "https://docs.helvetica.moe/schemas/webhook.json"
+            "$ref": "/schemas/webhook.json"
          }
       }
    },

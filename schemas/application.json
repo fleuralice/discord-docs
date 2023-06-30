@@ -4,7 +4,7 @@
    "type": "object",
    "properties": {
       "id": {
-         "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+         "$ref": "/schemas/snowflake.json"
       },
       "name": {
          "type": "string"
@@ -37,7 +37,7 @@
          "type": "string"
       },
       "owner": {
-         "$ref": "https://docs.helvetica.moe/schemas/user.json",
+         "$ref": "/schemas/user.json",
          "required": []
       },
       "verify_key": {
@@ -46,7 +46,7 @@
       "team": {
          "oneOf": [
             {
-               "$ref": "https://docs.helvetica.moe/schemas/team.json"
+               "$ref": "/schemas/team.json"
             },
             {
                "type": "null"
@@ -54,10 +54,10 @@
          ]
       },
       "guild_id": {
-         "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+         "$ref": "/schemas/snowflake.json"
       },
       "primary_sku_id": {
-         "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+         "$ref": "/schemas/snowflake.json"
       },
       "slug": {
          "type": "string"
@@ -90,7 +90,7 @@
          "type": "object",
          "properties": {
             "scopes": {
-               "$ref": "https://docs.helvetica.moe/schemas/integration.json#/properties/scopes"
+               "$ref": "/schemas/integration.json#/properties/scopes"
             },
             "permissions": {
                "type": "string"

@@ -14,7 +14,7 @@
                "type": "string"
             },
             "emoji": {
-               "$ref": "https://docs.helvetica.moe/schemas/emoji.json",
+               "$ref": "/schemas/emoji.json",
                "required": ["name", "id", "animated"]
             },
             "disabled": {
@@ -73,7 +73,7 @@
                         "type": "string"
                      },
                      "emoji": {
-                        "$ref": "https://docs.helvetica.moe/schemas/emoji.json",
+                        "$ref": "/schemas/emoji.json",
                         "required": ["name", "id", "animated"]
                      },
                      "default": {
@@ -134,7 +134,7 @@
             "channel_types": {
                "type": "array",
                "items": {
-                  "$ref": "https://docs.helvetica.moe/schemas/channel.json#/properties/type"
+                  "$ref": "/schemas/channel.json#/properties/type"
                }
             },
             "placeholder": {
@@ -197,7 +197,7 @@
                "items": {
                   "allOf": [
                      {
-                        "$ref": "https://docs.helvetica.moe/schemas/component.json"
+                        "$ref": "/schemas/component.json"
                      },
                      {
                         "not": {

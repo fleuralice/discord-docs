@@ -4,7 +4,7 @@
    "type": "object",
    "properties": {
       "id": {
-         "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+         "$ref": "/schemas/snowflake.json"
       },
       "name": {
          "type": "string"
@@ -30,11 +30,11 @@
       "emojis": {
          "type": "array",
          "items": {
-            "$ref": "https://docs.helvetica.moe/schemas/emoji.json"
+            "$ref": "/schemas/emoji.json"
          }
       },
       "features": {
-         "$ref": "https://docs.helvetica.moe/schemas/guild.json#/properties/features"
+         "$ref": "/schemas/guild.json#/properties/features"
       },
       "approximate_member_count": {
          "type": "integer"
@@ -51,7 +51,7 @@
       "stickers": {
          "type": "array",
          "items": {
-            "$ref": "https://docs.helvetica.moe/schemas/sticker.json"
+            "$ref": "/schemas/sticker.json"
          }
       }
    },

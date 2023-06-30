@@ -4,7 +4,7 @@
    "type": "object",
    "properties": {
       "id": {
-         "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+         "$ref": "/schemas/snowflake.json"
       },
       "name": {
          "type": "string"
@@ -31,7 +31,7 @@
          "type": "integer"
       },
       "permissions": {
-         "$ref": "https://docs.helvetica.moe/schemas/permissions.json"
+         "$ref": "/schemas/permissions.json"
       },
       "managed": {
          "type": "boolean"
@@ -43,16 +43,16 @@
          "type": "object",
          "properties": {
             "bot_id": {
-               "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+               "$ref": "/schemas/snowflake.json"
             },
             "integration_id": {
-               "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+               "$ref": "/schemas/snowflake.json"
             },
             "premium_subscriber": {
                "type": "null"
             },
             "subscription_listing_id": {
-               "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+               "$ref": "/schemas/snowflake.json"
             },
             "available_for_purchase": {
                "type": "null"

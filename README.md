@@ -38,7 +38,7 @@ doesn't do anything. E.g.:
 
 ```json
 {
-   "$ref": "https://docs.helvetica.moe/schemas/some-object.json",
+   "$ref": "/schemas/some-object.json",
    "required": []
 }
 ```

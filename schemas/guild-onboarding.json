@@ -4,7 +4,7 @@
    "type": "object",
    "properties": {
       "guild_id": {
-         "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+         "$ref": "/schemas/snowflake.json"
       },
       "prompts": {
          "type": "array",
@@ -12,7 +12,7 @@
             "type": "object",
             "properties": {
                "id": {
-                  "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+                  "$ref": "/schemas/snowflake.json"
                },
                "type": {
                   "type": "integer",
@@ -27,22 +27,22 @@
                      "type": "object",
                      "properties": {
                         "id": {
-                           "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+                           "$ref": "/schemas/snowflake.json"
                         },
                         "channel_ids": {
                            "type": "array",
                            "items": {
-                              "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+                              "$ref": "/schemas/snowflake.json"
                            }
                         },
                         "role_ids": {
                            "type": "array",
                            "items": {
-                              "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+                              "$ref": "/schemas/snowflake.json"
                            }
                         },
                         "emoji": {
-                           "$ref": "https://docs.helvetica.moe/schemas/emoji.json"
+                           "$ref": "/schemas/emoji.json"
                         },
                         "title": {
                            "type": "string"
@@ -91,7 +91,7 @@
       "default_channel_ids": {
          "type": "array",
          "items": {
-            "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+            "$ref": "/schemas/snowflake.json"
          }
       },
       "enabled": {

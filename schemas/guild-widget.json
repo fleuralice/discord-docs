@@ -4,7 +4,7 @@
    "type": "object",
    "properties": {
       "id": {
-         "$ref": "https://docs.helvetica.moe/schemas/snowflake.json"
+         "$ref": "/schemas/snowflake.json"
       },
       "name": {
          "type": "string"
@@ -18,14 +18,14 @@
       "channels": {
          "type": "array",
          "items": {
-            "$ref": "https://docs.helvetica.moe/schemas/channel.json",
+            "$ref": "/schemas/channel.json",
             "required": []
          }
       },
       "members": {
          "type": "array",
          "items": {
-            "$ref": "https://docs.helvetica.moe/schemas/user.json",
+            "$ref": "/schemas/user.json",
             "required": []
          }
       },
