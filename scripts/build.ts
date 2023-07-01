@@ -101,6 +101,7 @@ export const partialCompatibility = (schema: Record<string, unknown>) => ({
                               [key, value],
                            ) => [key, recurse(value, [...currentPath, key])]),
                      ),
+                     "$id": undefined,
                   };
                }
 
