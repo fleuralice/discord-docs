@@ -1994,10 +1994,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "/schemas/invite-metadata.json#/properties/code"
+                                             "$ref": "/schemas/invite.json#/properties/code"
                                           },
                                           "old_value": {
-                                             "$ref": "/schemas/invite-metadata.json#/properties/code"
+                                             "$ref": "/schemas/invite.json#/properties/code"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2010,10 +2010,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "/schemas/invite-metadata.json#/properties/guild"
+                                             "$ref": "/schemas/invite.json#/properties/guild"
                                           },
                                           "old_value": {
-                                             "$ref": "/schemas/invite-metadata.json#/properties/guild"
+                                             "$ref": "/schemas/invite.json#/properties/guild"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2026,10 +2026,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "/schemas/invite-metadata.json#/properties/channel"
+                                             "$ref": "/schemas/invite.json#/properties/channel"
                                           },
                                           "old_value": {
-                                             "$ref": "/schemas/invite-metadata.json#/properties/channel"
+                                             "$ref": "/schemas/invite.json#/properties/channel"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2042,10 +2042,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "/schemas/invite-metadata.json#/properties/inviter"
+                                             "$ref": "/schemas/invite.json#/properties/inviter"
                                           },
                                           "old_value": {
-                                             "$ref": "/schemas/invite-metadata.json#/properties/inviter"
+                                             "$ref": "/schemas/invite.json#/properties/inviter"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2058,10 +2058,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "/schemas/invite-metadata.json#/properties/target_type"
+                                             "$ref": "/schemas/invite.json#/properties/target_type"
                                           },
                                           "old_value": {
-                                             "$ref": "/schemas/invite-metadata.json#/properties/target_type"
+                                             "$ref": "/schemas/invite.json#/properties/target_type"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2074,10 +2074,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "/schemas/invite-metadata.json#/properties/target_user"
+                                             "$ref": "/schemas/invite.json#/properties/target_user"
                                           },
                                           "old_value": {
-                                             "$ref": "/schemas/invite-metadata.json#/properties/target_user"
+                                             "$ref": "/schemas/invite.json#/properties/target_user"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2090,10 +2090,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "/schemas/invite-metadata.json#/properties/target_application"
+                                             "$ref": "/schemas/invite.json#/properties/target_application"
                                           },
                                           "old_value": {
-                                             "$ref": "/schemas/invite-metadata.json#/properties/target_application"
+                                             "$ref": "/schemas/invite.json#/properties/target_application"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2106,10 +2106,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "/schemas/invite-metadata.json#/properties/approximate_presence_count"
+                                             "$ref": "/schemas/invite.json#/properties/approximate_presence_count"
                                           },
                                           "old_value": {
-                                             "$ref": "/schemas/invite-metadata.json#/properties/approximate_presence_count"
+                                             "$ref": "/schemas/invite.json#/properties/approximate_presence_count"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2122,10 +2122,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "/schemas/invite-metadata.json#/properties/approximate_member_count"
+                                             "$ref": "/schemas/invite.json#/properties/approximate_member_count"
                                           },
                                           "old_value": {
-                                             "$ref": "/schemas/invite-metadata.json#/properties/approximate_member_count"
+                                             "$ref": "/schemas/invite.json#/properties/approximate_member_count"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2138,10 +2138,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "/schemas/invite-metadata.json#/properties/expires_at"
+                                             "$ref": "/schemas/invite.json#/properties/expires_at"
                                           },
                                           "old_value": {
-                                             "$ref": "/schemas/invite-metadata.json#/properties/expires_at"
+                                             "$ref": "/schemas/invite.json#/properties/expires_at"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2154,10 +2154,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "/schemas/invite-metadata.json#/properties/stage_instance"
+                                             "$ref": "/schemas/invite.json#/properties/stage_instance"
                                           },
                                           "old_value": {
-                                             "$ref": "/schemas/invite-metadata.json#/properties/stage_instance"
+                                             "$ref": "/schemas/invite.json#/properties/stage_instance"
                                           },
                                           "key": {
                                              "type": "string",
@@ -2170,10 +2170,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "/schemas/invite-metadata.json#/properties/guild_scheduled_event"
+                                             "$ref": "/schemas/invite.json#/properties/guild_scheduled_event"
                                           },
                                           "old_value": {
-                                             "$ref": "/schemas/invite-metadata.json#/properties/guild_scheduled_event"
+                                             "$ref": "/schemas/invite.json#/properties/guild_scheduled_event"
                                           },
                                           "key": {
                                              "type": "string",

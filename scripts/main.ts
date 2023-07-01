@@ -40,17 +40,21 @@ const reportError = (
             prop.type === "KeyValueProperty" &&
             prop.key.type === "StringLiteral" && prop.key.value === index
          )[0] as Property | undefined;
-         if (!result) throw new Error("error function passed invalid path");
+         if (!result) {
+            throw new Error(`error function passed invalid path: ${path}`);
+         }
          structure = (result as KeyValueProperty).value;
       } else if (
          typeof index === "number" && structure.type === "ArrayExpression"
       ) {
          const result: Expression | undefined = structure.elements[index]
             ?.expression;
-         if (!result) throw new Error("error function passed invalid path");
+         if (!result) {
+            throw new Error(`error function passed invalid path: ${path}`);
+         }
          structure = result;
       } else {
-         throw new Error("error function passed invalid path");
+         throw new Error(`error function passed invalid path: ${path}`);
       }
    }
 
@@ -228,6 +232,60 @@ schemas.forEach((schema, i) => {
                   );
                } catch {
                   // this is the case I want
+               }
+            }
+            recurse(value, [...path, key]);
+         });
+      }
+   };
+
+   recurse(schema, []);
+});
+
+// LINT: check that `$ref`s point to valid places
+const schemaMapping = createSchemaMapping(schemas);
+schemas.forEach((schema, i) => {
+   const recurse = (s: unknown, path: (string | number)[]) => {
+      if (Array.isArray(s)) s.forEach((x, j) => recurse(x, [...path, j]));
+      else if (typeof s === "object" && s !== null) {
+         Object.entries(s).forEach(([key, value]) => {
+            if (key === "$ref") {
+               const [id, refPath] =
+                  (new URL(value, schema["$id"] as string).toString()).split(
+                     "#",
+                  );
+               const otherSchema = schemaMapping[id!]!;
+               if (refPath) {
+                  const jsonPath = (refPath as string).split(
+                     "/",
+                  ).slice(1).map((
+                     piece,
+                  ) =>
+                     Number.isInteger(parseFloat(piece))
+                        ? parseInt(piece)
+                        : piece
+                  );
+
+                  const referenced = jsonPath.reduce(
+                     (s, p) =>
+                        Array.isArray(s) && typeof p === "number"
+                           ? s[p]
+                           : typeof s === "object" && s !== null && p in s
+                           ? (s as Record<string, unknown>)[p]
+                           : undefined,
+                     otherSchema as unknown,
+                  );
+
+                  if (
+                     typeof referenced !== "object" ||
+                     Array.isArray(referenced) || referenced === null
+                  ) {
+                     reportError(
+                        errorMap[i]!,
+                        [...path, "$ref"],
+                        "incorrect $ref",
+                     );
+                  }
                }
             }
             recurse(value, [...path, key]);
