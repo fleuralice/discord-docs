@@ -6,7 +6,7 @@ import type {
    VariableDeclaration,
 } from "https://esm.sh/@swc/core@1.2.212/types.js";
 import { KeyValueProperty } from "https://esm.sh/@swc/core@1.2.212/types.js";
-import { bundle, createSchemaMapping } from "./build.ts";
+import { bundle, createSchemaMapping, partialCompatibility } from "./build.ts";
 
 const dryRun = !Deno.args.includes("--build");
 
@@ -300,10 +300,73 @@ if (hadErrors) {
    console.log("errored :(");
    if (!Deno.args.includes("--dev")) Deno.exit(1);
 } else {
-   console.log("success!");
-
-   const schemaMapping = createSchemaMapping(schemas);
    const bundled = bundle(schemaMapping);
+   const compat = partialCompatibility(bundled);
+
+   {
+      // LINT: ensure that $ref extending doesn't happen in the compat bundle
+
+      // this also will catch recursive $ref extending, e.g.:
+      // {
+      //    "type": "object",
+      //    "properties": {
+      //       "x": {
+      //          "type": "integer"
+      //       },
+      //       "y": {
+      //          "$ref": "#/",
+      //          "required": ["x"]
+      //       }
+      //    },
+      //    "required": ["x", "y"]
+      // }
+      //
+      // this should turn into the following, but that isn't implemented yet
+      // {
+      //    "type": "object",
+      //    "properties": {
+      //       "x": {
+      //          "type": "integer"
+      //       },
+      //       "y": {
+      //          "type": "object",
+      //          "properties": {
+      //             "x": {
+      //                "type": "integer"
+      //             },
+      //             "y": {
+      //                "$ref": "#/properties/y"
+      //             }
+      //          },
+      //          "required": ["x"]
+      //       }
+      //    },
+      //    "required": ["x", "y"]
+      // }
+      let errored = false;
+      const recurse = (s: unknown) => {
+         if (Array.isArray(s)) s.forEach((x) => recurse(x));
+         else if (typeof s === "object" && s !== null) {
+            if ("$ref" in s && Object.entries(s).length > 1 && !errored) {
+               console.error("compat bundle has $ref extending");
+               errored = true;
+               hadErrors = true;
+            }
+            Object.values(s).forEach((value) => {
+               recurse(value);
+            });
+         }
+      };
+
+      recurse(compat);
+   }
+
+   if (hadErrors) {
+      console.log("build errors :(");
+      if (!Deno.args.includes("--dev")) Deno.exit(1);
+   } else {
+      console.log("success!");
+   }
 
    if (!dryRun) {
       try {
@@ -333,5 +396,9 @@ if (hadErrors) {
       }
 
       await Deno.writeTextFile("dist/bundled.json", JSON.stringify(bundled));
+      await Deno.writeTextFile(
+         "dist/bundled.compat.json",
+         JSON.stringify(compat),
+      );
    }
 }
