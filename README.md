@@ -5,6 +5,8 @@ Spooks you. 👻
 [How scary!!!~](https://docs.helvetica.moe) I thought I was safe!! Maybe if
 enough people contribute we can exorcise the ghosts?
 
+There's still a lot to do and ghosts are a moving target, after all.
+
 ##### Latest commit from the documentation
 
 Latest update was
@@ -44,13 +46,12 @@ doesn't do anything. E.g.:
 ```
 
 I require this to work for partial objects. Therefore, all generators used
-against this will need a small little patch. I will write my own as an example.
+against this will need a small little patch. Or, they can use the compatibility
+bundle!
 
 More generally, I require that properties next to a `$ref` _replace_ rather than
-_merge with_ the original properties. I could offer a pre-processor that turns
-this into valid JSONSchema and I should do so.
-
-The previous "merge with" behavior is still achievable via an explicit `allOf`.
+_merge with_ the original properties. The previous "merge with" behavior is
+still achievable via an explicit `allOf`.
 
 Additionally, my schemas contain a `flags` property that lists the flags for
 some numbers. If the `type` is `string`, then these `flags` will be `string`s
