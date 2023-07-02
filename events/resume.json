@@ -1,0 +1,27 @@
+{
+   "$id": "https://docs.helvetica.moe/events/resume.json",
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "type": "object",
+   "allOf": [{ "$ref": "/events/base.json" }],
+   "properties": {
+      "op": {
+         "type": "integer",
+         "enum": [6]
+      },
+      "d": {
+         "type": "object",
+         "properties": {
+            "token": {
+               "type": "string"
+            },
+            "session_id": {
+               "type": "string"
+            },
+            "seq": {
+               "type": "integer"
+            }
+         },
+         "required": ["token", "session_id", "seq"]
+      }
+   }
+}

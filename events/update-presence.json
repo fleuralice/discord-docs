@@ -1,0 +1,47 @@
+{
+   "$id": "https://docs.helvetica.moe/events/update-presence.json",
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "type": "object",
+   "allOf": [{ "$ref": "/events/base.json" }],
+   "properties": {
+      "op": {
+         "type": "integer",
+         "enum": [3]
+      },
+      "d": {
+         "type": "object",
+         "properties": {
+            "since": {
+               "type": ["null", "integer"]
+            },
+            "activities": {
+               "type": "array",
+               "items": {
+                  "type": "object",
+                  "properties": {
+                     "name": {
+                        "type": "string"
+                     },
+                     "type": {
+                        "type": "integer",
+                        "enum": [0, 1, 2, 3, 4, 5]
+                     },
+                     "url": {
+                        "type": ["null", "string"]
+                     }
+                  },
+                  "required": ["name", "type"]
+               }
+            },
+            "status": {
+               "type": "string",
+               "enum": ["online", "dnd", "idle", "invisible", "offline"]
+            },
+            "afk": {
+               "type": "boolean"
+            }
+         },
+         "required": ["since", "activities", "status", "afk"]
+      }
+   }
+}

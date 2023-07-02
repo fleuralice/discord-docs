@@ -1,0 +1,76 @@
+{
+   "$id": "https://docs.helvetica.moe/events/identify.json",
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "type": "object",
+   "allOf": [{ "$ref": "/events/base.json" }],
+   "properties": {
+      "op": {
+         "type": "integer",
+         "enum": [2]
+      },
+      "d": {
+         "type": "object",
+         "properties": {
+            "token": {
+               "type": "string"
+            },
+            "properties": {
+               "type": "object",
+               "properties": {
+                  "os": {
+                     "type": "string"
+                  },
+                  "browser": {
+                     "type": "string"
+                  },
+                  "device": {
+                     "type": "string"
+                  }
+               },
+               "required": ["os", "browser", "device"]
+            },
+            "compress": {
+               "type": "boolean"
+            },
+            "large_threshold": {
+               "type": "integer"
+            },
+            "shard": {
+               "type": "array",
+               "prefixItems": [
+                  { "type": "integer" },
+                  { "type": "integer" }
+               ]
+            },
+            "presence": {
+               "$ref": "/events/update-presence.json"
+            },
+            "intents": {
+               "type": "integer",
+               "flags": {
+                  "guilds": 1,
+                  "guild_members": 2,
+                  "guild_moderation": 4,
+                  "guild_emojis_and_stickers": 8,
+                  "guild_integrations": 16,
+                  "guild_webhooks": 32,
+                  "guild_invites": 64,
+                  "guild_voice_states": 128,
+                  "guild_presences": 256,
+                  "guild_messages": 512,
+                  "guild_message_reactions": 1024,
+                  "guild_message_typing": 2048,
+                  "direct_messages": 4096,
+                  "direct_message_reactions": 8192,
+                  "direct_message_typing": 16384,
+                  "message_content": 32768,
+                  "guild_scheduled_events": 65536,
+                  "auto_moderation_configuration": 1048576,
+                  "auto_moderation_execution": 2097152
+               }
+            }
+         },
+         "required": ["token", "properties", "intents"]
+      }
+   }
+}

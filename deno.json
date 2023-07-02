@@ -9,10 +9,10 @@
       }
    },
    "tasks": {
-      "lint": "deno fmt --check && deno lint && deno run --check=all --allow-read=schemas/ --allow-net=deno.land scripts/main.ts",
-      "build": "deno run --allow-read=schemas/ --allow-write=dist/ --allow-net=deno.land scripts/main.ts --build",
-      "dev": "deno run --allow-read=schemas/ --allow-net=deno.land --watch=schemas/ scripts/main.ts --dev",
-      "dev:build": "deno run --allow-read=schemas/ --allow-write=dist/ --allow-net=deno.land --watch=schemas/ scripts/main.ts --build --dev"
+      "lint": "deno fmt --check && deno lint && deno run --check=all --allow-read=schemas/,events/ --allow-net=deno.land scripts/main.ts",
+      "build": "deno run --allow-read=schemas/,events/ --allow-write=dist/ --allow-net=deno.land scripts/main.ts --build",
+      "dev": "deno run --allow-read=schemas/,events/ --allow-net=deno.land --watch=schemas/,events/ scripts/main.ts --dev",
+      "dev:build": "deno run --allow-read=schemas/,events/ --allow-write=dist/ --allow-net=deno.land --watch=schemas/,events/ scripts/main.ts --build --dev"
    },
    "compilerOptions": {
       "noFallthroughCasesInSwitch": true,

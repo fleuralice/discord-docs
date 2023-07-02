@@ -1,0 +1,46 @@
+{
+   "$id": "https://docs.helvetica.moe/events/request-guild-members.json",
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "type": "object",
+   "allOf": [{ "$ref": "/events/base.json" }],
+   "properties": {
+      "op": {
+         "type": "integer",
+         "enum": [8]
+      },
+      "d": {
+         "type": "object",
+         "properties": {
+            "guild_id": {
+               "$ref": "/schemas/snowflake.json"
+            },
+            "query": {
+               "type": "string"
+            },
+            "limit": {
+               "type": "integer"
+            },
+            "presences": {
+               "type": "boolean"
+            },
+            "user_ids": {
+               "oneOf": [
+                  { "$ref": "/schemas/snowflake.json" },
+                  {
+                     "type": "array",
+                     "items": { "$ref": "/schemas/snowflake.json" }
+                  }
+               ]
+            },
+            "nonce": {
+               "type": "string"
+            }
+         },
+         "required": ["guild_id"],
+         "oneOf": [
+            { "required": ["query", "limit"] },
+            { "required": ["user_ids"] }
+         ]
+      }
+   }
+}

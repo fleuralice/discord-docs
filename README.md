@@ -5,7 +5,15 @@ Spooks you. 👻
 [How scary!!!~](https://docs.helvetica.moe) I thought I was safe!! Maybe if
 enough people contribute we can exorcise the ghosts?
 
-There's still a lot to do and ghosts are a moving target, after all.
+There's still a lot to do and ghosts are a moving target, after all. There are a
+couple major things left:
+
+- automatically know when documentation is missing
+- automatically know when keys are redundent
+
+Additionally, a lot of work has to be done to figure out constraints on fields
+and on objects generally (e.g. ADTs). Additionally, work needs to be done to add
+gateway events and REST routes.
 
 ##### Latest commit from the documentation
 
@@ -46,8 +54,8 @@ doesn't do anything. E.g.:
 ```
 
 I require this to work for partial objects. Therefore, all generators used
-against this will need a small little patch. Or, they can use the compatibility
-bundle!
+against this will need a small little patch. Or, they can use the
+[compatibility bundle](https://docs.helvetica.moe/bundle.compat.json)!
 
 More generally, I require that properties next to a `$ref` _replace_ rather than
 _merge with_ the original properties. The previous "merge with" behavior is

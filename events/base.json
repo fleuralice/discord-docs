@@ -1,0 +1,39 @@
+{
+   "$id": "https://docs.helvetica.moe/events/base.json",
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "type": "object",
+   "properties": {
+      "d": {}
+   },
+   "anyOf": [
+      {
+         "properties": {
+            "op": {
+               "type": "integer",
+               "enum": [0]
+            },
+            "s": {
+               "type": "integer"
+            },
+            "t": {
+               "type": "string"
+            }
+         }
+      },
+      {
+         "properties": {
+            "op": {
+               "type": "integer",
+               "enum": [1, 2, 3, 4, 6, 7, 8, 9, 10, 11]
+            },
+            "s": {
+               "type": "null"
+            },
+            "t": {
+               "type": "null"
+            }
+         }
+      }
+   ],
+   "required": ["op", "d", "s", "t"]
+}

@@ -1,0 +1,15 @@
+{
+   "$id": "https://docs.helvetica.moe/events/heartbeat.json",
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "type": "object",
+   "allOf": [{ "$ref": "/events/base.json" }],
+   "properties": {
+      "op": {
+         "type": "integer",
+         "enum": [1]
+      },
+      "d": {
+         "type": "integer"
+      }
+   }
+}

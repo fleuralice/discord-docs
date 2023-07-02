@@ -17,7 +17,7 @@ if (dryRun) {
 }
 
 // make sure to update deno.json's watch configuration if updating this list
-const schemaLocations = ["schemas/"];
+const schemaLocations = ["schemas/", "events/"];
 const schemas: Record<string, unknown>[] = [];
 const errorMap: [ObjectExpression, string, string][] = [];
 let hadErrors = false;
@@ -170,12 +170,15 @@ schemas.forEach((schema, i) => {
       if (Array.isArray(s)) s.forEach((x, j) => recurse(x, [...path, j]));
       else if (typeof s === "object" && s !== null) {
          if (
-            "type" in s && s["type"] === "object" && Object.keys(s).length === 1
+            "type" in s && ["object", "array"].includes(s.type as string) &&
+            Object.keys(s).filter((k) =>
+                  !["type", "$id", "$schema"].includes(k)
+               ).length === 0
          ) {
             reportError(
                errorMap[i]!,
                path,
-               'bare {"type": "object"}',
+               `bare {"type": "${s["type"]}"}`,
             );
          }
 
@@ -295,6 +298,21 @@ schemas.forEach((schema, i) => {
 
    recurse(schema, []);
 });
+
+// LINT: check all "minor names" used in the bundle are unique
+if (
+   new Set(schemas.map((schema) => {
+      if (typeof schema["$id"] !== "string") return Math.random();
+      const keyURL = new URL(schema["$id"]);
+      return keyURL.pathname.slice(
+         keyURL.pathname.lastIndexOf("/") + 1,
+         keyURL.pathname.length - 5,
+      );
+   })).size !== schemas.length
+) {
+   console.error("minor names are not unique");
+   hadErrors = true;
+}
 
 if (hadErrors) {
    console.log("errored :(");

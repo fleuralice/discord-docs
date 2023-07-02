@@ -1,0 +1,17 @@
+{
+   "$id": "https://docs.helvetica.moe/events/send.json",
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "oneOf": [{
+      "$ref": "/events/identify.json"
+   }, {
+      "$ref": "/events/resume.json"
+   }, {
+      "$ref": "/events/heartbeat.json"
+   }, {
+      "$ref": "/events/request-guild-members.json"
+   }, {
+      "$ref": "/events/update-voice-state.json"
+   }, {
+      "$ref": "/events/update-presence.json"
+   }]
+}
