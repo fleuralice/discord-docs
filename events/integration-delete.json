@@ -1,0 +1,31 @@
+{
+   "$id": "https://docs.helvetica.moe/events/integration-delete.json",
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "type": "object",
+   "allOf": [{ "$ref": "/events/base.json" }],
+   "properties": {
+      "op": {
+         "type": "integer",
+         "enum": [0]
+      },
+      "t": {
+         "type": "string",
+         "enum": ["INTEGRATION_DELETE"]
+      },
+      "d": {
+         "type": "object",
+         "properties": {
+            "id": {
+               "$ref": "/schemas/snowflake.json"
+            },
+            "guild_id": {
+               "$ref": "/schemas/snowflake.json"
+            },
+            "application_id": {
+               "$ref": "/schemas/snowflake.json"
+            }
+         },
+         "required": ["id", "guild_id"]
+      }
+   }
+}

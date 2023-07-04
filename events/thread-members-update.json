@@ -1,0 +1,43 @@
+{
+   "$id": "https://docs.helvetica.moe/events/thread-members-update.json",
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "type": "object",
+   "allOf": [{ "$ref": "/events/base.json" }],
+   "properties": {
+      "op": {
+         "type": "integer",
+         "enum": [0]
+      },
+      "t": {
+         "type": "string",
+         "enum": ["THREAD_MEMBERS_UPDATE"]
+      },
+      "d": {
+         "type": "object",
+         "properties": {
+            "id": {
+               "$ref": "/schemas/snowflake.json"
+            },
+            "guild_id": {
+               "$ref": "/schemas/snowflake.json"
+            },
+            "member_count": {
+               "type": "integer"
+            },
+            "added_members": {
+               "type": "array",
+               "items": {
+                  "$ref": "/schemas/channel.json#/properties/member"
+               }
+            },
+            "removed_member_ids": {
+               "type": "array",
+               "items": {
+                  "$ref": "/schemas/snowflake.json"
+               }
+            }
+         },
+         "required": ["id", "guild_id", "member_count"]
+      }
+   }
+}

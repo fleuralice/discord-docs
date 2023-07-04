@@ -1,0 +1,43 @@
+{
+   "$id": "https://docs.helvetica.moe/events/thread-list-sync.json",
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "type": "object",
+   "allOf": [{ "$ref": "/events/base.json" }],
+   "properties": {
+      "op": {
+         "type": "integer",
+         "enum": [0]
+      },
+      "t": {
+         "type": "string",
+         "enum": ["THREAD_LIST_SYNC"]
+      },
+      "d": {
+         "type": "object",
+         "properties": {
+            "guild_id": {
+               "$ref": "/schemas/snowflake.json"
+            },
+            "channel_ids": {
+               "type": "array",
+               "items": {
+                  "$ref": "/schemas/snowflake.json"
+               }
+            },
+            "threads": {
+               "type": "array",
+               "items": {
+                  "$ref": "/schemas/channel.json"
+               }
+            },
+            "members": {
+               "type": "array",
+               "items": {
+                  "$ref": "/schemas/channel.json#/properties/member"
+               }
+            }
+         },
+         "required": ["guild_id", "threads", "members"]
+      }
+   }
+}

@@ -1,0 +1,21 @@
+{
+   "$id": "https://docs.helvetica.moe/events/hello.json",
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "type": "object",
+   "allOf": [{ "$ref": "/events/base.json" }],
+   "properties": {
+      "op": {
+         "type": "integer",
+         "enum": [10]
+      },
+      "d": {
+         "type": "object",
+         "properties": {
+            "heartbeat_interval": {
+               "type": "integer"
+            }
+         },
+         "required": "heartbeat_interval"
+      }
+   }
+}

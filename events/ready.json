@@ -1,0 +1,55 @@
+{
+   "$id": "https://docs.helvetica.moe/events/ready.json",
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "type": "object",
+   "allOf": [{ "$ref": "/events/base.json" }],
+   "properties": {
+      "op": {
+         "type": "integer",
+         "enum": [0]
+      },
+      "t": {
+         "type": "string",
+         "enum": ["READY"]
+      },
+      "d": {
+         "type": "object",
+         "properties": {
+            "v": {
+               "type": "integer"
+            },
+            "user": {
+               "$ref": "/schemas/user.json"
+            },
+            "guilds": {
+               "type": "array",
+               "items": {
+                  "$ref": "/schemas/guild.json"
+               }
+            },
+            "session_id": {
+               "type": "string"
+            },
+            "resume_gateway_url": {
+               "type": "string"
+            },
+            "shard": {
+               "type": "array",
+               "prefixItems": [{ "type": "integer" }, { "type": "integer" }]
+            },
+            "application": {
+               "$ref": "/schemas/application.json",
+               "required": ["id", "flags"]
+            }
+         },
+         "required": [
+            "v",
+            "user",
+            "guilds",
+            "session_id",
+            "resume_gateway_url",
+            "application"
+         ]
+      }
+   }
+}

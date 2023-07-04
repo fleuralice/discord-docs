@@ -1,0 +1,28 @@
+{
+   "$id": "https://docs.helvetica.moe/events/guild-ban-add.json",
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "type": "object",
+   "allOf": [{ "$ref": "/events/base.json" }],
+   "properties": {
+      "op": {
+         "type": "integer",
+         "enum": [0]
+      },
+      "t": {
+         "type": "string",
+         "enum": ["GUILD_BAN_ADD"]
+      },
+      "d": {
+         "type": "object",
+         "properties": {
+            "guild_id": {
+               "$ref": "/schemas/snowflake.json"
+            },
+            "user": {
+               "$ref": "/schemas/user.json"
+            }
+         },
+         "required": ["guild_id", "user"]
+      }
+   }
+}

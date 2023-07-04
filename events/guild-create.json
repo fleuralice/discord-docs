@@ -1,0 +1,90 @@
+{
+   "$id": "https://docs.helvetica.moe/events/guild-create.json",
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "type": "object",
+   "allOf": [{ "$ref": "/events/base.json" }],
+   "properties": {
+      "op": {
+         "type": "integer",
+         "enum": [0]
+      },
+      "t": {
+         "type": "string",
+         "enum": ["GUILD_CREATE"]
+      },
+      "d": {
+         "oneOf": [{
+            "properties": {
+               "id": {
+                  "$ref": "/schemas/snowflake.json"
+               },
+               "unavailable": {
+                  "type": "boolean",
+                  "enum": [true]
+               }
+            },
+            "required": ["unavailable"]
+         }, {
+            "allOf": [{ "$ref": "/schemas/guild.json" }],
+            "properties": {
+               "joined_at": {
+                  "type": "string"
+               },
+               "large": {
+                  "type": "boolean"
+               },
+               "unavailable": {
+                  "type": "boolean"
+               },
+               "member_count": {
+                  "type": "integer"
+               },
+               "voice_states": {
+                  "type": "array",
+                  "items": {
+                     "$ref": "/schemas/voice-state.json",
+                     "required": []
+                  }
+               },
+               "members": {
+                  "type": "array",
+                  "items": {
+                     "$ref": "/schemas/member.json"
+                  }
+               },
+               "channels": {
+                  "type": "array",
+                  "items": {
+                     "$ref": "/schemas/channel.json"
+                  }
+               },
+               "threads": {
+                  "type": "array",
+                  "items": {
+                     "$ref": "/schemas/channel.json"
+                  }
+               },
+               "presences": {
+                  "type": "array",
+                  "items": {
+                     "$ref": "/events/presence-update.json#/properties/d",
+                     "required": []
+                  }
+               },
+               "stage_instances": {
+                  "type": "array",
+                  "items": {
+                     "$ref": "/schemas/stage-instance.json"
+                  }
+               },
+               "guild_scheduled_events": {
+                  "type": "array",
+                  "items": {
+                     "$ref": "/schemas/guild-scheduled-event.json"
+                  }
+               }
+            }
+         }]
+      }
+   }
+}

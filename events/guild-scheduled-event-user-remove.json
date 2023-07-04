@@ -1,0 +1,31 @@
+{
+   "$id": "https://docs.helvetica.moe/events/guild-scheduled-event-user-remove.json",
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "type": "object",
+   "allOf": [{ "$ref": "/events/base.json" }],
+   "properties": {
+      "op": {
+         "type": "integer",
+         "enum": [0]
+      },
+      "t": {
+         "type": "string",
+         "enum": ["GUILD_SCHEDULED_EVENT_USER_REMOVE"]
+      },
+      "d": {
+         "type": "object",
+         "properties": {
+            "guild_scheduled_event_id": {
+               "$ref": "/schemas/snowflake.json"
+            },
+            "user_id": {
+               "$ref": "/schemas/snowflake.json"
+            },
+            "guild_id": {
+               "$ref": "/schemas/snowflake.json"
+            }
+         },
+         "required": ["guild_scheduled_event_id", "user_id", "guild_id"]
+      }
+   }
+}

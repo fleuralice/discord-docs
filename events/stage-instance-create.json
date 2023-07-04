@@ -1,0 +1,19 @@
+{
+   "$id": "https://docs.helvetica.moe/events/stage-instance-create.json",
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "type": "object",
+   "allOf": [{ "$ref": "/events/base.json" }],
+   "properties": {
+      "op": {
+         "type": "integer",
+         "enum": [0]
+      },
+      "t": {
+         "type": "string",
+         "enum": ["STAGE_INSTANCE_CREATE"]
+      },
+      "d": {
+         "$ref": "/schemas/stage-instance.json"
+      }
+   }
+}

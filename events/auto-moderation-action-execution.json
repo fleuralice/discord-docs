@@ -1,0 +1,55 @@
+{
+   "$id": "https://docs.helvetica.moe/events/auto-moderation-action-execution.json",
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "type": "object",
+   "allOf": [{ "$ref": "/events/base.json" }],
+   "properties": {
+      "op": {
+         "type": "integer",
+         "enum": [0]
+      },
+      "t": {
+         "type": "string",
+         "enum": ["AUTO_MODERATION_ACTION_EXECUTION"]
+      },
+      "d": {
+         "type": "object",
+         "properties": {
+            "guild_id": {
+               "$ref": "/schemas/snowflake.json"
+            },
+            "action": {
+               "$ref": "/schemas/auto-moderation-rule.json#/allOf/0/properties/actions/items"
+            },
+            "rule_id": {
+               "$ref": "/schemas/snowflake.json"
+            },
+            "rule_trigger_type": {
+               "type": "integer",
+               "enum": [1, 3, 4, 5]
+            },
+            "user_id": {
+               "$ref": "/schemas/snowflake.json"
+            },
+            "channel_id": {
+               "$ref": "/schemas/snowflake.json"
+            },
+            "message_id": {
+               "$ref": "/schemas/snowflake.json"
+            },
+            "alert_system_message_id": {
+               "$ref": "/schemas/snowflake.json"
+            },
+            "content": {
+               "type": "string"
+            },
+            "matched_keyword": {
+               "type": ["null", "string"]
+            },
+            "matched_content": {
+               "type": "string"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,19 @@
+{
+   "$id": "https://docs.helvetica.moe/events/auto-moderation-rule-create.json",
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "type": "object",
+   "allOf": [{ "$ref": "/events/base.json" }],
+   "properties": {
+      "op": {
+         "type": "integer",
+         "enum": [0]
+      },
+      "t": {
+         "type": "string",
+         "enum": ["AUTO_MODERATION_RULE_CREATE"]
+      },
+      "d": {
+         "$ref": "/schemas/auto-moderation-rule.json"
+      }
+   }
+}

@@ -1,0 +1,19 @@
+{
+   "$id": "https://docs.helvetica.moe/events/guild-scheduled-event-delete.json",
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "type": "object",
+   "allOf": [{ "$ref": "/events/base.json" }],
+   "properties": {
+      "op": {
+         "type": "integer",
+         "enum": [0]
+      },
+      "t": {
+         "type": "string",
+         "enum": ["GUILD_SCHEDULED_EVENT_DELETE"]
+      },
+      "d": {
+         "$ref": "/schemas/guild-scheduled-event.json"
+      }
+   }
+}

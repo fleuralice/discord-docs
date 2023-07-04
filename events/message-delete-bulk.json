@@ -1,0 +1,34 @@
+{
+   "$id": "https://docs.helvetica.moe/events/message-delete-bulk.json",
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "type": "object",
+   "allOf": [{ "$ref": "/events/base.json" }],
+   "properties": {
+      "op": {
+         "type": "integer",
+         "enum": [0]
+      },
+      "t": {
+         "type": "string",
+         "enum": ["MESSAGE_DELETE_BULK"]
+      },
+      "d": {
+         "type": "object",
+         "properties": {
+            "ids": {
+               "type": "array",
+               "items": {
+                  "$ref": "/schemas/snowflake.json"
+               }
+            },
+            "channel_id": {
+               "$ref": "/schemas/snowflake.json"
+            },
+            "guild_id": {
+               "$ref": "/schemas/snowflake.json"
+            }
+         },
+         "required": ["ids", "channel_id"]
+      }
+   }
+}

@@ -1,0 +1,38 @@
+{
+   "$id": "https://docs.helvetica.moe/events/message-reaction-remove.json",
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "type": "object",
+   "allOf": [{ "$ref": "/events/base.json" }],
+   "properties": {
+      "op": {
+         "type": "integer",
+         "enum": [0]
+      },
+      "t": {
+         "type": "string",
+         "enum": ["MESSAGE_REACTION_REMOVE"]
+      },
+      "d": {
+         "type": "object",
+         "properties": {
+            "user_id": {
+               "$ref": "/schemas/snowflake.json"
+            },
+            "channel_id": {
+               "$ref": "/schemas/snowflake.json"
+            },
+            "message_id": {
+               "$ref": "/schemas/snowflake.json"
+            },
+            "guild_id": {
+               "$ref": "/schemas/snowflake.json"
+            },
+            "emoji": {
+               "$ref": "/schemas/emoji.json",
+               "required": []
+            }
+         },
+         "required": ["user_id", "channel_id", "message_id", "emoji"]
+      }
+   }
+}

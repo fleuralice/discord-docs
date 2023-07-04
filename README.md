@@ -13,7 +13,9 @@ couple major things left:
 
 Additionally, a lot of work has to be done to figure out constraints on fields
 and on objects generally (e.g. ADTs). Additionally, work needs to be done to add
-gateway events and REST routes.
+REST routes.
+
+nya
 
 ##### Latest commit from the documentation
 

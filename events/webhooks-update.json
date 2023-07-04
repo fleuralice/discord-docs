@@ -1,0 +1,28 @@
+{
+   "$id": "https://docs.helvetica.moe/events/webhooks-update.json",
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "type": "object",
+   "allOf": [{ "$ref": "/events/base.json" }],
+   "properties": {
+      "op": {
+         "type": "integer",
+         "enum": [0]
+      },
+      "t": {
+         "type": "string",
+         "enum": ["WEBHOOKS_UPDATE"]
+      },
+      "d": {
+         "type": "object",
+         "properties": {
+            "guild_id": {
+               "$ref": "/schemas/snowflake.json"
+            },
+            "channel_id": {
+               "$ref": "/schemas/snowflake.json"
+            }
+         },
+         "required": ["guild_id", "channel_id"]
+      }
+   }
+}

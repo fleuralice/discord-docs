@@ -1,0 +1,31 @@
+{
+   "$id": "https://docs.helvetica.moe/events/channel-pins-update.json",
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "type": "object",
+   "allOf": [{ "$ref": "/events/base.json" }],
+   "properties": {
+      "op": {
+         "type": "integer",
+         "enum": [0]
+      },
+      "t": {
+         "type": "string",
+         "enum": ["CHANNEL_PINS_UPDATE"]
+      },
+      "d": {
+         "type": "object",
+         "properties": {
+            "guild_id": {
+               "$ref": "/schemas/snowflake.json"
+            },
+            "channel_id": {
+               "$ref": "/schemas/snowflake.json"
+            },
+            "last_pin_timestamp": {
+               "type": ["null", "string"]
+            }
+         },
+         "required": ["channel_id"]
+      }
+   }
+}

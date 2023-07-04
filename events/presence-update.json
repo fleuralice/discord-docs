@@ -1,0 +1,185 @@
+{
+   "$id": "https://docs.helvetica.moe/events/presence-update.json",
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "type": "object",
+   "allOf": [{ "$ref": "/events/base.json" }],
+   "properties": {
+      "op": {
+         "type": "integer",
+         "enum": [0]
+      },
+      "t": {
+         "type": "string",
+         "enum": ["PRESENCE_UPDATE"]
+      },
+      "d": {
+         "type": "object",
+         "properties": {
+            "user": {
+               "$ref": "/schemas/user.json",
+               "required": ["id"]
+            },
+            "guild_id": {
+               "$ref": "/schemas/snowflake.json"
+            },
+            "status": {
+               "type": "string",
+               "enum": ["idle", "dnd", "online", "offline"]
+            },
+            "activities": {
+               "type": "array",
+               "items": {
+                  "type": "object",
+                  "properties": {
+                     "name": {
+                        "type": "string"
+                     },
+                     "type": {
+                        "type": "integer",
+                        "enum": [0, 1, 2, 3, 4, 5]
+                     },
+                     "url": {
+                        "type": ["null", "string"]
+                     },
+                     "created_at": {
+                        "type": "integer"
+                     },
+                     "timestamps": {
+                        "type": "object",
+                        "properties": {
+                           "start": {
+                              "type": "integer"
+                           },
+                           "end": {
+                              "type": "integer"
+                           }
+                        }
+                     },
+                     "application_id": {
+                        "$ref": "/schemas/snowflake.json"
+                     },
+                     "details": {
+                        "type": "string"
+                     },
+                     "state": {
+                        "type": "string"
+                     },
+                     "emoji": {
+                        "type": ["null", "object"],
+                        "properties": {
+                           "name": {
+                              "type": "string"
+                           },
+                           "id": {
+                              "$ref": "/schemas/snowflake.json"
+                           },
+                           "animated": {
+                              "type": "boolean"
+                           }
+                        },
+                        "required": ["name"]
+                     },
+                     "party": {
+                        "type": "object",
+                        "properties": {
+                           "id": {
+                              "type": "string"
+                           },
+                           "size": {
+                              "type": "array",
+                              "prefixItems": [
+                                 { "type": "integer" },
+                                 { "type": "integer" }
+                              ]
+                           }
+                        }
+                     },
+                     "assets": {
+                        "type": "object",
+                        "properties": {
+                           "large_image": {
+                              "type": "string"
+                           },
+                           "large_text": {
+                              "type": "string"
+                           },
+                           "small_image": {
+                              "type": "string"
+                           },
+                           "small_text": {
+                              "type": "string"
+                           }
+                        }
+                     },
+                     "secrets": {
+                        "type": "object",
+                        "properties": {
+                           "join": {
+                              "type": "string"
+                           },
+                           "spectate": {
+                              "type": "string"
+                           },
+                           "match": {
+                              "type": "string"
+                           }
+                        }
+                     },
+                     "instance": {
+                        "type": "boolean"
+                     },
+                     "flags": {
+                        "type": "integer",
+                        "flags": {
+                           "instance": 1,
+                           "join": 2,
+                           "spectate": 4,
+                           "join_request": 8,
+                           "sync": 16,
+                           "play": 32,
+                           "party_privacy_friends": 64,
+                           "party_privacy_voice_channel": 128,
+                           "embedded": 256
+                        }
+                     },
+                     "buttons": {
+                        "type": "array",
+                        "items": {
+                           "type": "object",
+                           "properties": {
+                              "label": {
+                                 "type": "string"
+                              },
+                              "url": {
+                                 "type": "string"
+                              }
+                           },
+                           "required": ["label", "url"]
+                        }
+                     }
+                  },
+                  "required": ["name", "type", "created_at"]
+               }
+            },
+            "client_status": {
+               "type": "object",
+               "properties": {
+                  "desktop": {
+                     "type": "string",
+                     "enum": ["online", "idle", "dnd"]
+                  },
+                  "mobile": {
+                     "type": "string",
+                     "enum": ["online", "idle", "dnd"]
+                  },
+                  "web": {
+                     "type": "string",
+                     "enum": ["online", "idle", "dnd"]
+                  }
+               }
+            }
+         },
+         "required": ["user_id", "channel_id", "message_id", "emoji"]
+      }
+   }
+}

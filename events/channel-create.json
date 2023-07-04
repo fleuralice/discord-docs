@@ -1,0 +1,19 @@
+{
+   "$id": "https://docs.helvetica.moe/events/channel-create.json",
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "type": "object",
+   "allOf": [{ "$ref": "/events/base.json" }],
+   "properties": {
+      "op": {
+         "type": "integer",
+         "enum": [0]
+      },
+      "t": {
+         "type": "string",
+         "enum": ["CHANNEL_CREATE"]
+      },
+      "d": {
+         "$ref": "/schemas/channel.json"
+      }
+   }
+}

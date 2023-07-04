@@ -1,0 +1,58 @@
+{
+   "$id": "https://docs.helvetica.moe/events/guild-member-update.json",
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "type": "object",
+   "allOf": [{ "$ref": "/events/base.json" }],
+   "properties": {
+      "op": {
+         "type": "integer",
+         "enum": [0]
+      },
+      "t": {
+         "type": "string",
+         "enum": ["GUILD_MEMBER_UPDATE"]
+      },
+      "d": {
+         "type": "object",
+         "properties": {
+            "guild_id": {
+               "$ref": "/schemas/snowflake.json"
+            },
+            "roles": {
+               "type": "array",
+               "items": {
+                  "$ref": "/schemas/snowflake.json"
+               }
+            },
+            "user": {
+               "$ref": "/schemas/user.json"
+            },
+            "nick": {
+               "type": ["null", "string"]
+            },
+            "avatar": {
+               "type": ["null", "string"]
+            },
+            "joined_at": {
+               "type": ["null", "string"]
+            },
+            "premium_since": {
+               "type": ["null", "string"]
+            },
+            "deaf": {
+               "type": "boolean"
+            },
+            "mute": {
+               "type": "boolean"
+            },
+            "pending": {
+               "type": "boolean"
+            },
+            "communication_disabled_until": {
+               "type": ["null", "string"]
+            }
+         },
+         "required": ["guild_id", "roles", "user", "avatar", "joined_at"]
+      }
+   }
+}

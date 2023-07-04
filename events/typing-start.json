@@ -1,0 +1,37 @@
+{
+   "$id": "https://docs.helvetica.moe/events/typing-start.json",
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "type": "object",
+   "allOf": [{ "$ref": "/events/base.json" }],
+   "properties": {
+      "op": {
+         "type": "integer",
+         "enum": [0]
+      },
+      "t": {
+         "type": "string",
+         "enum": ["TYPING_START"]
+      },
+      "d": {
+         "type": "object",
+         "properties": {
+            "user_id": {
+               "$ref": "/schemas/snowflake.json"
+            },
+            "channel_id": {
+               "$ref": "/schemas/snowflake.json"
+            },
+            "guild_id": {
+               "$ref": "/schemas/snowflake.json"
+            },
+            "member": {
+               "$ref": "/schemas/member.json"
+            },
+            "timestamp": {
+               "type": "integer"
+            }
+         },
+         "required": ["user_id", "channel_id", "timestamp"]
+      }
+   }
+}

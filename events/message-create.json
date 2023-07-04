@@ -1,0 +1,35 @@
+{
+   "$id": "https://docs.helvetica.moe/events/message-create.json",
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "type": "object",
+   "allOf": [{ "$ref": "/events/base.json" }],
+   "properties": {
+      "op": {
+         "type": "integer",
+         "enum": [0]
+      },
+      "t": {
+         "type": "string",
+         "enum": ["MESSAGE_CREATE"]
+      },
+      "d": {
+         "allOf": [{ "$ref": "/schemas/message.json" }],
+         "properties": {
+            "guild_id": {
+               "$ref": "/schemas/snowflake.json"
+            },
+            "member": {
+               "$ref": "/schemas/member.json",
+               "required": []
+            },
+            "mentions": {
+               "type": "array",
+               "items": {
+                  "$ref": "/schemas/user.json"
+               }
+            }
+         },
+         "required": ["mentions"]
+      }
+   }
+}

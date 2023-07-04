@@ -1,0 +1,20 @@
+{
+   "$id": "https://docs.helvetica.moe/events/guild-delete.json",
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "type": "object",
+   "allOf": [{ "$ref": "/events/base.json" }],
+   "properties": {
+      "op": {
+         "type": "integer",
+         "enum": [0]
+      },
+      "t": {
+         "type": "string",
+         "enum": ["GUILD_DELETE"]
+      },
+      "d": {
+         "$ref": "/schemas/guild.json",
+         "required": ["id"]
+      }
+   }
+}

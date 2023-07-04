@@ -1,0 +1,68 @@
+{
+   "$id": "https://docs.helvetica.moe/events/invite-create.json",
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "type": "object",
+   "allOf": [{ "$ref": "/events/base.json" }],
+   "properties": {
+      "op": {
+         "type": "integer",
+         "enum": [0]
+      },
+      "t": {
+         "type": "string",
+         "enum": ["INVITE_CREATE"]
+      },
+      "d": {
+         "type": "object",
+         "properties": {
+            "channel_id": {
+               "$ref": "/schemas/snowflake.json"
+            },
+            "code": {
+               "type": "string"
+            },
+            "created_at": {
+               "type": "string"
+            },
+            "guild_id": {
+               "$ref": "/schemas/snowflake.json"
+            },
+            "inviter": {
+               "$ref": "/schemas/user.json"
+            },
+            "max_age": {
+               "type": "integer"
+            },
+            "max_uses": {
+               "type": "integer"
+            },
+            "target_type": {
+               "$ref": "/schemas/invite.json#/properties/target_type"
+            },
+            "target_user": {
+               "$ref": "/schemas/user.json"
+            },
+            "target_application": {
+               "$ref": "/schemas/application.json",
+               "required": []
+            },
+            "temporary": {
+               "type": "boolean"
+            },
+            "uses": {
+               "type": "integer",
+               "enum": [0]
+            }
+         },
+         "required": [
+            "channel_id",
+            "code",
+            "created_at",
+            "max_age",
+            "max_uses",
+            "temporary",
+            "uses"
+         ]
+      }
+   }
+}

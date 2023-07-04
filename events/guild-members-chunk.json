@@ -1,0 +1,52 @@
+{
+   "$id": "https://docs.helvetica.moe/events/guild-members-chunk.json",
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "type": "object",
+   "allOf": [{ "$ref": "/events/base.json" }],
+   "properties": {
+      "op": {
+         "type": "integer",
+         "enum": [0]
+      },
+      "t": {
+         "type": "string",
+         "enum": ["GUILD_MEMBERS_CHUNK"]
+      },
+      "d": {
+         "type": "object",
+         "properties": {
+            "guild_id": {
+               "$ref": "/schemas/snowflake.json"
+            },
+            "members": {
+               "type": "array",
+               "items": {
+                  "$ref": "/schemas/member.json"
+               }
+            },
+            "chunk_index": {
+               "type": "integer"
+            },
+            "chunk_count": {
+               "type": "integer"
+            },
+            "not_found": {
+               "type": "array",
+               "items": {
+                  "$ref": "/schemas/snowflake.json"
+               }
+            },
+            "presences": {
+               "type": "array",
+               "items": {
+                  "$ref": "/events/presence-update.json#/properties/d"
+               }
+            },
+            "nonce": {
+               "type": "string"
+            }
+         },
+         "required": ["guild_id", "members", "chunk_index", "chunk_count"]
+      }
+   }
+}

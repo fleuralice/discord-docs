@@ -1,0 +1,19 @@
+{
+   "$id": "https://docs.helvetica.moe/events/guild-audit-log-entry-create.json",
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "type": "object",
+   "allOf": [{ "$ref": "/events/base.json" }],
+   "properties": {
+      "op": {
+         "type": "integer",
+         "enum": [0]
+      },
+      "t": {
+         "type": "string",
+         "enum": ["GUILD_AUDIT_LOG_ENTRY_CREATE"]
+      },
+      "d": {
+         "$ref": "/schemas/audit-log.json#/properties/audit_log_entries/items"
+      }
+   }
+}
