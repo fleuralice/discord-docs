@@ -365,7 +365,7 @@
                   1,
                   2,
                   3,
-                  4
+                  5
                ]
             },
             "party_id": {
@@ -450,7 +450,8 @@
                "$ref": "/schemas/member.json",
                "required": []
             }
-         }
+         },
+         "required": ["id", "type", "name", "user"]
       },
       "thread": {
          "$ref": "/schemas/channel.json"

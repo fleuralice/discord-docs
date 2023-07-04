@@ -310,10 +310,10 @@
                                     {
                                        "properties": {
                                           "new_value": {
-                                             "$ref": "/schemas/guild.json#/properties/expicit_content_filter"
+                                             "$ref": "/schemas/guild.json#/properties/explicit_content_filter"
                                           },
                                           "old_value": {
-                                             "$ref": "/schemas/guild.json#/properties/expicit_content_filter"
+                                             "$ref": "/schemas/guild.json#/properties/explicit_content_filter"
                                           },
                                           "key": {
                                              "type": "string",

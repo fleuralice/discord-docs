@@ -212,7 +212,8 @@
                   ]
                }
             }
-         }
+         },
+         "required": ["components"]
       }
    ]
 }

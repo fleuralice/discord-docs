@@ -85,7 +85,7 @@
             1
          ]
       },
-      "expicit_content_filter": {
+      "explicit_content_filter": {
          "type": "integer",
          "enum": [
             0,
@@ -119,9 +119,9 @@
                "CREATOR_MONETIZABLE_PROVISIONAL",
                "CREATOR_STORE_PAGE",
                "DEVELOPER_SUPPORT_SERVER",
-               "DICOVERABLE",
+               "DISCOVERABLE",
                "FEATURABLE",
-               "INVITED_DISABLED",
+               "INVITES_DISABLED",
                "INVITE_SPLASH",
                "MEMBER_VERIFICATION_GATE_ENABLED",
                "MORE_STICKERS",
@@ -348,7 +348,7 @@
       "explicit_content_filter",
       "roles",
       "emojis",
-      "featrues",
+      "features",
       "mfa_level",
       "application_id",
       "system_channel_id",

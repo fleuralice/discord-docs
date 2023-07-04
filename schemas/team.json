@@ -10,7 +10,7 @@
          "$ref": "/schemas/snowflake.json"
       },
       "members": {
-         "type": "list",
+         "type": "array",
          "items": {
             "type": "object",
             "properties": {
@@ -20,9 +20,10 @@
                },
                "permissions": {
                   "type": "array",
-                  "items": {
-                     "type": "string"
-                  }
+                  "prefixItems": [{
+                     "type": "string",
+                     "enum": ["\"*\""]
+                  }]
                },
                "team_id": {
                   "$ref": "/schemas/snowflake.json"
@@ -35,7 +36,7 @@
             "required": ["membership_state", "permissions", "team_id", "user"]
          }
       },
-      "names": {
+      "name": {
          "type": "string"
       },
       "owner_user_id": {

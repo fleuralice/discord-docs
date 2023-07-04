@@ -22,7 +22,8 @@
          "type": "string"
       },
       "asset": {
-         "type": "string"
+         "type": "string",
+         "enum": [""]
       },
       "type": {
          "type": "integer",

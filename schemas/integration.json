@@ -117,7 +117,7 @@
                "relationships.read",
                "role_connections.write",
                "rpc",
-               "rpc.activites.write",
+               "rpc.activities.write",
                "rpc.notifications.read",
                "rpc.voice.read",
                "rpc.voice.write",
