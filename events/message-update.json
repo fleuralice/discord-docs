@@ -13,7 +13,12 @@
          "enum": ["MESSAGE_UPDATE"]
       },
       "d": {
-         "allOf": [{ "$ref": "/schemas/message.json" }],
+         "allOf": [
+            {
+               "$ref": "/schemas/message.json",
+               "required": ["id", "channel_id"]
+            }
+         ],
          "properties": {
             "guild_id": {
                "$ref": "/schemas/snowflake.json"
@@ -28,8 +33,7 @@
                   "$ref": "/schemas/user.json"
                }
             }
-         },
-         "required": ["mentions"]
+         }
       }
    }
 }

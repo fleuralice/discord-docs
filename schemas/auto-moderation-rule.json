@@ -1,9 +1,9 @@
 {
    "$id": "https://docs.helvetica.moe/schemas/auto-moderation-rule.json",
    "$schema": "https://json-schema.org/draft/2020-12/schema",
-   "type": "object",
    "allOf": [
       {
+         "type": "object",
          "properties": {
             "id": {
                "$ref": "/schemas/snowflake.json"
@@ -107,7 +107,6 @@
             "creator_id",
             "event_type",
             "trigger_type",
-            "trigger_metadata",
             "actions",
             "enabled",
             "exempt_roles",
@@ -152,7 +151,8 @@
                         "allow_list"
                      ]
                   }
-               }
+               },
+               "required": ["trigger_metadata"]
             },
             {
                "properties": {
@@ -175,7 +175,7 @@
                         "allow_list": {
                            "type": "array",
                            "items": {
-                              "type": "strings"
+                              "type": "string"
                            }
                         }
                      },
@@ -184,7 +184,8 @@
                         "allow_list"
                      ]
                   }
-               }
+               },
+               "required": ["trigger_metadata"]
             },
             {
                "properties": {
@@ -209,7 +210,8 @@
                         "mention_raid_protection_enabled"
                      ]
                   }
-               }
+               },
+               "required": ["trigger_metadata"]
             },
             {
                "properties": {

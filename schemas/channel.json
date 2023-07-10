@@ -302,22 +302,26 @@
                "properties": {
                   "emoji_id": {
                      "$ref": "/schemas/snowflake.json"
+                  },
+                  "emoji_name": {
+                     "type": "null"
                   }
-               },
-               "required": [
-                  "emoji_id"
-               ]
+               }
             },
             {
                "properties": {
+                  "emoji_id": {
+                     "type": "null"
+                  },
                   "emoji_name": {
                      "type": "string"
                   }
-               },
-               "required": [
-                  "emoji_name"
-               ]
+               }
             }
+         ],
+         "required": [
+            "emoji_id",
+            "emoji_name"
          ]
       },
       "default_thread_rate_limit_per_user": {

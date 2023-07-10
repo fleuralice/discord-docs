@@ -534,6 +534,22 @@
                                     {
                                        "properties": {
                                           "new_value": {
+                                             "$ref": "/schemas/guild.json#/properties/banner"
+                                          },
+                                          "old_value": {
+                                             "$ref": "/schemas/guild.json#/properties/banner"
+                                          },
+                                          "key": {
+                                             "type": "string",
+                                             "enum": [
+                                                "banner_hash"
+                                             ]
+                                          }
+                                       }
+                                    },
+                                    {
+                                       "properties": {
+                                          "new_value": {
                                              "$ref": "/schemas/guild.json#/properties/premium_tier"
                                           },
                                           "old_value": {
@@ -2058,6 +2074,22 @@
                                     {
                                        "properties": {
                                           "new_value": {
+                                             "$ref": "/schemas/user.json#/properties/id"
+                                          },
+                                          "old_value": {
+                                             "$ref": "/schemas/user.json#/properties/id"
+                                          },
+                                          "key": {
+                                             "type": "string",
+                                             "enum": [
+                                                "inviter_id"
+                                             ]
+                                          }
+                                       }
+                                    },
+                                    {
+                                       "properties": {
+                                          "new_value": {
                                              "$ref": "/schemas/invite.json#/properties/target_type"
                                           },
                                           "old_value": {
@@ -2195,6 +2227,22 @@
                                              "type": "string",
                                              "enum": [
                                                 "channel_id"
+                                             ]
+                                          }
+                                       }
+                                    },
+                                    {
+                                       "properties": {
+                                          "new_value": {
+                                             "type": "integer"
+                                          },
+                                          "old_value": {
+                                             "type": "integer"
+                                          },
+                                          "key": {
+                                             "type": "string",
+                                             "enum": [
+                                                "flags"
                                              ]
                                           }
                                        }
@@ -4015,7 +4063,7 @@
       "application_commands",
       "audit_log_entries",
       "auto_moderation_rules",
-      "guild_schedules_events",
+      "guild_scheduled_events",
       "integrations",
       "threads",
       "users",

@@ -24,7 +24,17 @@
             "guilds": {
                "type": "array",
                "items": {
-                  "$ref": "/schemas/guild.json"
+                  "type": "object",
+                  "properties": {
+                     "id": {
+                        "$ref": "/schemas/snowflake.json"
+                     },
+                     "unavailable": {
+                        "type": "boolean",
+                        "enum": [true]
+                     }
+                  },
+                  "required": ["id", "unavailable"]
                }
             },
             "session_id": {

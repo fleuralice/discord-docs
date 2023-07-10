@@ -35,7 +35,7 @@
    },
    "required": [
       "id",
-      "anem",
+      "name",
       "instant_invite",
       "channels",
       "members",

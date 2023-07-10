@@ -145,16 +145,7 @@
                      "buttons": {
                         "type": "array",
                         "items": {
-                           "type": "object",
-                           "properties": {
-                              "label": {
-                                 "type": "string"
-                              },
-                              "url": {
-                                 "type": "string"
-                              }
-                           },
-                           "required": ["label", "url"]
+                           "type": "string"
                         }
                      }
                   },

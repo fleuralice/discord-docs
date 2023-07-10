@@ -16,7 +16,7 @@
             "properties": {
                "membership_state": {
                   "type": "integer",
-                  "eunm": [1, 2]
+                  "enum": [1, 2]
                },
                "permissions": {
                   "type": "array",

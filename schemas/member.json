@@ -1,6 +1,7 @@
 {
    "$id": "https://docs.helvetica.moe/schemas/member.json",
    "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "type": "object",
    "properties": {
       "user": {
          "$ref": "/schemas/user.json"

@@ -17,6 +17,9 @@
                "type": "integer",
                "enum": [2, 4]
             },
+            "locale": {
+               "$ref": "/schemas/locales.json"
+            },
             "data": {
                "type": "object",
                "properties": {
@@ -134,15 +137,24 @@
                "type": "integer",
                "enum": [3]
             },
-            "custom_id": {
-               "type": "string"
+            "locale": {
+               "$ref": "/schemas/locales.json"
             },
-            "component_type": {
-               "type": "integer",
-               "enum": [1, 2, 3, 4, 5, 6, 7, 8]
-            },
-            "values": {
-               "$ref": "/schemas/component.json#/oneOf/1/properties/options"
+            "data": {
+               "type": "object",
+               "properties": {
+                  "custom_id": {
+                     "type": "string"
+                  },
+                  "component_type": {
+                     "type": "integer",
+                     "enum": [1, 2, 3, 4, 5, 6, 7, 8]
+                  },
+                  "values": {
+                     "$ref": "/schemas/component.json#/oneOf/1/properties/options"
+                  }
+               },
+               "required": ["custom_id", "component_type"]
             }
          },
          "required": ["data", "locale"]
@@ -153,14 +165,23 @@
                "type": "integer",
                "enum": [5]
             },
-            "custom_id": {
-               "type": "string"
+            "locale": {
+               "$ref": "/schemas/locales.json"
             },
-            "components": {
-               "type": "array",
-               "items": {
-                  "$ref": "/schemas/component.json"
-               }
+            "data": {
+               "type": "object",
+               "properties": {
+                  "custom_id": {
+                     "type": "string"
+                  },
+                  "components": {
+                     "type": "array",
+                     "items": {
+                        "$ref": "/schemas/component.json"
+                     }
+                  }
+               },
+               "required": ["custom_id", "components"]
             }
          },
          "required": ["data", "locale"]
@@ -201,9 +222,6 @@
       },
       "app_permissions": {
          "$ref": "/schemas/permissions.json"
-      },
-      "locale": {
-         "$ref": "/schemas/locales.json"
       },
       "guild_locale": {
          "$ref": "/schemas/locales.json"

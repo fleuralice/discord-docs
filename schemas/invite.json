@@ -71,11 +71,10 @@
             }
          },
          "required": [
-            "uses",
-            "max_uses",
-            "max_age",
-            "temporary",
-            "created_at"
+            "members",
+            "participant_count",
+            "speaker_count",
+            "topic"
          ]
       },
       "guild_scheduled_event": {
