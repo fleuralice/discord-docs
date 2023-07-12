@@ -67,7 +67,7 @@
       },
       "flags": {
          "type": "integer",
-         "flags": {
+         "x-flags": {
             "application_auto_moderation_rule_create_badge": 64,
             "gateway_presence": 4096,
             "gateway_presence_limited": 8192,

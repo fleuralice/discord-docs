@@ -83,7 +83,7 @@
    "$defs": {
       "flags": {
          "type": "integer",
-         "flags": {
+         "x-flags": {
             "staff": 1,
             "partner": 2,
             "hypesquad": 4,

@@ -406,7 +406,7 @@
       },
       "flags": {
          "type": "integer",
-         "flags": {
+         "x-flags": {
             "crossposted": 1,
             "is_crosspost": 2,
             "suppress_embeds": 4,

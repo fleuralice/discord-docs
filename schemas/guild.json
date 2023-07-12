@@ -185,7 +185,7 @@
       },
       "system_channel_flags": {
          "type": "integer",
-         "flags": {
+         "x-flags": {
             "suppress_join_notifications": 1,
             "suppress_premium_subscriptions": 2,
             "suppress_guild_reminder_notifications": 4,

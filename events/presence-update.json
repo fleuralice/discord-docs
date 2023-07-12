@@ -130,7 +130,7 @@
                      },
                      "flags": {
                         "type": "integer",
-                        "flags": {
+                        "x-flags": {
                            "instance": 1,
                            "join": 2,
                            "spectate": 4,

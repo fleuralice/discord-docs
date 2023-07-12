@@ -222,7 +222,7 @@
       },
       "flags": {
          "type": "integer",
-         "flags": {
+         "x-flags": {
             "pinned": 2,
             "require_tag": 16
          }

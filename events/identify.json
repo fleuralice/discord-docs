@@ -47,7 +47,7 @@
             },
             "intents": {
                "type": "integer",
-               "flags": {
+               "x-flags": {
                   "guilds": 1,
                   "guild_members": 2,
                   "guild_moderation": 4,

@@ -2,7 +2,7 @@
    "$id": "https://docs.helvetica.moe/schemas/permissions.json",
    "$schema": "https://json-schema.org/draft/2020-12/schema",
    "type": "string",
-   "flags": {
+   "x-flags": {
       "create_instant_invite": "1",
       "kick_members": "2",
       "ban_members": "4",

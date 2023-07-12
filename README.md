@@ -63,10 +63,25 @@ More generally, I require that properties next to a `$ref` _replace_ rather than
 _merge with_ the original properties. The previous "merge with" behavior is
 still achievable via an explicit `allOf`.
 
-Additionally, my schemas contain a `flags` property that lists the flags for
-some numbers. If the `type` is `string`, then these `flags` will be `string`s
+Additionally, my schemas contain a `x-flags` property that lists the flags for
+some numbers. If the `type` is `string`, then these `x-flags` will be `string`s
 (or more precisely: bigints). Otherwise if the `type` is `integer`, then these
-`flags` will be `integer`s. I should figure out if I should actually do this:
+`x-flags` will be `integer`s. I should figure out if I should actually do this:
 either the flags need to exclude anything which isn't a combination of them or I
 should drop the concept. I guess alternatively they should be metadata, in which
 case they should allow for descriptions too!
+
+##### REST route status
+
+I've started documenting REST routes using an OpenAPI file. However, I have
+found in me a deep distaste for OpenAPI. Given this, I've paused my efforts. So
+far, I've only documented the REST routes in:
+
+- `resources/Application.md`
+- `resources/Application_Role_Connection_Metadata.md`
+- `resources/Audit_Log.md`
+- `resources/Auto_Moderation.md`
+- `resources/Channel.md`
+
+Additionally, the create message route and edit message route are not very
+possible to write in OpenAPI, so please hardcode that!

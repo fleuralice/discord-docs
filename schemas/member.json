@@ -41,7 +41,7 @@
       },
       "flags": {
          "type": "integer",
-         "flags": {
+         "x-flags": {
             "did_rejoin": 1,
             "completed_onboarding": 2,
             "bypasses_verification": 4,
