@@ -96,12 +96,17 @@
       },
       "enabled": {
          "type": "boolean"
+      },
+      "mode": {
+         "type": "integer",
+         "enum": [0, 1]
       }
    },
    "required": [
       "guild_id",
       "prompts",
       "default_channel_ids",
-      "enabled"
+      "enabled",
+      "mode"
    ]
 }

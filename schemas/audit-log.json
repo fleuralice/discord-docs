@@ -1903,6 +1903,22 @@
                                              ]
                                           }
                                        }
+                                    },
+                                    {
+                                       "properties": {
+                                          "new_value": {
+                                             "$ref": "/schemas/role.json#/properties/flags"
+                                          },
+                                          "old_value": {
+                                             "$ref": "/schemas/role.json#/properties/flags"
+                                          },
+                                          "key": {
+                                             "type": "string",
+                                             "enum": [
+                                                "flags"
+                                             ]
+                                          }
+                                       }
                                     }
                                  ]
                               }
@@ -3811,7 +3827,9 @@
                                  75,
                                  143,
                                  144,
-                                 145
+                                 145,
+                                 150,
+                                 151
                               ]
                            }
                         }

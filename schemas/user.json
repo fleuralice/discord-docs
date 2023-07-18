@@ -71,6 +71,9 @@
       },
       "public_flags": {
          "$ref": "#/$defs/flags"
+      },
+      "avatar_decoration": {
+         "type": ["null", "string"]
       }
    },
    "required": [

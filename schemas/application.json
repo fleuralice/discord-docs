@@ -56,6 +56,10 @@
       "guild_id": {
          "$ref": "/schemas/snowflake.json"
       },
+      "guild": {
+         "$ref": "/schemas/guild.json",
+         "required": []
+      },
       "primary_sku_id": {
          "$ref": "/schemas/snowflake.json"
       },
@@ -79,6 +83,9 @@
             "gateway_message_content_limited": 524288,
             "application_command_badge": 8388608
          }
+      },
+      "approximate_guild_count": {
+         "type": "integer"
       },
       "tags": {
          "type": "array",

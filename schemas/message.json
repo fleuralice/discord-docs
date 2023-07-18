@@ -114,6 +114,12 @@
                },
                "waveform": {
                   "type": "string"
+               },
+               "flags": {
+                  "type": "integer",
+                  "x-flags": {
+                     "is_remix": 4
+                  }
                }
             },
             "required": [

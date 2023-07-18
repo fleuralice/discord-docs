@@ -33,6 +33,9 @@
             "emoji": {
                "$ref": "/schemas/emoji.json",
                "required": []
+            },
+            "message_author_id": {
+               "$ref": "/schemas/snowflake.json"
             }
          },
          "required": ["user_id", "channel_id", "message_id", "emoji"]

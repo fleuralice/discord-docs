@@ -12,6 +12,24 @@
       "url": "https://discord.com/api/v10"
    }],
    "paths": {
+      "/applications/@me": {
+         "get": {
+            "operationId": "get_own_application",
+            "summary": "Gets the application linked to the token used",
+            "responses": {
+               "200": {
+                  "description": "Your application",
+                  "content": {
+                     "application/json": {
+                        "schema": {
+                           "$ref": "https://docs.helvetica.moe/schemas/application.json"
+                        }
+                     }
+                  }
+               }
+            }
+         }
+      },
       "/applications/{application_id}/role-connections/metadata": {
          "parameters": [{
             "in": "path",
