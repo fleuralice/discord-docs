@@ -15,13 +15,16 @@ Additionally, a lot of work has to be done to figure out constraints on fields
 and on objects generally (e.g. ADTs). Additionally, work needs to be done to add
 REST routes.
 
+See also <https://github.com/discord/discord-api-spec>, which contains a
+slightly buggy but still quite good OpenAPI specification for the HTTP API.
+
 nya
 
 ##### Latest commit from the documentation
 
 Latest update was
-[a50bf9ba22b5f493a242d748c0e9f51f726bfa17](https://github.com/discord/discord-api-docs/commit/a50bf9ba22b5f493a242d748c0e9f51f726bfa17).
-[Here are the changes since then](https://github.com/discord/discord-api-docs/compare/a50bf9ba22b5f493a242d748c0e9f51f726bfa17..main).
+[0fa62381428af08be950e8134c8aa38e338ee6a7](https://github.com/discord/discord-api-docs/commit/0fa62381428af08be950e8134c8aa38e338ee6a7).
+[Here are the changes since then](https://github.com/discord/discord-api-docs/compare/0fa62381428af08be950e8134c8aa38e338ee6a7..main).
 
 ##### Licensing
 

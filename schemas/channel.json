@@ -20,7 +20,8 @@
             12,
             13,
             14,
-            15
+            15,
+            16
          ]
       },
       "guild_id": {
@@ -224,7 +225,8 @@
          "type": "integer",
          "x-flags": {
             "pinned": 2,
-            "require_tag": 16
+            "require_tag": 16,
+            "hide_media_download_options": 32768
          }
       },
       "total_message_sent": {
