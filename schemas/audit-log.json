@@ -3986,7 +3986,7 @@
                                  },
                                  "type": {
                                     "type": "string",
-                                    "enum": ["0"]
+                                    "enum": ["1"]
                                  }
                               },
                               "required": ["id", "type"]
@@ -4007,13 +4007,13 @@
                                  },
                                  "type": {
                                     "type": "string",
-                                    "enum": ["1"]
+                                    "enum": ["0"]
                                  },
-                                 "name": {
+                                 "role_name": {
                                     "type": "string"
                                  }
                               },
-                              "required": ["id", "type", "name"]
+                              "required": ["id", "type", "role_name"]
                            }
                         }
                      },
