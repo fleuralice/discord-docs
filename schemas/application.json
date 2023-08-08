@@ -122,7 +122,6 @@
       "description",
       "bot_public",
       "bot_require_code_grant",
-      "verify_key",
-      "team"
+      "verify_key"
    ]
 }
