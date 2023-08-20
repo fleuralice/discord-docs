@@ -23,8 +23,8 @@ nya
 ##### Latest commit from the documentation
 
 Latest update was
-[0fa62381428af08be950e8134c8aa38e338ee6a7](https://github.com/discord/discord-api-docs/commit/0fa62381428af08be950e8134c8aa38e338ee6a7).
-[Here are the changes since then](https://github.com/discord/discord-api-docs/compare/0fa62381428af08be950e8134c8aa38e338ee6a7..main).
+[3bebe03196ecebd2d705f79822cec0e13618586c](https://github.com/discord/discord-api-docs/commit/3bebe03196ecebd2d705f79822cec0e13618586c).
+[Here are the changes since then](https://github.com/discord/discord-api-docs/compare/3bebe03196ecebd2d705f79822cec0e13618586c..main).
 
 ##### Licensing
 
