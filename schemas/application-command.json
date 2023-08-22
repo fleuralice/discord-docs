@@ -140,7 +140,7 @@
                                        "options": {
                                           "type": "array",
                                           "items": {
-                                             "$ref": "/schemas/application-command.json#/allOf/1/oneOf/1/properties/options"
+                                             "$ref": "/schemas/application-command.json#/allOf/1/oneOf/1/properties/options/items"
                                           }
                                        }
                                     }
