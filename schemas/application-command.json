@@ -18,7 +18,7 @@
                "type": "string"
             },
             "name_localizations": {
-               "type": "object",
+               "type": ["object", "null"],
                "propertyNames": {
                   "$ref": "/schemas/locales.json"
                }
@@ -27,7 +27,7 @@
                "type": "string"
             },
             "description_localizations": {
-               "type": "object",
+               "type": ["object", "null"],
                "propertyNames": {
                   "$ref": "/schemas/locales.json"
                }
