@@ -299,18 +299,42 @@
                "count": {
                   "type": "integer"
                },
+               "count_details": {
+                  "type": "object",
+                  "properties": {
+                     "burst": {
+                        "type": "integer"
+                     },
+                     "normal": {
+                        "type": "integer"
+                     }
+                  },
+                  "required": ["burst", "normal"]
+               },
                "me": {
+                  "type": "boolean"
+               },
+               "me_burst": {
                   "type": "boolean"
                },
                "emoji": {
                   "$ref": "/schemas/emoji.json",
                   "required": []
+               },
+               "burst_colors": {
+                  "type": "array",
+                  "items": {
+                     "type": "string"
+                  }
                }
             },
             "required": [
                "count",
+               "count_details",
                "me",
-               "emoji"
+               "me_burst",
+               "emoji",
+               "burst_colors"
             ]
          }
       },

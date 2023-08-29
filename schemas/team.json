@@ -18,22 +18,19 @@
                   "type": "integer",
                   "enum": [1, 2]
                },
-               "permissions": {
-                  "type": "array",
-                  "prefixItems": [{
-                     "type": "string",
-                     "enum": ["\"*\""]
-                  }]
-               },
                "team_id": {
                   "$ref": "/schemas/snowflake.json"
                },
                "user": {
                   "$ref": "/schemas/user.json",
                   "required": []
+               },
+               "role": {
+                  "type": "string",
+                  "enum": ["admin", "developer", "read_only"]
                }
             },
-            "required": ["membership_state", "permissions", "team_id", "user"]
+            "required": ["membership_state", "team_id", "user", "role"]
          }
       },
       "name": {

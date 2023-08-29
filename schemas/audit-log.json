@@ -4033,6 +4033,23 @@
                               "required": ["message_id"]
                            }
                         }
+                     },
+                     {
+                        "properties": {
+                           "action_type": {
+                              "type": "integer",
+                              "enum": [20, 25]
+                           },
+                           "options": {
+                              "type": "object",
+                              "properties": {
+                                 "integration_type": {
+                                    "type": "string"
+                                 }
+                              },
+                              "required": ["integration_type"]
+                           }
+                        }
                      }
                   ]
                }
