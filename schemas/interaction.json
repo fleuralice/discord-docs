@@ -126,7 +126,8 @@
                   "target_id": {
                      "$ref": "/schemas/snowflake.json"
                   }
-               }
+               },
+               "required": ["id", "name", "type"]
             }
          },
          "required": ["data", "locale"]
