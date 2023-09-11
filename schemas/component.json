@@ -15,7 +15,7 @@
             },
             "emoji": {
                "$ref": "/schemas/emoji.json",
-               "required": ["name", "id", "animated"]
+               "required": ["name", "id"]
             },
             "disabled": {
                "type": "boolean"
@@ -74,7 +74,7 @@
                      },
                      "emoji": {
                         "$ref": "/schemas/emoji.json",
-                        "required": ["name", "id", "animated"]
+                        "required": ["name", "id"]
                      },
                      "default": {
                         "type": "boolean"
