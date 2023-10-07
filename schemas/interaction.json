@@ -34,66 +34,7 @@
                      "enum": [1, 2, 3]
                   },
                   "resolved": {
-                     "type": "object",
-                     "properties": {
-                        "users": {
-                           "type": "object",
-                           "propertyNames": {
-                              "$ref": "/schemas/snowflake.json"
-                           },
-                           "additionalProperties": {
-                              "$ref": "/schemas/user.json"
-                           }
-                        },
-                        "members": {
-                           "type": "object",
-                           "propertyNames": {
-                              "$ref": "/schemas/snowflake.json"
-                           },
-                           "additionalProperties": {
-                              "$ref": "/schemas/member.json",
-                              "required": []
-                           }
-                        },
-                        "roles": {
-                           "type": "object",
-                           "propertyNames": {
-                              "$ref": "/schemas/snowflake.json"
-                           },
-                           "additionalProperties": {
-                              "$ref": "/schemas/role.json"
-                           }
-                        },
-                        "channels": {
-                           "type": "object",
-                           "propertyNames": {
-                              "$ref": "/schemas/snowflake.json"
-                           },
-                           "additionalProperties": {
-                              "$ref": "/schemas/channel.json",
-                              "required": []
-                           }
-                        },
-                        "messages": {
-                           "type": "object",
-                           "propertyNames": {
-                              "$ref": "/schemas/snowflake.json"
-                           },
-                           "additionalProperties": {
-                              "$ref": "/schemas/message.json",
-                              "required": []
-                           }
-                        },
-                        "attachments": {
-                           "type": "object",
-                           "propertyNames": {
-                              "$ref": "/schemas/snowflake.json"
-                           },
-                           "additionalProperties": {
-                              "$ref": "/schemas/message.json#/properties/attachments/items"
-                           }
-                        }
-                     }
+                     "$ref": "#/$defs/resolved"
                   },
                   "options": {
                      "type": "array",
@@ -153,6 +94,9 @@
                   },
                   "values": {
                      "$ref": "/schemas/component.json#/oneOf/1/properties/options"
+                  },
+                  "resolved": {
+                     "$ref": "#/$defs/resolved"
                   }
                },
                "required": ["custom_id", "component_type"]
@@ -226,7 +170,84 @@
       },
       "guild_locale": {
          "$ref": "/schemas/locales.json"
+      },
+      "entitlements": {
+         "type": "array",
+         "items": {
+            "$ref": "/schemas/entitlement.json"
+         }
       }
    },
-   "required": ["id", "application_id", "type", "token", "version"]
+   "required": [
+      "id",
+      "application_id",
+      "type",
+      "token",
+      "version",
+      "entitlements"
+   ],
+   "$defs": {
+      "resolved": {
+         "type": "object",
+         "properties": {
+            "users": {
+               "type": "object",
+               "propertyNames": {
+                  "$ref": "/schemas/snowflake.json"
+               },
+               "additionalProperties": {
+                  "$ref": "/schemas/user.json"
+               }
+            },
+            "members": {
+               "type": "object",
+               "propertyNames": {
+                  "$ref": "/schemas/snowflake.json"
+               },
+               "additionalProperties": {
+                  "$ref": "/schemas/member.json",
+                  "required": []
+               }
+            },
+            "roles": {
+               "type": "object",
+               "propertyNames": {
+                  "$ref": "/schemas/snowflake.json"
+               },
+               "additionalProperties": {
+                  "$ref": "/schemas/role.json"
+               }
+            },
+            "channels": {
+               "type": "object",
+               "propertyNames": {
+                  "$ref": "/schemas/snowflake.json"
+               },
+               "additionalProperties": {
+                  "$ref": "/schemas/channel.json",
+                  "required": []
+               }
+            },
+            "messages": {
+               "type": "object",
+               "propertyNames": {
+                  "$ref": "/schemas/snowflake.json"
+               },
+               "additionalProperties": {
+                  "$ref": "/schemas/message.json",
+                  "required": []
+               }
+            },
+            "attachments": {
+               "type": "object",
+               "propertyNames": {
+                  "$ref": "/schemas/snowflake.json"
+               },
+               "additionalProperties": {
+                  "$ref": "/schemas/message.json#/properties/attachments/items"
+               }
+            }
+         }
+      }
+   }
 }

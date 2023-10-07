@@ -1,0 +1,38 @@
+{
+   "$id": "https://docs.helvetica.moe/schemas/sku.json",
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "type": "object",
+   "properties": {
+      "id": {
+         "$ref": "/schemas/user.json"
+      },
+      "type": {
+         "type": "integer",
+         "enum": [5, 6]
+      },
+      "application_id": {
+         "$ref": "/schemas/user.json"
+      },
+      "name": {
+         "type": "string"
+      },
+      "slug": {
+         "type": "string"
+      },
+      "flags": {
+         "type": "integer",
+         "x-flags": {
+            "GUILD_SUBSCRIPTION": 128,
+            "USER_SUBSCRIPTION": 256
+         }
+      }
+   },
+   "required": [
+      "id",
+      "type",
+      "application_id",
+      "name",
+      "slug",
+      "flags"
+   ]
+}

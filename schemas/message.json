@@ -539,6 +539,9 @@
             "total_months_subscribed",
             "is_renewal"
          ]
+      },
+      "resolved": {
+         "$ref": "/schemas/interaction.json#/$defs/resolved"
       }
    },
    "required": [

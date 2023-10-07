@@ -110,6 +110,22 @@
             "placeholder": {
                "type": "string"
             },
+            "default_values": {
+               "type": "array",
+               "items": {
+                  "type": "object",
+                  "properties": {
+                     "id": {
+                        "$ref": "/schemas/snowflake.json"
+                     },
+                     "type": {
+                        "type": "string",
+                        "enum": ["user", "role", "channel"]
+                     }
+                  },
+                  "required": ["id", "type"]
+               }
+            },
             "min_values": {
                "type": "integer"
             },
@@ -139,6 +155,22 @@
             },
             "placeholder": {
                "type": "string"
+            },
+            "default_values": {
+               "type": "array",
+               "items": {
+                  "type": "object",
+                  "properties": {
+                     "id": {
+                        "$ref": "/schemas/snowflake.json"
+                     },
+                     "type": {
+                        "type": "string",
+                        "enum": ["user", "role", "channel"]
+                     }
+                  },
+                  "required": ["id", "type"]
+               }
             },
             "min_values": {
                "type": "integer"

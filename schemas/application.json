@@ -30,6 +30,10 @@
       "bot_require_code_grant": {
          "type": "boolean"
       },
+      "bot": {
+         "$ref": "/schemas/user.json",
+         "required": []
+      },
       "terms_of_service_url": {
          "type": "string"
       },
@@ -87,6 +91,18 @@
       "approximate_guild_count": {
          "type": "integer"
       },
+      "redirect_uris": {
+         "type": "array",
+         "items": {
+            "type": "string"
+         }
+      },
+      "interactions_endpoint_url": {
+         "type": "string"
+      },
+      "role_connections_verification_url": {
+         "type": "string"
+      },
       "tags": {
          "type": "array",
          "items": {
@@ -109,9 +125,6 @@
          ]
       },
       "custom_install_url": {
-         "type": "string"
-      },
-      "role_connections_verification_url": {
          "type": "string"
       }
    },

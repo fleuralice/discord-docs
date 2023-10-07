@@ -28,6 +28,68 @@
                   }
                }
             }
+         },
+         "patch": {
+            "operationId": "edit_own_application",
+            "summary": "Updates the application linked to the token used",
+            "requestBody": {
+               "content": {
+                  "application/json": {
+                     "schema": {
+                        "type": "object",
+                        "properties": {
+                           "custom_install_url": {
+                              "type": "string"
+                           },
+                           "description": {
+                              "type": "string"
+                           },
+                           "role_connections_verification_url": {
+                              "type": "string"
+                           },
+                           "install_params": {
+                              "$ref": "https://docs.helvetica.moe/schemas/application.json#/refs/install_params"
+                           },
+                           "flags": {
+                              "type": "integer",
+                              "x-flags": {
+                                 "gateway_presence_limited": 8192,
+                                 "gateway_guild_members_limited": 32768,
+                                 "gateway_message_content_limited": 524288
+                              }
+                           },
+                           "icon": {
+                              "type": ["null", "string"]
+                           },
+                           "cover_image": {
+                              "type": ["null", "string"]
+                           },
+                           "interactions_endpoint_url": {
+                              "type": "string"
+                           },
+                           "tags": {
+                              "type": "array",
+                              "items": {
+                                 "type": "string"
+                              }
+                           }
+                        }
+                     }
+                  }
+               }
+            },
+            "responses": {
+               "200": {
+                  "description": "Your (updated) application",
+                  "content": {
+                     "application/json": {
+                        "schema": {
+                           "$ref": "https://docs.helvetica.moe/schemas/application.json"
+                        }
+                     }
+                  }
+               }
+            }
          }
       },
       "/applications/{application_id}/role-connections/metadata": {

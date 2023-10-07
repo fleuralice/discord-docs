@@ -1,0 +1,42 @@
+{
+   "$id": "https://docs.helvetica.moe/schemas/entitlement.json",
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "type": "object",
+   "properties": {
+      "id": {
+         "$ref": "/schemas/snowflake.json"
+      },
+      "sku_id": {
+         "$ref": "/schemas/snowflake.json"
+      },
+      "user_id": {
+         "$ref": "/schemas/snowflake.json"
+      },
+      "guild_id": {
+         "$ref": "/schemas/snowflake.json"
+      },
+      "application_id": {
+         "$ref": "/schemas/snowflake.json"
+      },
+      "type": {
+         "type": "integer",
+         "enum": [8]
+      },
+      "consumed": {
+         "type": "boolean"
+      },
+      "starts_at": {
+         "type": "string"
+      },
+      "ends_at": {
+         "type": "string"
+      }
+   },
+   "required": [
+      "id",
+      "sku_id",
+      "application_id",
+      "type",
+      "consumed"
+   ]
+}
