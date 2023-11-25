@@ -1,14 +1,14 @@
 {
   "version": "3",
   "redirects": {
-    "https://esm.sh/@swc/core@1.2.212/types.d.ts": "https://esm.sh/v132/@swc/core@1.2.212/types.d.ts"
+    "https://esm.sh/@swc/core@1.2.212/types.d.ts": "https://esm.sh/v135/@swc/core@1.2.212/types.d.ts"
   },
   "remote": {
     "https://deno.land/x/lz4@v0.1.2/mod.ts": "4decfc1a3569d03fd1813bd39128b71c8f082850fe98ecfdde20025772916582",
     "https://deno.land/x/lz4@v0.1.2/wasm.js": "b9c65605327ba273f0c76a6dc596ec534d4cda0f0225d7a94ebc606782319e46",
     "https://deno.land/x/swc@0.2.1/lib/deno_swc.generated.js": "a112eb5a4871bcbd5b660d3fd9d7afdd5cf2bb9e135eb9b04aceaa24d16481a0",
     "https://deno.land/x/swc@0.2.1/mod.ts": "9e03f5daf4c2a25208e34e19ce3e997d2e23a5a11ee8c8ed58023b0e3626073f",
-    "https://esm.sh/@swc/core@1.2.212/types.js": "666cbcd148c3001951c4265b19bb2e5ae5056603ed6840d70d411580d6267d42",
-    "https://esm.sh/v132/@swc/core@1.2.212/denonext/types.js": "0e8bffa64ea63347e5a1460ff85737d218828a783d4f424ed94bb664dc93575b"
+    "https://esm.sh/@swc/core@1.2.212/types.js": "7855219cb1b411ca013a2821046dccfc607b4faada3bc8f356bba3af0944aa5a",
+    "https://esm.sh/v135/@swc/core@1.2.212/denonext/types.js": "0e8bffa64ea63347e5a1460ff85737d218828a783d4f424ed94bb664dc93575b"
   }
 }
