@@ -46,6 +46,8 @@
       "moderate_members": "1099511627776",
       "view_creator_monetization_analytics": "2199023255552",
       "use_soundboard": "4398046511104",
+      "create_guild_expressions": "8796093022208",
+      "create_events": "17592186044416",
       "use_external_sounds": "35184372088832",
       "send_voice_messages": "70368744177664"
    }

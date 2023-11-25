@@ -20,9 +20,11 @@
       },
       "type": {
          "type": "integer",
-         "enum": [8]
+         "x-flags": {
+            "application_subscription": 8
+         }
       },
-      "consumed": {
+      "deleted": {
          "type": "boolean"
       },
       "starts_at": {
@@ -37,6 +39,6 @@
       "sku_id",
       "application_id",
       "type",
-      "consumed"
+      "deleted"
    ]
 }

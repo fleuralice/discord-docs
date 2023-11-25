@@ -22,8 +22,9 @@
       "flags": {
          "type": "integer",
          "x-flags": {
-            "GUILD_SUBSCRIPTION": 128,
-            "USER_SUBSCRIPTION": 256
+            "available": 4,
+            "guild_subscription": 128,
+            "user_subscription": 256
          }
       }
    },
