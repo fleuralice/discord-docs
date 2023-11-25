@@ -148,6 +148,7 @@
                "SEVEN_DAY_THREAD_ARCHIVE",
                "SOUNDBOARD",
                "SUMMARIES_ENABLED",
+               "SUMMARIES_ENABLED_BY_USER",
                "THREADS_ENABLED",
                "THREE_DAY_THREAD_ARCHIVE",
                "TICKETED_EVENTS_ENABLED",
