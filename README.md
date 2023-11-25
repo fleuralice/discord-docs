@@ -12,11 +12,10 @@ couple major things left:
 - automatically know when keys are redundent
 
 Additionally, a lot of work has to be done to figure out constraints on fields
-and on objects generally (e.g. ADTs). Additionally, work needs to be done to add
-REST routes.
+and on objects generally (e.g. ADTs).
 
-See also <https://github.com/discord/discord-api-spec>, which contains a
-slightly buggy but still quite good OpenAPI specification for the HTTP API.
+See also <https://github.com/discord/discord-api-spec>, which contains an
+OpenAPI specification for the HTTP API.
 
 nya
 
@@ -73,18 +72,3 @@ some numbers. If the `type` is `string`, then these `x-flags` will be `string`s
 either the flags need to exclude anything which isn't a combination of them or I
 should drop the concept. I guess alternatively they should be metadata, in which
 case they should allow for descriptions too!
-
-##### REST route status
-
-I've started documenting REST routes using an OpenAPI file. However, I have
-found in me a deep distaste for OpenAPI. Given this, I've paused my efforts. So
-far, I've only documented the REST routes in:
-
-- `resources/Application.md`
-- `resources/Application_Role_Connection_Metadata.md`
-- `resources/Audit_Log.md`
-- `resources/Auto_Moderation.md`
-- `resources/Channel.md`
-
-Additionally, the create message route and edit message route are not very
-possible to write in OpenAPI, so please hardcode that!
